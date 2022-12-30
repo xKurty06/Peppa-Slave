@@ -1,0 +1,57 @@
+https://www.reddit.com/r/memes/rising.json?limit=100
+https://vacefron.nl/api/
+https://api.phydo.repl.co/
+https://popcat.xyz/api
+https://api.willz.repl.co/image/wallet?image=https://assets.poketwo.net/images/257.png&username=Blaziken&discriminator=0000&wallet=100&bank=100&total=200&background=BLUE
+https://api.xzusfin.repl.co/card?avatar=$replaceText[$authorAvatar;.webp;.png;1]?size=2048&middle=Goodbye&name=$replaceText[$replaceText[$username[$authorID]#$discriminator[$authorID];#;%23;-1]; ;%20;-1]&bottom=$replaceText[$serverName[$guildID] now have $membersCount members left!; ;%20;-1]&background=https://cdn.discordapp.com/attachments/789656208276848682/798106281189572645/default11.png&text=%23ffffff&avatarborder=%23FFFFFF&avatarbg=%23FF28b3
+https://api.alexflipnote.dev/filter/magik?image=$userAvatar[$mentioned[>;yes]]?size=2048
+https://ctk-api.herokuapp.com/meme/$random[1;500]
+https://gofaizen.sirv.com/Peepo%20sign%20template.jpeg?text.0.text=$replaceText[$message; ;+;-1]&text.0.position.gravity=center&text.0.position.y=-25%25&text.0.color=000000
+https://fuyuumi.ga
+https://api.popcatdev.repl.co
+https://Captcha-Image-Api.dhruvnation1.repl.co/captchame/
+https://Captcha-Image-Api.dhruvnation1.repl.co/captchame/a8XvUgO3EZfDSCL$randomString[3]G2Fm81TVXQRUK9oheCbWv4tdOY9l5ncCSDd5EB
+https://Captcha-Image-Api.dhruvnation1.repl.co/gimme/some/captcha
+https://Captcha-Image-Api.dhruvnation1.repl.co/captchame/
+https://api.no-api-key.com/api/v2/recaptcha?text=
+https://textoverimage.moesif.com/image?image_url=https%3A%2F%2Fcdn.discordapp.com%2Fattachments%2F893827047921696788%2F902940975335370762%2Fimages_1.png&overlay_color=64ccffff&text=ztKJh7&text_color=06f3a8ff&text_size=32&margin=1&y_align=middle&x_align=cent
+https://api.willz.repl.co/endpoints
+https://purrbot.site/api/
+  SFW:
+  img/sfw/bite/gif
+  /img/sfw/blush/gif
+  /img/sfw/cry/gif
+  /img/sfw/cuddle/gif
+  /img/sfw/dance/gif
+  /img/sfw/eevee/:type
+  /img/sfw/feed/gif
+  /img/sfw/fluff/gif
+  /img/sfw/holo/img
+  /img/sfw/hug/gif
+  /img/sfw/icon/img
+  /img/sfw/kiss/gif
+  /img/sfw/kitsune/img
+  /img/sfw/lick/gif
+  /img/sfw/neko/:type
+  /img/sfw/okami/img
+  /img/sfw/pat/gif
+  /img/sfw/poke/gif
+  /img/sfw/senko/img
+  /img/sfw/slap/gif
+  /img/sfw/smile/gif
+  /img/sfw/tail/gif
+  /img/sfw/tickle/gif
+
+  NSFW:
+  /img/nsfw/anal/gif
+  /img/nsfw/blowjob/gif
+  /img/nsfw/cum/gif
+  /img/nsfw/fuck/gif
+  /img/nsfw/neko/:type
+  /img/nsfw/pussylick/gif
+  /img/nsfw/solo/gif
+  /img/nsfw/threesome_fff/gif
+  /img/nsfw/threesome_ffm/gif
+  /img/nsfw/threesome_mmf/gif
+  /img/nsfw/yaoi/gif
+  /img/nsfw/yuri/gif

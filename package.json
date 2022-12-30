@@ -1,0 +1,32 @@
+{
+	"name": "announcer-peppa",
+	"version": "1.0.0",
+	"description": "Peppa's Slave bot for \"Peppa's Shoppe\" server. ",
+	"main": "./index.js",
+	"scripts": {
+		"test": "node .",
+		"stop": "node stop"
+	},
+	"author": "xKurty",
+	"license": "ISC",
+	"dependencies": {
+		"aoi.db": "^1.0.0",
+		"aoi.js": "^5.5.5",
+		"body-parser": "^1.20.1",
+		"dbdjs.db": "^2.0.2",
+		"discord-html-transcripts": "^3.1.2",
+		"discord.js": "^14.7.1",
+		"dotenv": "^16.0.3",
+		"express": "^4.18.2",
+		"http": "^0.0.1-security",
+		"json": "^11.0.0",
+		"node.js": "^0.0.1-security",
+		"nodejs": "^0.0.0",
+		"npm": "^9.1.3"
+	},
+	"keywords": [
+		"bot",
+		"discordbot",
+		"discord"
+	]
+}

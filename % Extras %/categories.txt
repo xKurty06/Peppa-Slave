@@ -1,0 +1,72 @@
+Admin:{
+	setprefix
+},
+Config:{
+},
+Emotes:{
+	bite
+	blush
+	cry
+	cuddle
+	dance
+	eevee
+	feed
+	fluff
+	holo
+	hug
+	icon
+	kiss
+	kitsune
+	lick
+	neko
+	okami
+	pat
+	poke
+	senko
+	shoot
+	slap
+	smile
+	tail
+	tickle
+},
+Fun:{
+	achieve
+	ascii
+	imageSay
+	impostor
+	meme
+	owoify
+	tweet
+	wouldYouRather
+},
+General:{
+	143
+	date
+	help
+	invite
+	quote
+},
+Moderation:{
+	
+},
+Music:{
+	pause
+	play
+	queue
+	resume
+	skip
+	stop
+	volume
+},
+Owner:{
+	eval
+	function;
+    reboot
+    test
+	updateCmds
+},
+Utility:{
+	avatar
+	say
+	search
+},

@@ -1,0 +1,68 @@
+module.exports = {
+  name: "",
+  cmdName: "",
+  aliases: [""],
+  cmdAliases: "none",
+  description: "",
+  example: "<Prefix>",
+  category: "",
+  cooldown: "",
+  usage: "<Prefix>",
+  perms: "",
+  code: `
+$addTimestamp[]
+$color[$get[clr]]
+$footer[$userTag]
+$author[║ X;$authorAvatar]
+$reply[$messageID;no]
+
+$onlyBotPerms[;{newEmbed:{description:$get[error] | Missing Bot's Permissions <\`\`>}{color:$get[clr2]}}]
+$onlyIf[$hasPermsInChannel[$voiceID;$clientID;]==true;{newEmbed:{description:$get[error] | Missing Bot's Permission(s) of <\`\`>.}{color:$get[clr2]}}]
+$onlyPerms[;{newEmbed:{description:$get[error] | You don't have enough permissions <\`\`> to use this command!}{color:$get[clr2]}}]
+$argsCheck[;{newEmbed:{author:║ Wrong Arguments Given!:$authorAvatar}{field:$get[error] Command's Usage#COLON#:\`\`\`js
+Aliases: #RIGHT#$get[alias]#LEFT#\n~> $get[usage]\n~> $get[example]\`\`\`}{footer:$get[params]}{footer:$get[params]}{color:$get[clr2]}}]
+$cooldown[$get[cd];{newEmbed:{description:$get[error] | Hey! Slow down, you have to wait until \` %sec%.%ms%s \` before running this command again.}{color:$get[clr2]}}]
+
+$onlyForIDs[$joinSplitText[;];]
+$textSplit[$getVar[botOwners;bot];/]
+$let[arrow;<#COLON#arrow2#COLON#1055144562257047702>]
+$let[error;❌]
+$let[check;✅]
+$let[clr2;$getServerVar[clr2;;server]]
+$let[clr;$getServerVar[clr;;server]]
+$let[params;<X> = Required, \(X?\) = Optional, #RIGHT#A | B | C#LEFT# = Options]
+$let[alias;$commandInfo[$commandName;cmdAliases]]
+$let[category;$commandInfo[$commandName;category]]
+$let[desc;$commandInfo[$commandName;description]]
+$let[cd;$commandInfo[$commandName;cooldown]]
+$let[perms;$commandInfo[$commandName;perms]]
+$let[name;$commandInfo[$commandName;cmdName]]
+$let[usage;$replaceText[$commandInfo[$commandName;usage];<Prefix>;$get[prefix]]]
+$let[example;$replaceText[$commandInfo[$commandName;example];<Prefix>;$get[prefix]]]
+$let[prefix;$getServerVar[prefix;;server]]
+`}
+
+$let[guildID;$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$guildID;1;a];2;b];3;c];4;d];5;e];6;f];7;g];8;h];9;i];0;j]]
+
+-------------------------------------------------------------------
+API Error: {newEmbed:{description:$get[error] | The API is currently down, you can report this error to the Devs' or in Support Server to fix this issue.}{color:$get[clr2]}}
+-------------------------------------------------------------------
+
+Emojis: $get[error] <:correct_args:896615343898886184>
+ ឵឵<:arrow_to_right:896598087953440799> " ឵឵" <a:check_args:903510617405677578> <a:errors_args:903510494751649852> 
+" ឵឵ ឵឵ ឵឵឵឵<:arrow_to_right:896598087953440799>"
+
+-------------------------------------------------------------------
+║
+-------------------------------------------------------------------
+Error Template: {newEmbed:{description:$get[error] | X}{color:$get[clr2]}}
+-------------------------------------------------------------------
+Missing Bot Perms in Channel Error: $onlyIf[$hasPermsInChannel[$voiceID;$clientID;]==true;{newEmbed:{description:$get[error] | Missing Bot's Permissions of <\`\`>.}{color:$get[clr2]}}]
+
+-------------------------------------------------------------------
+
+No NSFW filter: $onlyif[$checkContains[$toLowercase[$message];porn;hentai;bdsm;bondage;nsfw;xxx;sex;threesome;uncensored;dick;big dick;cock;strapon;futanari;trap;strap on;shemale;dickgirl;futa;incest;lolicon;titty;fuck;boobs;boobas;titties;hardcore;milf;amelewd;murr;yiff;4k;anal;cumart;cumslut;boobs;ass;blowjob;bondage;femdom;feet;gasm;gif;hanal;hboobs;hentai;hneko;holo;keta;pussy;kitsu;kuni;nude;girlsolo;orgy;slut;creampie;xlecx;xhamster;xnxx;lewd;xvideos;bangbros;boyfriendtv;goodgay;txx;4tube;8teenxxx;alotporn;amateurscentral;asianscentral;beeg;bustnow;cliphunter;definebabes;deviantclip;drtuber;empflix;fantasti.cc;fapdu;freeporn;freudbox;fuq;fux;grayvee;hellxx;hustlertube;jugy;jizzhut;kaktuz;keezmovies;kinxxx;laraporn;leakedporn;lovelyclips;lubetube;mofosex;monstertube;madthumbs;moviefap;moviesand;orgasm;perfectgirls.net;pichunter;planetsuzy;porn;pornolandia;porn-plus;porncor;pornhub;pornrabbit;porntitan;pussy;redtube;tube8;xhamster;xnxx;xvideos;youjizz;redwap2;childxfun;childxporn]==false;{newEmbed:{description: X}{color:$get[clr2]}}]
+
+-------------------------------------------------------------------
+Only Owner:
+$onlyForIDs[$getVar[botOwners];$getVar[botOwners2];]

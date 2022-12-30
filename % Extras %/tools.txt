@@ -1,0 +1,652 @@
+https://serpapi.com/search.json?q=pizza&hl=en&gl=us&google_domain=google.com&api_key=84ea3ce0896f7af7d6b7c58563a749cce509e7fbbb2dbc36982cf94db4fa4a91
+
+https://serpapi.com/search.json?engine=youtube&search_query=pizza&api_key=84ea3ce0896f7af7d6b7c58563a749cce509e7fbbb2dbc36982cf94db4fa4a91
+
+-------------------------------------------------------------------
+
+***`Peppa's Slave`*** is a multi-purpose bot, that will give you a best experience using the bot when it comes to servers. This bot was made by a Filipino person, and  has a lot of useful features like *Anti-Link*, *Custom Emojis*, *Well Designed Commands*, *Useful Commands* for your server, and also *Online 24/7*  and many more similar commands! I created this bot during my free time because It was my hobby, to code and build discord bots! **Stitchy** was built perfectly just for your server! Enjoy using Peppa's Slave!
+
+
+Peppa's Slave is a multi-purpose bot, that will give you a best experience using the bot. This bot was made by a Filipino person, and  has a lot of useful features like Anti-Link, Custom Emojis, Well designed commands, Useful commands for your server, and also Online 24/7  and many more similar commands! I created this bot during my free time because It was my hobby, to code and build discord bots! Stitchy was built perfectly just for your server! Enjoy using Peppa's Slave!
+
+
+https://discord.com/oauth2/authorize?client_id=860004838628917279&scope=guilds%20guilds.members.read%20connections%20identify%20bot%20messages.read%20applications.builds.read%20applications.commands&permissions=2146958847
+
+
+https://discord.com/oauth2/authorize?client_id=860004838628917279&redirect_uri=https%3A%2F%2Fstitchy.xkurty06.repl.co&response_type=code&scope=guilds%20guilds.members.read%20connections%20identify%20bot%20messages.read%20applications.builds.read%20applications.commands&permissions=2146958847
+
+
+perms: 2147483647
+
+
+advanced time: $advancedtextsplit[$divide[$get[sec];60];.;1]:$replacetext[$replacetext[$charcount[$get[s]];1;0$get[s]];2;$get[s]]
+$let[s;$sub[$get[sec];$multi[$advancedtextsplit[$divide[$get[sec];60];.;1];60]]]
+$let[sec;your time in seconds]
+
+
+https://api.willz.repl.co/image/wallet?image=https://assets.poketwo.net/images/257.png&username=Blaziken&discriminator=0000&wallet=100&bank=100&total=200&background=BLUE
+
+
+https://www.youtube.com/watch?v=rfscVS0vtbw
+https://youtube.com/c/CodeLyon
+
+------------------------------------------------------------------------------
+
+https://api.xzusfin.repl.co/card?avatar=$replaceText[$authorAvatar;.webp;.png;1]?size=2048&middle=Goodbye&name=$replaceText[$replaceText[$username[$authorID]#$discriminator[$authorID];#;%23;-1]; ;%20;-1]&bottom=$replaceText[$serverName[$guildID] now have $membersCount members left!; ;%20;-1]&background=https://cdn.discordapp.com/attachments/789656208276848682/798106281189572645/default11.png&text=%23ffffff&avatarborder=%23FFFFFF&avatarbg=%23FF28b3
+
+-------------------------------------------------------------------
+
+Brought a Fun Among us command 
+Variables: none
+Language :BD Script
+Code:
+$nomention
+. 　。　　　　•　 　ﾟ　　。
+　　.　　　.　　　 　　.　　　　　。　　 。　.
+　.　　 。　 ඞ 。　 . •
+• **$username[$mentioned[1;yes]]** $randomText[Was an Impostor;was not the Impostor]
+ $randomText[0 Impostors Remaining;1 Impostor Remaining] 。　.
+　 　　。　　 　　　　ﾟ　　　.　 　　　.
+,　　　　.　 . 
+
+
+
+---------------------------------------------------------------------------------------
+Fun command achievements minecraft
+
+$nomention
+$color[00bdff]
+$argsCheck[>1; what you eant to achieved lol]
+$image[$randomText[https://minecraftskinstealer.com/achievement/1/Achievement%20get!/$message[1]+$message[2]+$message[3]+$message[4];https://minecraftskinstealer.com/achievement/2/Achievement%20get!/$message[1]+$message[2]+$message[3]+$message[4];https://minecraftskinstealer.com/achievement/3/Achievement%20get!/$message[1]+$message[2]+$message[3]+$message[4];https://minecraftskinstealer.com/achievement/4/Achievement%20get!/$message[1]+$message[2]+$message[3]+$message[4];https://minecraftskinstealer.com/achievement/5/Achievement%20get!/$message[1]+$message[2]+$message[3]+$message[4];https://minecraftskinstealer.com/achievement/6/Achievement%20get!/$message[1]+$message[2]+$message[3]+$message[4];https://minecraftskinstealer.com/achievement/7/Achievement%20get!/$message[1]+$message[2]+$message[3]+$message[4];https://minecraftskinstealer.com/achievement/8/Achievement%20get!/$message[1]+$message[2]+$message[3]+$message[4];https://minecraftskinstealer.com/achievement/9/Achievement%20get!/$message[1]+$message[2]+$message[3]+$message[4];https://minecraftskinstealer.com/achievement/10/Achievement%20get!/$message[1]+$message[2]+$message[3]+$message[4];https://minecraftskinstealer.com/achievement/11/Achievement%20get!/$message[1]+$message[2]+$message[3]+$message[4];https://minecraftskinstealer.com/achievement/12/Achievement%20get!/$message[1]+$message[2]+$message[3]+$message[4];https://minecraftskinstealer.com/achievement/13/Achievement%20get!/$message[1]+$message[2]+$message[3]+$message[4];https://minecraftskinstealer.com/achievement/14/Achievement%20get!/$message[1]+$message[2]+$message[3]+$message[4];https://minecraftskinstealer.com/achievement/15/Achievement%20get!/$message[1]+$message[2]+$message[3]+$message[4];https://minecraftskinstealer.com/achievement/16/Achievement%20get!/$message[1]+$message[2]+$message[3]+$message[4]]]
+
+
+
+---------------------------------------------------------------------------------------
+FUN COMMAND ALL IN ONE
+
+TRIGGER: !FUN [OBJECTIVES] (@MENTION)
+
+THE OBJECTIVES MEANS THE FUN YOU WANT TO DO AND DONT USE BRAKETS ;-;
+
+CODE:
+
+$nomention
+$onlyIf[$mentioned[1]!=;Mention someone!]
+$argsCheck[>2;**social activities available**: 1. bite 2. cuddle 3. feed 4. fluff 5. hug 6. kiss 7. lick 8. poke 9. slap 10 tickle and `Remember that the correct usage is .fun <activities> @usermention`]$onlyIf[$checkContains[$message;bite;cuddle;feed;fluff;hug;kiss;lick;pat;poke;slap;tickle]==true; the thing you have set as activity is not vaild! The activities are: `bite` `cuddle` `feed` `fluff` `hug` `kiss` `lick` `pat` `poke` `slap` `tickle`.]
+$author[$username $message[1] $username[$mentioned[1]]]
+$authorIcon[$authorAvatar]
+$thumbnail[$userAvatar[$mentioned[1]]]
+$image[https://purrbot.site/img/sfw/$message[1]/gif/$message[1]_$randomText[001;002;003;004;005;006;007;008;009;010;011;012;013;014;015;016].gif]
+$footer[DEVELOPER BY SAVAGE DEVELOPERS©]
+$color[$randomText[ffffff;ff0000;00ff00;0000ff;00ffff;ff00ff;ffff00]]
+$addTimestamp
+$botTyping
+$cooldown[$get[cd]; Please wait 3 Second before use the command again later.]
+
+
+
+---------------------------------------------------------------------------------------
+Fun Commands
+
+MAGIK Command, API by Alex Flipnote:
+
+$nomention
+
+ 
+
+$color[$random[111111;999999]]
+
+$image[https://api.alexflipnote.dev/filter/magik?image=$userAvatar[$mentioned[>;yes]]?size=2048]
+
+ 
+
+MEME command, API by CTK Warrior:
+
+$nomention
+
+$color[$random[111111;999999]]
+
+$image[https://ctk-api.herokuapp.com/meme/$random[1;500]]
+
+ 
+
+SUPREME text command, API by Alex Flipnote:
+
+$nomention
+
+$onlyIf[$message!=;Please type something!]
+
+ 
+
+$color[$random[111111;999999]]
+
+$image[https://api.alexflipnote.dev/supreme?text=$replaceText[$message; ;+;-1]]
+
+ 
+
+PRIDE colour command, API by Alex Flipnote:
+
+$nomention
+
+ 
+
+$color[$random[111111;999999]]
+
+$image[https://api.alexflipnote.dev/filter/gay?image=$userAvatar[$mentioned[1;yes]]?size=2048]
+
+ 
+
+(REQUIRE UNSTABLE MODE) EJECT command, API by Vac Efron:
+
+$nomention
+
+$color[$random[111111;999999]]
+
+$image[https://vacefron.nl/api/ejected?name=$replaceText[$username[$mentioned[<;yes]]; ;+;-1]&impostor=$randomText[true;false]&crewmate=$randomText[black;blue;brown;cyan;darkgreen;lime;orange;pink;purple;red;white;yellow]]
+
+ 
+
+STONKS command, API by Vac Efron:
+
+$nomention
+
+$color[$random[111111;999999]]
+
+$image[https://vacefron.nl/api/stonks?user=$userAvatar[$mentioned[<;yes]]?size=4096]
+
+
+
+
+
+---------------------------------------------------------------------------------------
+Api fun commands
+
+Note: the ones with api's is not mine
+
+Rip command
+
+$nomention
+$deletecommand
+$title[RIP $username[$mentioned[1]]]
+$color[7F00FF]
+$image[https://vacefron.nl/api/grave?user=$userAvatar[$mentioned[1]]]
+$argsCheck[>1;Mention someone!]
+
+
+Trash command
+
+$nomention
+$image[https://api.no-api-key.com/api/v2/trash?image=$userAvatar[$mentioned[1]]]
+$color[00ffff]
+$author[Trash]
+$authorIcon[$authorAvatar]
+$argsCheck[>1;Man this dude is soo trash that you can't even mention him? Well to actually throw this guy in he trash you need to mention him]
+
+ Meme command
+
+$nomention
+$color[$random[100000;999999]]
+$title[Meme]
+$image[https://ctk-api.herokuapp.com/meme/$random[1;500]]
+$footer[Smokin meme]
+
+
+---------------------------------------------------------------------------------------
+PEEPO API
+simpe & fun command have fun using it| By M1 Nøah#1669
+$nomention
+$image[https://gofaizen.sirv.com/Peepo%20sign%20template.jpeg?text.0.text=$replaceText[$message; ;+;-1]&text.0.position.gravity=center&text.0.position.y=-25%25&text.0.color=000000]
+$color[4eff00]
+
+
+
+
+---------------------------------------------------------------------------------------
+A Bunch of Fun Commands
+(did this cause im bored)
+
+Trigger: 
+<your prefix>gay
+
+Code:
+$nomention
+$image[https://fuyuumi.ga/api/v1/imagegen/gay?avatar=$authorAvatar]
+$color[fe5417]
+
+Trigger: 
+<your prefix>batslap
+
+Code:
+$nomention
+$image[https://fuyuumi.ga/api/v1/imagegen/batslap?avatar1=$authorAvatar&avatar2=$userAvatar[$mentioned[1]]]
+$color[fe5417]
+
+Trigger: 
+<your prefix>bobross
+
+Code:
+$nomention
+$image[https://fuyuumi.ga/api/v1/imagegen/bobross?avatar=$authorAvatar]
+$color[fe5417]
+
+Trigger: 
+<your prefix>beautiful
+
+Code:
+$nomention
+$image[https://fuyuumi.ga/api/v1/imagegen/beautiful?avatar=$authorAvatar]
+$color[fe5417]
+
+Trigger: 
+<your prefix>rip
+
+Code:
+$nomention
+$image[https://fuyuumi.ga/api/v1/imagegen/rip?avatar=$authorAvatar]
+$color[fe5417]
+
+Trigger: 
+<your prefix>triggered
+
+Code:
+$nomention
+$image[https://fuyuumi.ga/api/v1/imagegen/triggered?avatar=$authorAvatar]
+$color[fe5417]
+
+Trigger: 
+<your prefix>wanted
+
+Code:
+$nomention
+$image[https://fuyuumi.ga/api/v1/imagegen/wanted?avatar=$authorAvatar]
+$color[fe5417]
+
+Trigger: 
+<your prefix>wasted
+
+Code:
+$nomention
+$image[https://fuyuumi.ga/api/v1/imagegen/wasted?avatar=$authorAvatar]
+$color[fe5417]
+
+
+
+---------------------------------------------------------------------------------------
+Best Fun Fact Command 
+Trigger - <prefix>fact (message)
+Stable Mode 
+$nomention
+$image[https://api.popcatdev.repl.co/facts?text=$replaceText[$message; ;+;-1]]
+$footer[$username]
+$footerIcon[$authorAvatar]
+$addTimestamp 
+$onlyIf[$guildID!=;You can not use commands in DM's!]
+$color[$random[0;999999]]
+NOTE!!
+If you are using in ur bot and u liked it pls give me credit for this in dm's 
+
+-------------------------------------------------------------------
+
+HERE ARE SOME AOI.JS COMMANDS
+
+CREDIT TO LEAF I JUST MIX ALL COMMANDS
+
+DONT PING ME FOR ERRORS
+----------------------------
+Moderation:
+
+	Ban and Unban: https://pastebin.com/wcHCwnCk 
+
+	Kick & Clear: https://pastebin.com/dpR5riTJ 
+
+	Snipe, Editsnipe, Quote Command: https://paste.gg/p/anonymous/ad08779272ac4d43bf8057992376c748 
+
+	Warn System: https://paste.gg/p/Leaf-Yt/178ac8f410fd44a996ac1b24bfe0720f 
+
+	Give, Remove, Temp Role: https://paste.gg/p/Leaf-Yt/132ac97327e940faae16c2f596f5c5d0 
+
+	Mute System: https://paste.gg/p/Leaf-Yt/cfe6b393a80d417b890daf34f6baf388 
+
+	AntiLink: https://paste.gg/p/Leaf-Yt/28c92ef00c764196a193ee8b0caae9b8 
+
+Systems:
+
+	Levelling System: https://pastebin.com/mqS2C17s 
+
+	Ticket System: https://paste.gg/p/Leaf-Yt/140772ebfc2c4333aa67086ca2fbda0a 
+
+	Blacklist System: https://paste.gg/p/Leaf-Yt/d22db5d020724083a8da521051fafb89 
+
+	Welcome System: https://paste.gg/p/Leaf-Yt/58380e60b7a54a8589f96cfe7ac0373b 
+
+	Modlog System: https://paste.gg/p/Leaf-Yt/f199a0625a524a2184f9d29a001484dd 
+
+	Guess The Number System: https://paste.gg/p/Leaf-Yt/9df0ee5607114269a21c00ad78f3b662 
+
+	Premium System: https://paste.gg/p/Leaf-Yt/fc605ddd3e764de7b56708e42fca8946 
+
+ 
+Uncategorized:
+
+	Custom Commands: https://pastebin.com/3sARcLU6 
+
+	Music: https://paste.gg/p/Leaf-Yt/6d6b8c603b0041b7b9175670e4410419 
+
+	Addemoji: https://paste.gg/p/Leaf-Yt/8710c6c20e0c427a87d648745afc7ea8 
+
+	Help Command: https://paste.gg/p/Leaf-Yt/1d3669b2d1954c399ee2958fc41039a1 
+
+	RPS Command: https://paste.gg/p/Leaf-Yt/7dc81c748e204a0ca6241719b941b833 
+
+Economy:
+
+	Part 1: https://paste.gg/p/Leaf-Yt/9bd1a917a5454f2a9868abde747b98c3 
+
+	Part 2: https://paste.gg/p/Leaf-Yt/d39fe8fa52f34cd48b3a45ecfe65f6a6
+
+
+~ SMJ B⃢ot.#0007
+
+-------------------------------------------------------------------
+
+https://Captcha-Image-Api.dhruvnation1.repl.co/captchame/
+
+https://Captcha-Image-Api.dhruvnation1.repl.co/captchame/a8XvUgO3EZfDSCL$randomString[3]G2Fm81TVXQRUK9oheCbWv4tdOY9l5ncCSDd5EB
+
+https://Captcha-Image-Api.dhruvnation1.repl.co/gimme/some/captcha
+
+https://Captcha-Image-Api.dhruvnation1.repl.co/captchame/
+
+https://api.no-api-key.com/api/v2/recaptcha?text=
+
+https://textoverimage.moesif.com/image?image_url=https%3A%2F%2Fcdn.discordapp.com%2Fattachments%2F893827047921696788%2F902940975335370762%2Fimages_1.png&overlay_color=64ccffff&text=ztKJh7&text_color=06f3a8ff&text_size=32&margin=1&y_align=middle&x_align=cent
+
+-------------------------------------------------------------------
+
+***` AB `, ` AA `, ` AF `, ` SQ `, ` AM `, ` AR `, ` HY `, ` AS `, ` AY `, ` AZ `, ` BA `, ` EU `, ` BN `, ` DZ `, ` BH `, ` BI `, ` BR `, ` BG `, ` MY `, ` BEKM `, ` CA `, ` ZH `, ` CO `, ` HR `, ` CS `, ` DA `, ` NL `, ` EN `, ` EO `, ` ET `, ` FO `, ` FJ `, ` FI `, ` FR `, ` FY `, ` GD `, ` GL `, ` KA `, ` DE `, ` EL `, ` KL `, ` GN `, ` GU `, ` HA `, ` IW `, ` HI `, ` HU `, ` IS `, ` IN `, ` IA `, ` IE `, ` IK `, ` GA `, ` IT `, ` JA `, ` JW `, ` KN `, ` KS `, ` KK `, ` RW `, ` KY `, ` RN `, ` KO `, ` KU `, ` LO `, ` LA `, ` LV `, ` LN `, ` LT `, ` MK `, ` MG `, ` MS `, ` ML `, ` MT `, ` MI `, ` MR `, ` MO `, ` MN `, ` NA `, ` NE `, ` NO `, ` OC `, ` OR `, ` OM `, ` PS `, ` FA `, ` PL `, ` PT `, ` PA `, ` QU `, ` RM `, ` RO `, ` RU `, ` SM `, ` SG `, ` SA `, ` SR `, ` SH `, ` ST `, ` TN `, ` SN `, ` SD `, ` SI `, ` SS `, ` SK `, ` SL `, ` SO `, ` ES `, ` SU `, ` SW `, ` SV `, ` TL `, ` TG `, ` TA `, ` TT `, ` TE `, ` TH `, ` BO `, ` TI `, ` TO `, ` TS `, ` TR `, ` TK `, ` TW `, ` UK `, ` UR `, ` UZ `, ` VI `, ` VO `, ` CY `, ` WO `, ` XH `, ` JI `, ` YO `, ` ZU***  `
+
+
+AB, AA, AF, SQ, AM, AR, HY, AS, AY, AZ, BA, EU, BN, DZ, BH, BI, BR, BG, MY, BEKM, CA, ZH, CO, HR, CS, DA, NL, EN, EO, ET, FO, FJ, FI, FR, FY, GD, GL, KA, DE, EL, KL, GN, GU, HA, IW, HI, HU, IS, IN, IA, IE, IK, GA, IT, JA, JW, KN, KS, KK, RW, KY, RN, KO, KU, LO, LA, LV, LN, LT, MK, MG, MS, ML, MT, MI, MR, MO, MN, NA, NE, NO, OC, OR, OM, PS, FA, PL, PT, PA, QU, RM, RO, RU, SM, SG, SA, SR, SH, ST, TN, SN, SD, SI, SS, SK, SL, SO, ES, SU, SW, SV, TL, TG, TA, TT, TE, TH, BO, TI, TO, TS, TR, TK, TW, UK, UR, UZ, VI, VO, CY, WO, XH, JI, YO, ZU
+
+
+AB-AA-AF-SQ-AM-AR-HY-AS-AY-AZ-BA-EU-BN-DZ-BH-BI-BR-BG-MY-BEKM-CA-ZH-CO-HR-CS-DA-NL-EN-EO-ET-FO-FJ-FI-FR-FY-GD-GL-KA-DE-EL-KL-GN-GU-HA-IW-HI-HU-IS-IN-IA-IE-IK-GA-IT-JA-JW-KN-KS-KK-RW-KY-RN-KO-KU-LO-LA-LV-LN-LT-MK-MG-MS-ML-MT-MI-MR-MO-MN-NA-NE-NO-OC-OR-OM-PS-FA-PL-PT-PA-QU-RM-RO-RU-SM-SG-SA-SR-SH-ST-TN-SN-SD-SI-SS-SK-SL-SO-ES-SU-SW-SV-TL-TG-TA-TT-TE-TH-BO-TI-TO-TS-TR-TK-TW-UK-UR-UZ-VI-VO-CY-WO-XH-JI-YO-ZU
+
+-------------------------------------------------------------------
+
+Donald Trump Tweeted Fun commands 
+Var : none
+Code : 
+$nomention
+$title[Donald Trump Tweeted]
+$image[https://api.no-api-key.com/api/v2/trump?message=$replaceText[$message; ;%20;-1]]
+$color[$random[0;999999]]
+$argsCheck[>1;What you want to tweet by Donald Trump.]
+$footer[Requested by $username]
+$addTimestamp
+$botTyping
+$suppressErrors[Error Occurred; Please try again later.]
+$deletecommand
+$ignoreTriggerCase
+$footerIcon[$authorAvatar] 
+
+
+
+
+---------------------------------------------------------------------------------------
+$nomention
+$httpResult[joke]
+$httpGet[https://api.popcatdev.repl.co/joke]
+
+
+---------------------------------------------------------------------------------------
+$nomention
+$httpResult[fact]
+$httpGet[https://api.popcatdev.repl.co/fact]
+
+
+---------------------------------------------------------------------------------------
+SFW:
+img/sfw/bite/gif
+/img/sfw/blush/gif
+/img/sfw/cry/gif
+/img/sfw/cuddle/gif
+/img/sfw/dance/gif
+/img/sfw/eevee/:type
+/img/sfw/feed/gif
+/img/sfw/fluff/gif
+/img/sfw/holo/img
+/img/sfw/hug/gif
+/img/sfw/icon/img
+/img/sfw/kiss/gif
+/img/sfw/kitsune/img
+/img/sfw/lick/gif
+/img/sfw/neko/:type
+/img/sfw/okami/img
+/img/sfw/pat/gif
+/img/sfw/poke/gif
+/img/sfw/senko/img
+/img/sfw/slap/gif
+/img/sfw/smile/gif
+/img/sfw/tail/gif
+/img/sfw/tickle/gif
+
+NSFW:
+/img/nsfw/anal/gif
+/img/nsfw/blowjob/gif
+/img/nsfw/cum/gif
+/img/nsfw/fuck/gif
+/img/nsfw/neko/:type
+/img/nsfw/pussylick/gif
+/img/nsfw/solo/gif
+/img/nsfw/threesome_fff/gif
+/img/nsfw/threesome_ffm/gif
+/img/nsfw/threesome_mmf/gif
+/img/nsfw/yaoi/gif
+/img/nsfw/yuri/gif
+
+
+//1 code
+
+module.exports = {
+    name:"fasttype" ,
+    code:`
+$djsEval[
+const { FastType } = require('weky');
+FastType({
+    message: message,
+    embed: {
+        title: 'FastType',
+        description: 'You have **{{time}}** to type the below sentence.',
+        color: '#000001',
+        timestamp: true
+    },
+    sentence: 'This is the sentence :)',
+    winMessage: 'GG, you have a wpm of **{{wpm}}** and You made it in **{{time}}**.',
+    loseMessage: 'Better luck next time!',
+    cancelMessage: 'You ended the game!',
+    time: 60000,
+    buttonText: 'Cancel',
+    othersMessage: 'Only <@{{author}}> can use the buttons!'
+})]`
+    }
+
+//2 code
+
+module.exports = {
+    name:"lieswatter" ,
+    code:`
+$djsEval[
+const { LieSwatter } = require('weky');
+LieSwatter({
+	message: message,
+	embed: {
+		title: 'Lie Swatter',
+		color: '#000001',
+		timestamp: true,
+	},
+	thinkMessage: 'I am thinking',
+	winMessage:
+		'GG, It was a **{{answer}}**. You got it correct in **{{time}}**.',
+	loseMessage: 'Better luck next time! It was a **{{answer}}**.',
+	othersMessage: 'Only <@{{author}}> can use the buttons!',
+	buttons: { true: 'Truth', lie: 'Lie' },
+})]`
+    }
+
+//3 code
+
+module.exports = {
+    name:"nhe" ,
+    code:`
+$djsEval[
+const { NeverHaveIEver } = require('weky');
+NeverHaveIEver({
+	message: message,
+	embed: {
+		title: 'Never Have I Ever',
+		color: '#000001',
+		timestamp: true,
+	},
+	thinkMessage: 'I am thinking',
+	othersMessage: 'Only <@{{author}}> can use the buttons!',
+	buttons: { optionA: 'Yes', optionB: 'No' },
+})]`
+    }
+
+//4 code
+
+module.exports = {
+    name:"quickclick" ,
+    aliases:"qc" ,
+    code:`
+$djsEval[
+const { QuickClick } = require('weky');
+QuickClick({
+	message: message,
+	embed: {
+		title: 'Quick Click',
+		color: '#000001',
+		timestamp: true,
+	},
+	time: 60000,
+	waitMessage: 'The buttons may appear anytime now!',
+	startMessage:
+		'First person to press the correct button will win. You have **{{time}}**!',
+	winMessage: 'GG, <@{{winner}}> pressed the button in **{{time}} seconds**.',
+	loseMessage: 'No one pressed the button in time. So, I dropped the game!',
+	emoji: '🚩',
+	ongoingMessage:
+		"A game is already runnning in <#{{channel}}>. You can't start a new one!",
+})]`
+    }
+
+//5 code
+
+module.exports = {
+    name:"rps" ,
+    code:`
+$djsEval[const opponent = mentions.users.first()
+require('weky'). RockPaperScissors ({ 
+embed: {
+		title: 'Rock Paper Scissors',
+		description: 'Press the button below to choose your element.',
+		color: '#000001',
+		timestamp: true,
+	},
+message: message,
+opponent: opponent
+})]`
+    }
+
+//6 code
+
+module.exports = {
+    name:"snake" ,
+    code:`
+$djsEval[const { Snake } = require('weky');
+     Snake({
+	message: message,
+	embed: {
+		title: 'Snake',
+		description: 'nice, you scored **{{score}}** points!',
+		color: '#000001',
+		timestamp: true,
+	},
+	emojis: {
+		empty: '⬛',
+		snakeBody: '🟩',
+		food: '🎂',
+		up: '⬆️',
+		right: '⬅️',
+		down: '⬇️',
+		left: '➡️',
+	},
+	othersMessage: 'Only <@{{author}}> can use the buttons!',
+	buttonText: 'Cancel',
+    }).then(snake => snake)]`
+    }
+
+//7 code
+
+module.exports = {
+    name:"trivia" ,
+    code:`
+$djsEval[
+const { Trivia } = require('weky');
+Trivia({
+	message: message,
+
+embed: {
+		title: 'Trivia',
+		description: 'You only have **{{time}}** to guess the answer!',
+		color: '#000001',
+		timestamp: true,
+	},
+	difficulty: 'hard',
+	thinkMessage: 'I am thinking',
+	winMessage:
+		'GG, It was **{{answer}}**. You gave the correct answer in **{{time}}**.',
+	loseMessage: 'Better luck next time! The correct answer was **{{answer}}**.',
+	emojis: {
+		one: '1️⃣',
+		two: '2️⃣',
+		three: '3️⃣',
+		four: '4️⃣',
+	},
+	othersMessage: 'Only <@{{author}}> can use the buttons!',
+	returnWinner: false,
+})]`
+    }
+
+//8 code
+
+module.exports = {
+    name:"wyr" ,
+    aliases:"wouldyourather" ,
+    code:`
+$djsEval[const { WouldYouRather } = require('weky');
+WouldYouRather({
+message: message,
+	embed: {
+		title: 'Would you rather...',
+		color: '#000001',
+		timestamp: true,
+	},
+	thinkMessage: 'I am thinking',
+	othersMessage: 'Only <@{{author}}> can use the buttons!',
+	buttons: { optionA: 'Option A', optionB: 'Option B' },
+})]`
+    }
+
+//the end`
+-------------------------------------------------------------------
+
+const mongo = new MongoClient(URI, {
+	useNewUrlParser: true,
+	useUnifiedTopology: true,
+	serverApi: ServerApiVersion.v1
+});
+mongo.connect(err => {
+  const collection = mongo.db("test").collection("devices");
+  mongo.close();
+});
