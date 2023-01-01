@@ -1,5 +1,4 @@
 console.log(`[ SYSTEM ] ~> Client starting....`);
-require("dotenv").config({ path: "./src/.env" });
 const cfg = require("./src/config.js");
 const Kurt = require("aoi.js");
 const botKey = process.env.TOKEN;

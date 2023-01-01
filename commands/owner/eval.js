@@ -19,10 +19,11 @@ Aliases: #RIGHT#$get[alias]#LEFT#\n~> $get[usage]\n~> $get[example]\`\`\`}{foote
 $onlyForIDs[$joinSplitText[;];]
 $textSplit[$getVar[botOwners;bot];/]
 
-$let[error;$get[error]]
+$let[arrow;<#COLON#arrow2#COLON#1055144562257047702>]
+$let[error;❌]
 $let[check;✅]
-$let[clr2;$getServerVar[clr2;;server]]
-$let[clr;$getServerVar[clr;;server]]
+$let[clr2;$getServerVar[clr2;$guildID;server]]
+$let[clr;$getServerVar[clr;$guildID;server]]
 $let[params;<X> = Required, \(X?\) = Optional, #RIGHT#A | B | C#LEFT# = Options]
 $let[alias;$commandInfo[$commandName;cmdAliases]]
 $let[category;$commandInfo[$commandName;category]]
@@ -32,8 +33,7 @@ $let[perms;$commandInfo[$commandName;perms]]
 $let[name;$commandInfo[$commandName;cmdName]]
 $let[usage;$replaceText[$commandInfo[$commandName;usage];<Prefix>;$get[prefix]]]
 $let[example;$replaceText[$commandInfo[$commandName;example];<Prefix>;$get[prefix]]]
-$let[prefix;$getServerVar[prefix;;server]]
-$deletecommand
+$let[prefix;$getServerVar[prefix;$guildID;server]]
 `
 	},
 	{
@@ -52,13 +52,13 @@ $deletecommand
 		code: `
 $eval[$message;no;yes;yes;no]
 $argsCheck[>0;{newEmbed:{author:║ Wrong Arguments Given!:$authorAvatar}{field:<a:errors_args:903510494751649852> Command's Usage#COLON#:\`\`\`js
-Aliases: #RIGHT#$get[alias]#LEFT#\n~> $get[usage]\n~> $get[example]\`\`\`}{footer:$get[params]}{footer:$get[params]}{color:$getServerVar[clr;;server]}}]
+Aliases: #RIGHT#$get[alias]#LEFT#\n~> $get[usage]\n~> $get[example]\`\`\`}{footer:$get[params]}{footer:$get[params]}{color:$getServerVar[clr;$guildID;server]}}]
 $onlyForIDs[$joinSplitText[;];]
 $textSplit[$getVar[botOwners;bot];/]
 $let[error;$get[error]]
 $let[check;✅]
-$let[clr2;$getServerVar[clr2;;server]]
-$let[clr;$getServerVar[clr;;server]]
+$let[clr2;$getServerVar[clr2;$guildID;server]]
+$let[clr;$getServerVar[clr;$guildID;server]]
 $let[params;<X> = Required, \(X?\) = Optional, #RIGHT#A | B | C#LEFT# = Options]
 $let[alias;$commandInfo[$commandName;cmdAliases]]
 $let[category;$commandInfo[$commandName;category]]
@@ -68,7 +68,7 @@ $let[perms;$commandInfo[$commandName;perms]]
 $let[name;$commandInfo[$commandName;cmdName]]
 $let[usage;$replaceText[$commandInfo[$commandName;usage];<Prefix>;$get[prefix]]]
 $let[example;$replaceText[$commandInfo[$commandName;example];<Prefix>;$get[prefix]]]
-$let[prefix;$getServerVar[prefix;;server]]
+$let[prefix;$getServerVar[prefix;$guildID;server]]
 $deletecommand
 `
 	},
@@ -104,7 +104,7 @@ $let[perms;$commandInfo[$commandName;perms]]
 $let[name;$commandInfo[$commandName;cmdName]]
 $let[usage;$replaceText[$commandInfo[$commandName;usage];<Prefix>;$get[prefix]]]
 $let[example;$replaceText[$commandInfo[$commandName;example];<Prefix>;$get[prefix]]]
-$let[prefix;$getServerVar[prefix;;server]]
+$let[prefix;$getServerVar[prefix;$guildID;server]]
 $deletecommand
 `
 	}

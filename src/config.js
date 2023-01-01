@@ -5,7 +5,7 @@ module.exports = {
 		"{actionRow:{button:Support Server:link:https#COLON#//dsc.gg/peppashoppe:false:🎫}{button:Delete:danger:deleteEmbed:false:🗑}}"
 	],
 	Prefixes: [
-		"$getServerVar[prefix]",
+		"$getServerVar[prefix;$guildID;server]",
 		"peppa",
 		"<@$clientID>",
 		"<@!$clientID>"

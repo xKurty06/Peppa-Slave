@@ -28,8 +28,8 @@ $textSplit[$getVar[botOwners;bot];/]
 $let[arrow;<#COLON#arrow2#COLON#1055144562257047702>]
 $let[error;❌]
 $let[check;✅]
-$let[clr2;$getServerVar[clr2;;server]]
-$let[clr;$getServerVar[clr;;server]]
+$let[clr2;$getServerVar[clr2;$guildID;server]]
+$let[clr;$getServerVar[clr;$guildID;server]]
 $let[params;<X> = Required, \(X?\) = Optional, #RIGHT#A | B | C#LEFT# = Options]
 $let[alias;$commandInfo[$commandName;cmdAliases]]
 $let[category;$commandInfo[$commandName;category]]
@@ -39,8 +39,54 @@ $let[perms;$commandInfo[$commandName;perms]]
 $let[name;$commandInfo[$commandName;cmdName]]
 $let[usage;$replaceText[$commandInfo[$commandName;usage];<Prefix>;$get[prefix]]]
 $let[example;$replaceText[$commandInfo[$commandName;example];<Prefix>;$get[prefix]]]
-$let[prefix;$getServerVar[prefix;;server]]
+$let[prefix;$getServerVar[prefix;$guildID;server]]
 `}
+
+------------------------------------------------------------------------------------------------------------------------------
+
+module.exports = {
+	name: "",
+	cmdName: "",
+	aliases: [],
+	cmdAliases: "none",
+	description: "",
+	example: "<Prefix>",
+	category: "Setup",
+	cooldown: "3s",
+	usage: "<Prefix>",
+	perms: "Admin",
+	code: `
+$color[$get[clr]]
+$title[・──── __**__ ────・]
+$description[ ឵឵឵឵
+ ឵឵឵឵
+・─  ]
+$image[]
+$deletecommand
+
+$cooldown[$get[cd];{newEmbed:{description:$get[error] | Hey! Slow down, you have to wait until \` %sec%.%ms%s \` before running this command again.}{color:$get[clr2]}}]
+
+$onlyForIDs[$joinSplitText[;];]
+$textSplit[$getVar[owners;bot];/]
+$let[arrow;<#COLON#arrow2#COLON#1055144562257047702>]
+$let[error;❌]
+$let[check;✅]
+$let[clr2;$getServerVar[clr2;$guildID;server]]
+$let[clr;$getServerVar[clr;$guildID;server]]
+$let[params;<X> = Required, \(X?\) = Optional, #RIGHT#A | B | C#LEFT# = Options]
+$let[alias;$commandInfo[$commandName;cmdAliases]]
+$let[category;$commandInfo[$commandName;category]]
+$let[desc;$commandInfo[$commandName;description]]
+$let[cd;$commandInfo[$commandName;cooldown]]
+$let[perms;$commandInfo[$commandName;perms]]
+$let[name;$commandInfo[$commandName;cmdName]]
+$let[usage;$replaceText[$commandInfo[$commandName;usage];<Prefix>;$get[prefix]]]
+$let[example;$replaceText[$commandInfo[$commandName;example];<Prefix>;$get[prefix]]]
+$let[prefix;$getServerVar[prefix;$guildID;server]]
+`
+};
+
+--------------------------------------------------------------------------------------------------------------------------------------
 
 $let[guildID;$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$guildID;1;a];2;b];3;c];4;d];5;e];6;f];7;g];8;h];9;i];0;j]]
 
