@@ -1,7 +1,10 @@
 module.exports = {
 	name: "test",
 	code: `
-$sendMessage[Working...]
+$onlyIf[yes==no;{
+"embeds": "{newEmbed:{author:$get[error] | Wrong format given!}{description:*Please provide a screenshot of your purchase!*}{color:$get[clr2]}{delete:15s}}",
+"reply": {"messageReference": "$messageID"}
+}]
 
 $onlyForIDs[$joinSplitText[;];]
 $textSplit[$getVar[botOwners;bot];/]

@@ -1,5 +1,5 @@
 
-hidden = [".config"]
+hidden = [".config", ".git", ".upm"]
 run = "node ."
 
 [[hints]]

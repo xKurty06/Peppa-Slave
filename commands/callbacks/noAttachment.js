@@ -1,11 +1,16 @@
 module.exports = {
-  name: "$alwaysExecute",
-  code: `
+	name: "$alwaysExecute",
+	code: `
 <:peppapig:1057625427029540904> ***Thank you for vouching!*** <:peppapig:1057625427029540904>
 $reply[$messageID;yes]
 
-$onlyIf[$get[attch]!=;{newEmbed:{author:$get[error] | Wrong format given!}{description:*Please provide a screenshot of your purchase!*}{color:$get[clr2]}{delete:15s}}]
-$onlyIf[$checkContains[$message;vouch;Vouch]==true;{newEmbed:{author:$get[error] | Wrong format given!}{description:**Proper Format:** *\` - vouch @yskaela#2022 for 1 pc of Nitro Boost, tysm! \`*}{color:$get[clr2]}{delete:15s}}]
+$onlyIf[$get[attch]!=;{newEmbed:{author:$get[error] | Wrong format given!}{description:*Please provide a screenshot of your purchase!*}{color:$get[clr2]}{delete:15s}}",
+"reply": {"messageReference": "$messageID"}
+}]
+$onlyIf[$checkContains[$message;vouch;Vouch]==true;{
+"embeds": "{newEmbed:{author:$get[error] | Wrong format given!}{description:**Proper Format:** *\` - vouch @yskaela#2022 for 1 pc of Nitro Boost, tysm! \`*}{color:$get[clr2]}{delete:15s}}",
+"reply": {"messageReference": "$messageID"}
+}]
 $let[attch;$messageAttachment]
 $onlyForChannels[1057338851359735828;]
 $suppressErrors
