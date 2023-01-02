@@ -12,9 +12,7 @@ module.exports = {
 	code: `
 $color[1;$get[clr]]
 $title[1;・──── __*N I T R O / G A M E   C R E D I T S / P R E M I U M   A C C O U N T S   O R D E R   F O R M A T*__ ────・]
-$description[1;
- ឵឵឵឵
- \`\`\`
+$description[1;\`\`\`
 ~> FORMAT:
 ឵឵឵឵឵឵឵឵
 ⤿ Item/s:

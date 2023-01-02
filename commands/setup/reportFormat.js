@@ -12,10 +12,8 @@ module.exports = {
 	code: `
 $color[1;$get[clr]]
 $title[1;・──── __*N I T R O ឵឵឵឵ ឵឵឵឵ ឵឵឵឵R E P O R T ឵឵឵឵ ឵឵឵឵ ឵឵឵឵F O R M A T*__ ────・]
-$description[1;
- ឵឵឵឵
- ឵឵឵឵឵឵឵឵\`\`\`
- ~> FORMAT:
+$description[1;\`\`\`
+~> FORMAT:
 
 ⤿ Discord User & Tag:
 ⤿ Nitro Gift Link Given:
@@ -27,9 +25,7 @@ $description[1;
 
 $color[2;$get[clr]]
 $title[2;・──── __*P R E M I U M ឵឵឵឵ ឵឵឵឵ ឵឵឵឵A C C O U N T ឵឵឵឵ ឵឵឵឵ ឵឵឵឵R E P O R T ឵឵឵឵ ឵឵឵឵ ឵឵឵឵F O R M A T*__ ────・]
-$description[2;
- ឵឵឵឵
- ឵឵឵឵឵឵឵឵\`\`\`
+$description[2;\`\`\`
 ~> FORMAT:
 
 ⤿ Discord User & Tag:
