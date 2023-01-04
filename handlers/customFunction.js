@@ -27,7 +27,7 @@ module.exports = (bot) => {
 			name: '$memberAvatar',
 			type: 'djs',
 			code: async (d) => {
-				const data = d.util.openFunc(d);
+				const data = d.util.aoiFunc(d);
 				const [guildID = d.guild.id, user = d.author.id] =
 					data.inside.splits;
 				data.result = d.client.guilds.cache
@@ -38,6 +38,6 @@ module.exports = (bot) => {
 					code: d.util.setCode(data),
 				};
 			},
-		})
-	];
+		}
+		)];
 };

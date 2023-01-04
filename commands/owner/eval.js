@@ -87,8 +87,8 @@ $deletecommand
 $djsEval[try {
 $message
 } catch (err) {
-channel.send("**Source Error:**\`\`\`js\n" + err + "\`\`\`")
-};yes]
+channel.send("**Source Error:**\`\`\`js\\n" + err + "\`\`\`")
+};no]
 
 $argsCheck[>0;{newEmbed:{author:║ Wrong Arguments Given!:$authorAvatar}{field:<a:errors_args:903510494751649852> $toLocaleUppercase[$get[name]]'s Usage#COLON#:\`\`\`js
 Aliases: #RIGHT#$get[alias]#LEFT#\n~> $get[usage]\n~> $get[example]\`\`\`}{footer:$get[params]}{color:$get[clr2]}}]
@@ -106,6 +106,5 @@ $let[usage;$replaceText[$commandInfo[$commandName;usage];<Prefix>;$get[prefix]]]
 $let[example;$replaceText[$commandInfo[$commandName;example];<Prefix>;$get[prefix]]]
 $let[prefix;$getServerVar[prefix;$guildID;server]]
 $deletecommand
-`
-	}
+`}
 ];

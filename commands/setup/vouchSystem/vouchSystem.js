@@ -12,9 +12,14 @@ $onlyIf[$checkContains[$message;vouch;Vouch]==true;{
 "reply": {"messageReference": "$messageID"}
 }]
 $let[attch;$messageAttachment]
-$onlyForChannels[1057338851359735828;]
+$onlyForChannels[$get[vChannel];]
+$onlyIf[$serverChannelExists[$get[vChannel]]==true;]
+$onlyIf[$get[vChannel]!=;]
+$onlyIf[$get[status]==enabled;]
 $suppressErrors
 
+$let[vChannel;$getServerVar[vouchChannel;$guildID;server]]
+$let[status;$getServerVar[vouchStatus;$guildID;server]]
 $let[arrow;<#COLON#arrow2#COLON#1055144562257047702>]
 $let[error;❌]
 $let[check;✅]

@@ -3,7 +3,9 @@ module.exports = (bot) => {
 		{
 			prefix: "p!",
 			clr: "fbb3fd",
-			clr2: "FF1010"
+			clr2: "FF1010",
+			vouchChannel: "",
+			vouchStatus: "disabled"
 		},
 		"server"
 	);
