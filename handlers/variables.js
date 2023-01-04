@@ -5,7 +5,10 @@ module.exports = (bot) => {
 			clr: "fbb3fd",
 			clr2: "FF1010",
 			vouchChannel: "",
-			vouchStatus: "disabled"
+			vouchStatus: "disabled",
+			serverLogs: "",
+			ticketHelper: "",
+			ticketStatus: "disabled"
 		},
 		"server"
 	);
@@ -18,6 +21,12 @@ module.exports = (bot) => {
 		"bot"
 	);
 	bot.variables({}, "user");
+	bot.variables(
+		{
+			ticketHelper_format: "false",
+		},
+		"channel"
+	);
 	bot.variables(
 		// MESSAGE DATABASE
 		{

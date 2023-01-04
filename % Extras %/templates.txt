@@ -23,6 +23,7 @@ $argsCheck[;{newEmbed:{author:║ Wrong Arguments Given!:$authorAvatar}{field:$g
 Aliases: #RIGHT#$get[alias]#LEFT#\n~> $get[usage]\n~> $get[example]\`\`\`}{footer:$get[params]}{footer:$get[params]}{color:$get[clr2]}}]
 $cooldown[$get[cd];{newEmbed:{description:$get[error] | Hey! Slow down, you have to wait until \` %sec%.%ms%s \` before running this command again.}{color:$get[clr2]}}]
 
+$onlyForServers[877873096265170994;]
 $onlyForIDs[$joinSplitText[;];]
 $textSplit[$getVar[botOwners;bot];/]
 $let[arrow;<#COLON#arrow2#COLON#1055144562257047702>]
