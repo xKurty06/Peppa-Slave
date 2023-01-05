@@ -3,7 +3,8 @@ module.exports = [{
 	channel: " ",
 	code: `
 $channelSendMessage[$get[channelID];{
-"embeds": "{newEmbed:{title:<:peppapigshoppe_happypeppa:1060268959724740720> Hello Shopper!}{footer:Want to order now? Click the button below to make an order form!}{color:$get[clr]}}",
+"content": "<@886620575735373825>",
+"embeds": "{newEmbed:{title:<:peppapigshoppe_happypeppa:1060268959724740720> Hello Shopper!}{description:> $get[arrow] | Want to order now? Click the button below to make an order form!}{footer:📌 If the bot is offline, please send the order format manually.}{color:$get[clr]}}",
 "components": "{actionRow:{button:Click to Order:success:orderForm:no:<:peppapigshoppe:1057625427029540904>}}"
 }]
 $wait[1s]
@@ -17,7 +18,7 @@ $onlyIf[$get[status]==enabled;]
 $let[ticketCatID;$getServerVar[ticketHelper;$guildID;server]]
 $let[status;$getServerVar[ticketStatus;$guildID;server]]
 $let[channelID;$newChannel[id]]
-$let[arrow;<#COLON#arrow2#COLON#1055144562257047702>]
+$let[arrow;<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466>]
 $let[error;❌]
 $let[check;✅]
 $let[clr2;$getServerVar[clr2;$guildID;server]]
@@ -61,7 +62,7 @@ $thumbnail[https://cdn.discordapp.com/attachments/1057866510997139477/1058049552
 
 $onlyIf[$checkContains[$toLowercase[$get[payment]];gcash]==true;]
 
-$interactionReply[;{newEmbed:{author:$userTag:$authorAvatar}{fields:$get[arrow] Name of Item/s#COLON#,\` $get[item] \`,no:$get[arrow] Quantity#COLON#,\` $get[quantity] \`,yes:$get[arrow] Mode of payment#COLON#,\` $get[payment] \`,yes}{footer:Thank you for submitting an order form, please wait for the @yskaela#2022 to process it.}{color:$get[clr]}}]
+$interactionReply[;{newEmbed:{author:$userTag:$authorAvatar}{fields:$get[arrow] Name of Item/s#COLON#,\` $get[item] \`,no:$get[arrow] Quantity#COLON#,\` $get[quantity] \`,yes:$get[arrow] Mode of payment#COLON#,\` $get[payment] \`,yes}{footer:Thank you for submitting an order form, please wait for @yskaela#2022 to process it.}{color:$get[clr]}}]
 
 $let[payment;$textInputValue[orderForm_payment]]
 $let[quantity;$textInputValue[orderForm_quantity]]

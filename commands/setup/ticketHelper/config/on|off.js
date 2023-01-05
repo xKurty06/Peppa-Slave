@@ -13,7 +13,7 @@ module.exports = [{
 $addTimestamp[]
 $color[$get[clr]]
 $footer[$userTag]
-$description[> Ticket Helper System has been succesfully set to \` $getServerVar[ticket;$guildID;server] \`!]
+$description[> Ticket Helper System has been succesfully set to \` $getServerVar[ticketStatus;$guildID;server] \`!]
 $author[║ Ticket Helper System;$authorAvatar]
 $reply[$messageID;no]
 

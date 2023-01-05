@@ -23,7 +23,7 @@ module.exports = {
 		"guildMessageTyping",
 		"guildEmojisAndStickers"
 	],
-	Tables: ["server", "user", "bot", "message", "channel"],
+	Tables: ["server", "user", "bot", "message", "channels"],
 	Caches: [
 		"guilds",
 		"messages",

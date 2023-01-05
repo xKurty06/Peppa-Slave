@@ -15,10 +15,11 @@ const server = http.createServer((req, res) => {
 });
 
 //Callbacks and Events Handler
-require("./handlers/events.js")(loader, bot, Kurt);
+require("./handlers/events/events.js")(loader, bot, Kurt);
 require("./handlers/status.js")(bot);
 require("./handlers/variables.js")(bot);
 require("./handlers/keepAlive.js")(app, bodyParser, express, server);
+require("./handlers/events/onReady.js")(bot, Kurt);
 
 //Custom Function Manager
 require("./handlers/customFunction.js")(bot);

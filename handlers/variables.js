@@ -25,7 +25,7 @@ module.exports = (bot) => {
 		{
 			ticketHelper_format: "false",
 		},
-		"channel"
+		"channels"
 	);
 	bot.variables(
 		// MESSAGE DATABASE
