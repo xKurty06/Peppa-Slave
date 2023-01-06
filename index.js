@@ -11,7 +11,11 @@ const app = express();
 const http = require("http");
 const server = http.createServer((req, res) => {
 	res.writeHead(200);
-	res.end("[ SYSTEM ] ~> The server is now active!");
+	let a = bot.db.ping;
+	let b = bot.ws.ping;
+	let number = a + b;
+	let ping = Math.round(number);
+	res.end(`Peppa's Slave bot is now online and ready to work for "Peppa's Shoppe" server!\n BotPing: ${ping}ms`);
 });
 
 //Callbacks and Events Handler

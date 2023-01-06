@@ -5,7 +5,7 @@ module.exports = (app, bodyParser, express, server) => {
 	app.use(bodyParser.urlencoded({ extended: false }));
 	app.use(express.static("public"));
 	app.get("/", function (req, res) {
-		res.sendFile(path.resolve(__dirname, "/home/runner/Peppa-Slave/src/host/index.html"));
+		res.sendFile("/home/runner/Peppa-Slave/src/host/index.html");
 	});
 
 	let listeningCount = 0;
