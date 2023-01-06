@@ -23,25 +23,5 @@ require("./handlers/events/onReady.js")(bot, Kurt);
 
 //Custom Function Manager
 require("./handlers/customFunction.js")(bot);
-bot.functionManager.createCustomFunction({
-	name: "$transcript",
-	type: "djs",
-	code: async (d) => {
-		const data = d.util.aoiFunc(d)
-		const discordTranscripts = require('discord-html-transcripts');
-		const channel = d.message.channel;
-		const attachment = await discordTranscripts.createTranscript(channel, {
-			limit: -1,
-			returnBuffer: false,
-			fileName: d.channel.name + ".html",
-		});
-		channel.send({
-			files: [attachment]
-		});
-		return {
-			code: d.util.setCode(data)
-		}
-	}
-});
 
 //Commands

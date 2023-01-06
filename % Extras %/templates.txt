@@ -26,7 +26,7 @@ $cooldown[$get[cd];{newEmbed:{description:$get[error] | Hey! Slow down, you have
 $onlyForServers[877873096265170994;]
 $onlyForIDs[$joinSplitText[;];]
 $textSplit[$getVar[botOwners;bot];/]
-$let[arrow;<#COLON#arrow2#COLON#1055144562257047702>]
+$let[arrow;<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466>]
 $let[error;❌]
 $let[check;✅]
 $let[clr2;$getServerVar[clr2;$guildID;server]]
@@ -69,7 +69,7 @@ $cooldown[$get[cd];{newEmbed:{description:$get[error] | Hey! Slow down, you have
 
 $onlyForIDs[$joinSplitText[;];]
 $textSplit[$getVar[owners;bot];/]
-$let[arrow;<#COLON#arrow2#COLON#1055144562257047702>]
+$let[arrow;<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466>]
 $let[error;❌]
 $let[check;✅]
 $let[clr2;$getServerVar[clr2;$guildID;server]]

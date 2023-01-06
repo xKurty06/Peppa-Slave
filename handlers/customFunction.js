@@ -38,6 +38,25 @@ module.exports = (bot) => {
 					code: d.util.setCode(data),
 				};
 			},
+		}, {
+			name: "$transcript",
+			type: "djs",
+			code: async (d) => {
+				const data = d.util.aoiFunc(d)
+				const discordTranscripts = require('discord-html-transcripts');
+				const channel = d.message.channel;
+				const attachment = await discordTranscripts.createTranscript(channel, {
+					limit: -1,
+					returnBuffer: false,
+					fileName: d.channel.name + ".html",
+				});
+				channel.send({
+					files: [attachment]
+				});
+				return {
+					code: d.util.setCode(data)
+				}
+			}
 		}
 		)];
 };
