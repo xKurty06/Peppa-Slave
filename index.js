@@ -1,6 +1,6 @@
 console.log(`[ SYSTEM ] ~> Client starting....`);
 const cfg = require("./src/config.js");
-const Kurt = require("aoi.js");
+const Krt = require("aoi.js");
 const botKey = process.env.TOKEN;
 const kurty = require("./src/bot.js")(botKey, cfg);
 const bot = new Kurt.AoiClient(kurty.Bot);
