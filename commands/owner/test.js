@@ -1,28 +1,7 @@
 module.exports = {
 	name: "test",
 	code: `
-$onlyIf[yes==no;{
-"embeds": "{newEmbed:{author:$get[error] | Wrong format given!}{description:*Please provide a screenshot of your purchase!*}{color:$get[clr2]}{delete:15s}}",
-"reply": {"messageReference": "$messageID"}
-}]
-
-$onlyForIDs[$joinSplitText[;];]
-$textSplit[$getVar[botOwners;bot];/]
-$let[arrow;<#COLON#arrow2#COLON#1055144562257047702>]
-$let[error;❌]
-$let[check;✅]
-$let[clr2;$getServerVar[clr2;$guildID;server]]
-$let[clr;$getServerVar[clr;$guildID;server]]
-$let[params;<X> = Required, \(X?\) = Optional, #RIGHT#A | B | C#LEFT# = Options]
-$let[alias;$commandInfo[$commandName;cmdAliases]]
-$let[category;$commandInfo[$commandName;category]]
-$let[desc;$commandInfo[$commandName;description]]
-$let[cd;$commandInfo[$commandName;cooldown]]
-$let[perms;$commandInfo[$commandName;perms]]
-$let[name;$commandInfo[$commandName;cmdName]]
-$let[usage;$replaceText[$commandInfo[$commandName;usage];<Prefix>;$get[prefix]]]
-$let[example;$replaceText[$commandInfo[$commandName;example];<Prefix>;$get[prefix]]]
-$let[prefix;$getServerVar[prefix;$guildID;server]]
+$messageSlice[1;2]
     `
 };
 

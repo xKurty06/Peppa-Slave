@@ -22,10 +22,11 @@ $suppressErrors
 
 $let[vChannel;$getServerVar[vouchChannel;$guildID;server]]
 $let[status;$getServerVar[vouchStatus;$guildID;server]]
-$let[arrow;<#COLON#arrow2#COLON#1055144562257047702>]
+$let[arrow;<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466>]
 $let[error;❌]
 $let[check;✅]
 $let[clr2;$getServerVar[clr2;$guildID;server]]
 $let[clr;$getServerVar[clr;$guildID;server]]
 $let[prefix;$getServerVar[prefix;$guildID;server]]
-`}
+`
+};

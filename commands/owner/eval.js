@@ -14,17 +14,17 @@ module.exports = [
 		code: `
 $eval[$message;no;yes;yes;no]
 $argsCheck[>0;{newEmbed:{author:║ Wrong Arguments Given!:$authorAvatar}{field:<a:errors_args:903510494751649852> Command's Usage#COLON#:\`\`\`js
-Aliases: #RIGHT#$get[alias]#LEFT#\n~> $get[usage]\n~> $get[example]\`\`\`}{footer:$get[params]}{footer:$get[params]}{color:$get[clr2]}}]
+Aliases: #RIGHT#$get[alias]#LEFT#\n~> $get[usage]\n~> $get[example]\`\`\`}{footer:$get[params]}{color:$get[clr2]}}]
 
 $onlyForIDs[$joinSplitText[;];]
 $textSplit[$getVar[botOwners;bot];/]
 
-$let[arrow;<#COLON#arrow2#COLON#1055144562257047702>]
+$let[arrow;<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466>]
 $let[error;❌]
 $let[check;✅]
 $let[clr2;$getServerVar[clr2;$guildID;server]]
 $let[clr;$getServerVar[clr;$guildID;server]]
-$let[params;<X> = Required, \(X?\) = Optional, #RIGHT#A | B | C#LEFT# = Options]
+$let[params;< > = Required, \( \) = Optional, #RIGHT#a | b | c#LEFT# = Choices]
 $let[alias;$commandInfo[$commandName;cmdAliases]]
 $let[category;$commandInfo[$commandName;category]]
 $let[desc;$commandInfo[$commandName;description]]
@@ -52,14 +52,14 @@ $let[prefix;$getServerVar[prefix;$guildID;server]]
 		code: `
 $eval[$message;no;yes;yes;no]
 $argsCheck[>0;{newEmbed:{author:║ Wrong Arguments Given!:$authorAvatar}{field:<a:errors_args:903510494751649852> Command's Usage#COLON#:\`\`\`js
-Aliases: #RIGHT#$get[alias]#LEFT#\n~> $get[usage]\n~> $get[example]\`\`\`}{footer:$get[params]}{footer:$get[params]}{color:$getServerVar[clr;$guildID;server]}}]
+Aliases: #RIGHT#$get[alias]#LEFT#\n~> $get[usage]\n~> $get[example]\`\`\`}{footer:$get[params]}{color:$getServerVar[clr;$guildID;server]}}]
 $onlyForIDs[$joinSplitText[;];]
 $textSplit[$getVar[botOwners;bot];/]
 $let[error;$get[error]]
 $let[check;✅]
 $let[clr2;$getServerVar[clr2;$guildID;server]]
 $let[clr;$getServerVar[clr;$guildID;server]]
-$let[params;<X> = Required, \(X?\) = Optional, #RIGHT#A | B | C#LEFT# = Options]
+$let[params;< > = Required, \( \) = Optional, #RIGHT#a | b | c#LEFT# = Choices]
 $let[alias;$commandInfo[$commandName;cmdAliases]]
 $let[category;$commandInfo[$commandName;category]]
 $let[desc;$commandInfo[$commandName;description]]
@@ -106,5 +106,6 @@ $let[usage;$replaceText[$commandInfo[$commandName;usage];<Prefix>;$get[prefix]]]
 $let[example;$replaceText[$commandInfo[$commandName;example];<Prefix>;$get[prefix]]]
 $let[prefix;$getServerVar[prefix;$guildID;server]]
 $deletecommand
-`}
+`
+	}
 ];

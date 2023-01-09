@@ -1,6 +1,7 @@
+require("dotenv").config();
 console.log(`[ SYSTEM ] ~> Client starting....`);
 const cfg = require("./src/config.js");
-const Krt = require("aoi.js");
+const Kurt = require("aoi.js");
 const botKey = process.env.TOKEN;
 const kurty = require("./src/bot.js")(botKey, cfg);
 const bot = new Kurt.AoiClient(kurty.Bot);
@@ -15,7 +16,9 @@ const server = http.createServer((req, res) => {
 	let b = bot.ws.ping;
 	let number = a + b;
 	let ping = Math.round(number);
-	res.end(`Peppa's Slave bot is now online and ready to work for "Peppa's Shoppe" server!\n BotPing: ${ping}ms`);
+	res.end(
+		`Peppa's Slave bot is now online and ready to work for "Peppa's Shoppe" server!\n BotPing: ${ping}ms`
+	);
 });
 
 //Callbacks and Events Handler

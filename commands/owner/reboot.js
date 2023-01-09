@@ -4,7 +4,7 @@ module.exports = {
 	aliases: ["rb"],
 	cmdAliases: "rb",
 	category: "Owner",
-	description: "To reboot me (this is only for Bot Owners).",
+	description: "To reboot me (this is only for Bot Developers).",
 	example: "<Prefix>reboot index.js\n<Prefix>reboot",
 	cooldown: "3s",
 	usage: "<Prefix>reboot (path)",
@@ -25,12 +25,12 @@ $cooldown[$get[cd];{newEmbed:{description:$get[error] | Hey! Slow down, you have
 
 $onlyForIDs[$joinSplitText[;];]
 $textSplit[$getVar[botOwners;bot];/]
-$let[arrow;<#COLON#arrow2#COLON#1055144562257047702>]
+$let[arrow;<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466>]
 $let[error;❌]
 $let[check;✅]
 $let[clr2;$getServerVar[clr2;$guildID;server]]
 $let[clr;$getServerVar[clr;$guildID;server]]
-$let[params;<X> = Required, \(X?\) = Optional, #RIGHT#A | B | C#LEFT# = Options]
+$let[params;< > = Required, \( \) = Optional, #RIGHT#a | b | c#LEFT# = Choices]
 $let[alias;$commandInfo[$commandName;cmdAliases]]
 $let[category;$commandInfo[$commandName;category]]
 $let[desc;$commandInfo[$commandName;description]]

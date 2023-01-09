@@ -1,0 +1,6 @@
+{
+	"admin": "setprefix <prefix>",
+	"general": "commands [command name | module]\ndm <user> <message>\nhelp",
+	"botowner": "eval <code>\nexec <command>\nreboot (path)\nshutdown\ntest\nupdateCommands",
+	"setup": "disney\ngcash\ngrammarly\nnetflix\nnitro\norderFormat\nother\npaypal\nquillbot\nreportFormat\nrobux\nrules\nspotify\nterms\nticket [check | on/off | reset | set <ticketCategoryID>]\nverifyBanner\nviu\nvouch [check | on/off | reset | set <channel>]\nwordtune\nyoutube"
+}
