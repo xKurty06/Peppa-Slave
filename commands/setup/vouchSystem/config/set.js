@@ -14,7 +14,7 @@ $addTimestamp
 $color[$get[clr]]
 $footer[$userTag]
 $description[> Vouch Channel has been succesfully set to <#$getServerVar[vouchChannel;$guildID;server]> and system has been \` $getServerVar[vouchStatus;$guildID;server] \`!]
-$author[║ Vouch System Channel;$userAvatar[$authorID]]
+$author[║ Vouch System Channel;$userAvatar]
 $reply[$messageID;no]
 
 $wait[1s]
@@ -24,7 +24,7 @@ $setServerVar[vouchChannel;$get[channelID];$guildID;server]
 
 $onlyIf[$serverChannelExists[$get[channelID]]==true;{newEmbed:{title:$get[error] | I couldn't find \` $message \` channel.}{color:$get[clr2]}}]
 $onlyPerms[manageguild;{newEmbed:{description:$get[error] | You don't have enough permissions <\` $get[perms] \`> to use this command!}{color:$get[clr2]}}]
-$argsCheck[>0;{newEmbed:{author:║ Wrong Arguments Given!:$userAvatar[$authorID]}{field:$get[error] Command's Usage#COLON#:\`\`\`js
+$argsCheck[>0;{newEmbed:{author:║ Wrong Arguments Given!:$userAvatar}{field:$get[error] Command's Usage#COLON#:\`\`\`js
 Aliases: #RIGHT#$get[alias]#LEFT#\n~> Usage:\n$get[usage]\n\n~> Example:\n$get[example]\`\`\`}{footer:$get[params]}{color:$get[clr2]}}]
 $cooldown[$get[cd];{newEmbed:{description:$get[error] | Hey! Slow down, you have to wait until \` %sec%.%ms%s \` before running this command again.}{color:$get[clr2]}}]
 

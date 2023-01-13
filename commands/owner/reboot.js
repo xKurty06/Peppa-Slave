@@ -19,7 +19,7 @@ $deletecommand
 $wait[5s]
 $addCmdReactions[✅]
 
-$argsCheck[<2;{newEmbed:{author:║ Wrong Arguments Given!:$userAvatar[$authorID]}{field:$get[error] Command's Usage#COLON#:\`\`\`js
+$argsCheck[<2;{newEmbed:{author:║ Wrong Arguments Given!:$userAvatar}{field:$get[error] Command's Usage#COLON#:\`\`\`js
 Aliases: #RIGHT#$get[alias]#LEFT#\n~> $get[usage]\`\`\`}{footer:$get[params]}{color:$get[clr2]}}]
 $cooldown[$get[cd];{newEmbed:{description:$get[error] | Hey! Slow down, you have to wait until \` %sec%.%ms%s \` before running this command again.}{color:$get[clr2]}}]
 

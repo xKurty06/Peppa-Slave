@@ -14,13 +14,13 @@ $deletecommand
 $addTimestamp[1]
 $color[1;$get[clr]]
 $footer[1;$userTag]
-$author[1;║ Terminal/Shell;$userAvatar[$authorID]]
+$author[1;║ Terminal/Shell;$userAvatar]
 $addField[1;<:output:937755816637915196> Output:;\`\`\`js
 $get[a]\`\`\`;no]
 $let[a;$exec[$message]]
 
 $addCmdReactions[✅]
-$argsCheck[>0;{newEmbed:{author:║ Wrong Arguments Given!:$userAvatar[$authorID]}{field:$get[error] Command's Usage#COLON#:\`\`\`js
+$argsCheck[>0;{newEmbed:{author:║ Wrong Arguments Given!:$userAvatar}{field:$get[error] Command's Usage#COLON#:\`\`\`js
 Aliases: #RIGHT#$get[alias]#LEFT#\n~> Usage:\n$get[usage]\n\n~> Example:\n$get[example]\`\`\`}{footer:$get[params]}{color:$get[clr2]}}]
 $onlyForIDs[$joinSplitText[;];]
 $textSplit[$getVar[botOwners;bot];/]

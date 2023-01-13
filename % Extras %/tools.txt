@@ -32,7 +32,7 @@ https://youtube.com/c/CodeLyon
 
 ------------------------------------------------------------------------------
 
-https://api.xzusfin.repl.co/card?avatar=$replaceText[$userAvatar[$authorID];.webp;.png;1]?size=2048&middle=Goodbye&name=$replaceText[$replaceText[$username[$authorID]#$discriminator[$authorID];#;%23;-1]; ;%20;-1]&bottom=$replaceText[$serverName[$guildID] now have $membersCount members left!; ;%20;-1]&background=https://cdn.discordapp.com/attachments/789656208276848682/798106281189572645/default11.png&text=%23ffffff&avatarborder=%23FFFFFF&avatarbg=%23FF28b3
+https://api.xzusfin.repl.co/card?avatar=$replaceText[$userAvatar;.webp;.png;1]?size=2048&middle=Goodbye&name=$replaceText[$replaceText[$username[$authorID]#$discriminator[$authorID];#;%23;-1]; ;%20;-1]&bottom=$replaceText[$serverName[$guildID] now have $membersCount members left!; ;%20;-1]&background=https://cdn.discordapp.com/attachments/789656208276848682/798106281189572645/default11.png&text=%23ffffff&avatarborder=%23FFFFFF&avatarbg=%23FF28b3
 
 -------------------------------------------------------------------
 
@@ -74,7 +74,7 @@ $nomention
 $onlyIf[$mentioned[1]!=;Mention someone!]
 $argsCheck[>2;**social activities available**: 1. bite 2. cuddle 3. feed 4. fluff 5. hug 6. kiss 7. lick 8. poke 9. slap 10 tickle and `Remember that the correct usage is .fun <activities> @usermention`]$onlyIf[$checkContains[$message;bite;cuddle;feed;fluff;hug;kiss;lick;pat;poke;slap;tickle]==true; the thing you have set as activity is not vaild! The activities are: `bite` `cuddle` `feed` `fluff` `hug` `kiss` `lick` `pat` `poke` `slap` `tickle`.]
 $author[$username $message[1] $username[$mentioned[1]]]
-$authorIcon[$userAvatar[$authorID]]
+$authorIcon[$userAvatar]
 $thumbnail[$userAvatar[$mentioned[1]]]
 $image[https://purrbot.site/img/sfw/$message[1]/gif/$message[1]_$randomText[001;002;003;004;005;006;007;008;009;010;011;012;013;014;015;016].gif]
 $footer[DEVELOPER BY SAVAGE DEVELOPERS©]
@@ -179,7 +179,7 @@ $nomention
 $image[https://api.no-api-key.com/api/v2/trash?image=$userAvatar[$mentioned[1]]]
 $color[00ffff]
 $author[Trash]
-$authorIcon[$userAvatar[$authorID]]
+$authorIcon[$userAvatar]
 $argsCheck[>1;Man this dude is soo trash that you can't even mention him? Well to actually throw this guy in he trash you need to mention him]
 
  Meme command
@@ -210,7 +210,7 @@ Trigger:
 
 Code:
 $nomention
-$image[https://fuyuumi.ga/api/v1/imagegen/gay?avatar=$userAvatar[$authorID]]
+$image[https://fuyuumi.ga/api/v1/imagegen/gay?avatar=$userAvatar]
 $color[fe5417]
 
 Trigger: 
@@ -218,7 +218,7 @@ Trigger:
 
 Code:
 $nomention
-$image[https://fuyuumi.ga/api/v1/imagegen/batslap?avatar1=$userAvatar[$authorID]&avatar2=$userAvatar[$mentioned[1]]]
+$image[https://fuyuumi.ga/api/v1/imagegen/batslap?avatar1=$userAvatar&avatar2=$userAvatar[$mentioned[1]]]
 $color[fe5417]
 
 Trigger: 
@@ -226,7 +226,7 @@ Trigger:
 
 Code:
 $nomention
-$image[https://fuyuumi.ga/api/v1/imagegen/bobross?avatar=$userAvatar[$authorID]]
+$image[https://fuyuumi.ga/api/v1/imagegen/bobross?avatar=$userAvatar]
 $color[fe5417]
 
 Trigger: 
@@ -234,7 +234,7 @@ Trigger:
 
 Code:
 $nomention
-$image[https://fuyuumi.ga/api/v1/imagegen/beautiful?avatar=$userAvatar[$authorID]]
+$image[https://fuyuumi.ga/api/v1/imagegen/beautiful?avatar=$userAvatar]
 $color[fe5417]
 
 Trigger: 
@@ -242,7 +242,7 @@ Trigger:
 
 Code:
 $nomention
-$image[https://fuyuumi.ga/api/v1/imagegen/rip?avatar=$userAvatar[$authorID]]
+$image[https://fuyuumi.ga/api/v1/imagegen/rip?avatar=$userAvatar]
 $color[fe5417]
 
 Trigger: 
@@ -250,7 +250,7 @@ Trigger:
 
 Code:
 $nomention
-$image[https://fuyuumi.ga/api/v1/imagegen/triggered?avatar=$userAvatar[$authorID]]
+$image[https://fuyuumi.ga/api/v1/imagegen/triggered?avatar=$userAvatar]
 $color[fe5417]
 
 Trigger: 
@@ -258,7 +258,7 @@ Trigger:
 
 Code:
 $nomention
-$image[https://fuyuumi.ga/api/v1/imagegen/wanted?avatar=$userAvatar[$authorID]]
+$image[https://fuyuumi.ga/api/v1/imagegen/wanted?avatar=$userAvatar]
 $color[fe5417]
 
 Trigger: 
@@ -266,7 +266,7 @@ Trigger:
 
 Code:
 $nomention
-$image[https://fuyuumi.ga/api/v1/imagegen/wasted?avatar=$userAvatar[$authorID]]
+$image[https://fuyuumi.ga/api/v1/imagegen/wasted?avatar=$userAvatar]
 $color[fe5417]
 
 
@@ -278,7 +278,7 @@ Stable Mode
 $nomention
 $image[https://api.popcatdev.repl.co/facts?text=$replaceText[$message; ;+;-1]]
 $footer[$username]
-$footerIcon[$userAvatar[$authorID]]
+$footerIcon[$userAvatar]
 $addTimestamp 
 $onlyIf[$guildID!=;You can not use commands in DM's!]
 $color[$random[0;999999]]
@@ -387,7 +387,7 @@ $botTyping
 $suppressErrors[Error Occurred; Please try again later.]
 $deletecommand
 $ignoreTriggerCase
-$footerIcon[$userAvatar[$authorID]] 
+$footerIcon[$userAvatar] 
 
 
 

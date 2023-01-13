@@ -14,13 +14,13 @@ $addTimestamp
 $color[$get[clr]]
 $footer[$userTag]
 $description[> Vouch System has been succesfully reset!]
-$author[║ Vouch System;$userAvatar[$authorID]]
+$author[║ Vouch System;$userAvatar]
 $reply[$messageID;no]
 
 $resetServerVar[vouchStatus;server]
 $resetServerVar[vouchChannel;server]
 $onlyPerms[manageguild;{newEmbed:{description:$get[error] | You don't have enough permissions <\` $get[perms] \`> to use this command!}{color:$get[clr2]}}]
-$argsCheck[0;{newEmbed:{author:║ Wrong Arguments Given!:$userAvatar[$authorID]}{field:$get[error] Command's Usage#COLON#:\`\`\`js
+$argsCheck[0;{newEmbed:{author:║ Wrong Arguments Given!:$userAvatar}{field:$get[error] Command's Usage#COLON#:\`\`\`js
 Aliases: #RIGHT#$get[alias]#LEFT#\n~> Usage:\n$get[usage]\n\n~> Example:\n$get[example]\`\`\`}{footer:$get[params]}{color:$get[clr2]}}]
 $cooldown[$get[cd];{newEmbed:{description:$get[error] | Hey! Slow down, you have to wait until \` %sec%.%ms%s \` before running this command again.}{color:$get[clr2]}}]
 

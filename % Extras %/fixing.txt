@@ -55,4 +55,4 @@ $replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$r
 
 {user.pfp} {user.banner} {server.icon} {server.banner}
 
-$replaceText[$replaceText[$replaceText[$replaceText[aaaaa;{user.pfp};$userAvatar[$authorID]];{user.banner};$authorBanner];{server.icon};$serverIcon];{server.banner};$serverBanner]
+$replaceText[$replaceText[$replaceText[$replaceText[aaaaa;{user.pfp};$userAvatar];{user.banner};$authorBanner];{server.icon};$serverIcon];{server.banner};$serverBanner]

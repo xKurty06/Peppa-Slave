@@ -3,7 +3,7 @@ https://vacefron.nl/api/
 https://api.phydo.repl.co/
 https://popcat.xyz/api
 https://api.willz.repl.co/image/wallet?image=https://assets.poketwo.net/images/257.png&username=Blaziken&discriminator=0000&wallet=100&bank=100&total=200&background=BLUE
-https://api.xzusfin.repl.co/card?avatar=$replaceText[$userAvatar[$authorID];.webp;.png;1]?size=2048&middle=Goodbye&name=$replaceText[$replaceText[$username[$authorID]#$discriminator[$authorID];#;%23;-1]; ;%20;-1]&bottom=$replaceText[$serverName[$guildID] now have $membersCount members left!; ;%20;-1]&background=https://cdn.discordapp.com/attachments/789656208276848682/798106281189572645/default11.png&text=%23ffffff&avatarborder=%23FFFFFF&avatarbg=%23FF28b3
+https://api.xzusfin.repl.co/card?avatar=$replaceText[$userAvatar;.webp;.png;1]?size=2048&middle=Goodbye&name=$replaceText[$replaceText[$username[$authorID]#$discriminator[$authorID];#;%23;-1]; ;%20;-1]&bottom=$replaceText[$serverName[$guildID] now have $membersCount members left!; ;%20;-1]&background=https://cdn.discordapp.com/attachments/789656208276848682/798106281189572645/default11.png&text=%23ffffff&avatarborder=%23FFFFFF&avatarbg=%23FF28b3
 https://api.alexflipnote.dev/filter/magik?image=$userAvatar[$mentioned[>;yes]]?size=2048
 https://ctk-api.herokuapp.com/meme/$random[1;500]
 https://gofaizen.sirv.com/Peepo%20sign%20template.jpeg?text.0.text=$replaceText[$message; ;+;-1]&text.0.position.gravity=center&text.0.position.y=-25%25&text.0.color=000000

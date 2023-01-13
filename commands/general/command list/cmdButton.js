@@ -4,7 +4,7 @@ module.exports = [
 		prototype: "button",
 		$if: "old",
 		code: `
-$interactionUpdate[;{newEmbed:{author:║ Command List | $toLocaleUppercase[$get[customID]]:$serverIcon}{description:\`\`\`js\n$get[result]\`\`\`}{color:$get[clr]}{footer:$get[params]:$userAvatar[$authorID]}};{actionRow:{button:🏠:1:button_cmd_menu_$authorID:no}{button:🐷:1:button_cmd_general_$authorID:no}
+$interactionUpdate[;{newEmbed:{author:║ Command List | $toLocaleUppercase[$get[customID]]:$serverIcon}{description:\`\`\`js\n$get[result]\`\`\`}{color:$get[clr]}{footer:$get[params]:$userAvatar}};{actionRow:{button:🏠:1:button_cmd_menu_$authorID:no}{button:🐷:1:button_cmd_general_$authorID:no}
 {button:⚙️:2:button_cmd_setup_$authorID:no}
 {button:⚠️:2:button_cmd_admin_$authorID:no}
 {button:🗑:4:deleteEmbed:no}}]
@@ -52,7 +52,7 @@ $textSplit[$interactionData[customId];_]
 		code: `
 $interactionUpdate[;{newEmbed:{description:> $get[arrow] Choose a module by clicking the corresponding emojis in a button below.
 
-🐷 = General | ⚙️ = Setup | ⚠️ = Admin | 🗑 = Delete embed | 🏠 = Back to menu}{author:║ Command Info | Module:$serverIcon}{footer:$userTag:$userAvatar[$authorID]}{color:$get[clr]}{timestamp:ms}};{actionRow:{button:🏠:1:button_cmd_menu_$authorID:no}{button:🐷:1:button_cmd_general_$authorID:no}
+🐷 = General | ⚙️ = Setup | ⚠️ = Admin | 🗑 = Delete embed | 🏠 = Back to menu}{author:║ Command Info | Module:$serverIcon}{footer:$userTag:$userAvatar}{color:$get[clr]}{timestamp:ms}};{actionRow:{button:🏠:1:button_cmd_menu_$authorID:no}{button:🐷:1:button_cmd_general_$authorID:no}
 {button:⚙️:2:button_cmd_setup_$authorID:no}
 {button:⚠️:2:button_cmd_admin_$authorID:no}
 {button:🗑:4:deleteEmbed:no}}]
