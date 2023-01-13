@@ -1,4 +1,4 @@
-require("dotenv").config();
+require("dotenv").config({ path: "./src/.env" });
 console.log(`[ SYSTEM ] ~> Client starting...`);
 const cfg = require("./src/config.js");
 const Kurt = require("aoi.js");
