@@ -4,7 +4,7 @@ module.exports = [
 		channel: " ",
 		code: `
 $channelSendMessage[$get[channelID];{
-    "content": "<@&1057491730733207583>",
+    "content": "test",
     "embeds": "{newEmbed:{title:<#COLON#peppapigshoppe_happypeppa#COLON#1060268959724740720> Hello Shopper!}{description:> $get[arrow] | Want to order or report now? Click the Green Button below to make an <:peppapigshoppe:1057625427029540904>Order Form and Red Button for the <:peppapigshoppe_report:1061638968195690577>Report Form!\n\n> 📌 | If the bot is offline, please send the format manually from <#1059307766684073984> channel.}{color:$get[clr]}}",
     "components": "{actionRow:{button:Order here:success:orderForm:no:<:peppapigshoppe:1057625427029540904>}{button:Nitro:danger:nitroReportForm:no:<:peppapigshoppe_report:1061638968195690577>}{button:Premium Acc:danger:premReportForm:no:<:peppapigshoppe_report:1061638968195690577>}}"
 }]
@@ -180,7 +180,7 @@ $channelSendMessage[$channelID;<@$authorID>{newEmbed:{title:$get[arrow] | Always
 
 $onlyIf[$checkContains[$toLowercase[$get[payment]];gcash]==true;<@$authorID>{newEmbed:{title:$get[arrow] | Always remember to send the screenshot of your payment receipt.}{color:$get[clr]}}]
 
-$interactionReply[;{newEmbed:{author:$userTag:$authorAvatar}{title:<:peppapigshoppe:1057625427029540904> | Order Form Submitted!}{fields:$get[arrow] Name of Item/s#COLON#,\` $get[item] \`,no:$get[arrow] Quantity#COLON#,\` $get[quantity] \`,yes:$get[arrow] Mode of payment#COLON#,\` $get[payment] \`,yes}{footer:Thank you for submitting an order form, please wait for @yskaela#2022 to process it shortly.:$userAvatar[$clientID]}{color:$get[clr]}};;;users;no]
+$interactionReply[;{newEmbed:{author:$userTag:$userAvatar[$authorID]}{title:<:peppapigshoppe:1057625427029540904> | Order Form Submitted!}{fields:$get[arrow] Name of Item/s#COLON#,\` $get[item] \`,no:$get[arrow] Quantity#COLON#,\` $get[quantity] \`,yes:$get[arrow] Mode of payment#COLON#,\` $get[payment] \`,yes}{footer:Thank you for submitting an order form, please wait for @yskaela#2022 to process it shortly.:$userAvatar[$clientID]}{color:$get[clr]}};;;users;no]
 $let[payment;$textInputValue[orderForm_payment]]
 $let[quantity;$textInputValue[orderForm_quantity]]
 $let[item;$textInputValue[orderForm_item]]
@@ -199,7 +199,7 @@ $let[prefix;$getServerVar[prefix;$guildID;server]]
 		code: `
 $channelSendMessage[$channelID;<@$authorID>{newEmbed:{description:> $get[arrow] **Always remember to send the screenshot of revoke email (Check your gmail account) and the screenshot/link message of your vouch in <#1057338851359735828>.**}{color:$get[clr]}}]
 $wait[1s]
-$interactionReply[;{newEmbed:{author:$userTag:$authorAvatar}{title:<:peppapigshoppe_report:1061638968195690577> | Nitro Report Form Submitted!}{fields:$get[arrow] Discord User & Tag#COLON#,\` $userTag \`,no:$get[arrow] Nitro Gift link given#COLON#,\` $get[nitroLink] \`,no:$get[arrow] Claimer Usertag#COLON#,\` $get[claimer] \`,yes:$get[arrow] Date of purchase#COLON#,\` $get[datePurchase] \`,yes:$get[arrow] Remaining Days/Months#COLON#,\` $get[dateLeft] \`,yes}{footer:Thank you for submitting report form, please wait for @yskaela#2022 to process it shortly.:$userAvatar[$clientID]}{color:$get[clr]}};;;users;no]
+$interactionReply[;{newEmbed:{author:$userTag:$userAvatar[$authorID]}{title:<:peppapigshoppe_report:1061638968195690577> | Nitro Report Form Submitted!}{fields:$get[arrow] Discord User & Tag#COLON#,\` $userTag \`,no:$get[arrow] Nitro Gift link given#COLON#,\` $get[nitroLink] \`,no:$get[arrow] Claimer Usertag#COLON#,\` $get[claimer] \`,yes:$get[arrow] Date of purchase#COLON#,\` $get[datePurchase] \`,yes:$get[arrow] Remaining Days/Months#COLON#,\` $get[dateLeft] \`,yes}{footer:Thank you for submitting report form, please wait for @yskaela#2022 to process it shortly.:$userAvatar[$clientID]}{color:$get[clr]}};;;users;no]
 
 $let[dateLeft;$textInputValue[nitroReportForm_dateLeft]]
 $let[datePurchase;$textInputValue[nitroReportForm_datePurchase]]
@@ -220,7 +220,7 @@ $let[prefix;$getServerVar[prefix;$guildID;server]]
 		code: `
 $channelSendMessage[$channelID;<@$authorID>{newEmbed:{description:> $get[arrow] **Always remember to send the screenshot of the issue and the screenshot/link message of your vouch in <#1057338851359735828>.**}{color:$get[clr]}}]
 $wait[1s]
-$interactionUpdate[;{newEmbed:{author:$userTag:$authorAvatar}{title:<:peppapigshoppe_report:1061638968195690577> | Premium Acc Form Submitted!}{fields:$get[arrow] Discord User & Tag#COLON#,\` $userTag \`,no:$get[arrow] Premium Item/s Purchased & Subscription/s#COLON#,\` $get[itemSub] \`,no:$get[arrow] Item's Email & Password#COLON#,\` $get[emailPass] \`,no:$get[arrow] Type of Item/s#COLON#,\` $get[typeItem] \`,no:$get[arrow] Replacement Email#COLON#,\` $get[repEmail] \`,no:$get[arrow] Date of Purchase#COLON#,\` $get[datePurchase] \`,no:$get[arrow] Date Reported#COLON#,\` $get[dateNow] \`,no:$get[arrow] Days/Months Used#COLON#,\` $get[dateUsed] \`,no:$get[arrow] Remaining Days/Months#COLON#,\` $get[dateLeft] \`,no:$get[arrow] Issue#COLON#,\` $get[issue] \`,no}{footer:Thank you for submitting report form, please wait for @yskaela#2022 to process it shortly.:$userAvatar[$clientID]}{color:$get[clr]}}]
+$interactionUpdate[;{newEmbed:{author:$userTag:$userAvatar[$authorID]}{title:<:peppapigshoppe_report:1061638968195690577> | Premium Acc Form Submitted!}{fields:$get[arrow] Discord User & Tag#COLON#,\` $userTag \`,no:$get[arrow] Premium Item/s Purchased & Subscription/s#COLON#,\` $get[itemSub] \`,no:$get[arrow] Item's Email & Password#COLON#,\` $get[emailPass] \`,no:$get[arrow] Type of Item/s#COLON#,\` $get[typeItem] \`,no:$get[arrow] Replacement Email#COLON#,\` $get[repEmail] \`,no:$get[arrow] Date of Purchase#COLON#,\` $get[datePurchase] \`,no:$get[arrow] Date Reported#COLON#,\` $get[dateNow] \`,no:$get[arrow] Days/Months Used#COLON#,\` $get[dateUsed] \`,no:$get[arrow] Remaining Days/Months#COLON#,\` $get[dateLeft] \`,no:$get[arrow] Issue#COLON#,\` $get[issue] \`,no}{footer:Thank you for submitting report form, please wait for @yskaela#2022 to process it shortly.:$userAvatar[$clientID]}{color:$get[clr]}}]
 
 $let[dateNow;$formatDate[$dateStamp;dddd, DD MMMM YYYY], $hour:$minute:$second]
 $timezone[Asia/Manila]

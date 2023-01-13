@@ -13,7 +13,7 @@ module.exports = [
 		error: "$channelSendMessage[911995913885581353;```js\nError: $error```]",
 		code: `
 $eval[$message;no;yes;yes;no]
-$argsCheck[>0;{newEmbed:{author:║ Wrong Arguments Given!:$authorAvatar}{field:<a:errors_args:903510494751649852> Command's Usage#COLON#:\`\`\`js
+$argsCheck[>0;{newEmbed:{author:║ Wrong Arguments Given!:$userAvatar[$authorID]}{field:<a:errors_args:903510494751649852> Command's Usage#COLON#:\`\`\`js
 Aliases: #RIGHT#$get[alias]#LEFT#\n~> $get[usage]\n~> $get[example]\`\`\`}{footer:$get[params]}{color:$get[clr2]}}]
 
 $onlyForIDs[$joinSplitText[;];]
@@ -51,7 +51,7 @@ $let[prefix;$getServerVar[prefix;$guildID;server]]
 		$if: "old",
 		code: `
 $eval[$message;no;yes;yes;no]
-$argsCheck[>0;{newEmbed:{author:║ Wrong Arguments Given!:$authorAvatar}{field:<a:errors_args:903510494751649852> Command's Usage#COLON#:\`\`\`js
+$argsCheck[>0;{newEmbed:{author:║ Wrong Arguments Given!:$userAvatar[$authorID]}{field:<a:errors_args:903510494751649852> Command's Usage#COLON#:\`\`\`js
 Aliases: #RIGHT#$get[alias]#LEFT#\n~> $get[usage]\n~> $get[example]\`\`\`}{footer:$get[params]}{color:$getServerVar[clr;$guildID;server]}}]
 $onlyForIDs[$joinSplitText[;];]
 $textSplit[$getVar[botOwners;bot];/]
@@ -90,7 +90,7 @@ $message
 channel.send("**Source Error:**\`\`\`js\\n" + err + "\`\`\`")
 };no]
 
-$argsCheck[>0;{newEmbed:{author:║ Wrong Arguments Given!:$authorAvatar}{field:<a:errors_args:903510494751649852> $toLocaleUppercase[$get[name]]'s Usage#COLON#:\`\`\`js
+$argsCheck[>0;{newEmbed:{author:║ Wrong Arguments Given!:$userAvatar[$authorID]}{field:<a:errors_args:903510494751649852> $toLocaleUppercase[$get[name]]'s Usage#COLON#:\`\`\`js
 Aliases: #RIGHT#$get[alias]#LEFT#\n~> $get[usage]\n~> $get[example]\`\`\`}{footer:$get[params]}{color:$get[clr2]}}]
 $onlyForIDs[$joinSplitText[;];]
 $textSplit[$getVar[botOwners;bot];/]

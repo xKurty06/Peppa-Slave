@@ -20,7 +20,7 @@ $if[$checkContains[$get[msg2];bot;all;unpins]]
     $color[$get[clr]]
     $footer[$userTag]
     $description[> 🧹 Successfully cleared \` $get[result] \` messages from \` bots \` in this channel.]
-    $author[║ Purge;$authorAvatar]
+    $author[║ Purge;$userAvatar[$authorID]]
     $let[result;$clear[$get[msg1];$authorID;yes;$channelID]]
     $wait[1s]
 
@@ -29,7 +29,7 @@ $if[$checkContains[$get[msg2];bot;all;unpins]]
     $color[$get[clr]]
     $footer[$userTag]
     $description[> 🧹 Successfully cleared \` $get[result] \` messages from \` everyone \` in this channel.]
-    $author[║ Purge;$authorAvatar]
+    $author[║ Purge;$userAvatar[$authorID]]
     $let[result;$clear[$get[msg1];$authorID;yes;$channelID]]
     $wait[1s]
     $endelseif
@@ -39,7 +39,7 @@ $if[$checkContains[$get[msg2];bot;all;unpins]]
     $color[$get[clr]]
     $footer[$userTag]
     $description[> 🧹 Successfully cleared \` $get[result] \` messages from \` unpinned \` messages in this channel.]
-    $author[║ Purge;$authorAvatar]
+    $author[║ Purge;$userAvatar[$authorID]]
     $let[result;$clear[$get[msg1];$authorID;yes;$channelID]]
     $wait[1s]
 
@@ -51,7 +51,7 @@ $else
     $color[$get[clr]]
     $footer[$userTag]
     $description[> 🧹 Successfully cleared \` $get[result] \` messages from <@$get[user]> in this channel.]
-    $author[║ Purge;$authorAvatar]
+    $author[║ Purge;$userAvatar[$authorID]]
     $let[result;$clear[$get[msg1];$authorID;yes;$channelID]]
     $wait[1s]
 
@@ -60,7 +60,7 @@ $else
     $color[$get[clr]]
     $footer[$userTag]
     $description[> 🧹 Successfully cleared \` $get[result] \` messages from \` everyone1 \` in this channel.]
-    $author[║ Purge;$authorAvatar]
+    $author[║ Purge;$userAvatar[$authorID]]
     $let[result;$clear[$get[msg1];$authorID;yes;$channelID]]
     $wait[1s]
 
@@ -68,9 +68,9 @@ $else
 $endif
 
 $deletecommand
-$onlyIf[$isNumber[$get[msg1]]==true;{newEmbed:{author:║ Invalid Amount:$authorAvatar}{description:> $get[error] | Please provide a valid amount of messages to clear!}{color:$get[clr2]}}]
+$onlyIf[$isNumber[$get[msg1]]==true;{newEmbed:{author:║ Invalid Amount:$userAvatar[$authorID]}{description:> $get[error] | Please provide a valid amount of messages to clear!}{color:$get[clr2]}}]
 $onlyPerms[managemessages;{newEmbed:{description:$get[error] | You don't have enough permissions <\` $get[perms] \`> to use this command!}{color:$get[clr2]}}]
-$argsCheck[>0;{newEmbed:{author:║ Wrong Arguments Given!:$authorAvatar}{field:$get[error] Command's Usage#COLON#:\`\`\`js
+$argsCheck[>0;{newEmbed:{author:║ Wrong Arguments Given!:$userAvatar[$authorID]}{field:$get[error] Command's Usage#COLON#:\`\`\`js
 Aliases: #RIGHT#$get[alias]#LEFT#\n~> Usage:\n$get[usage]\n\n~> Example:\n$get[example]\`\`\`}{footer:$get[params]}{color:$get[clr2]}}]
 $cooldown[$get[cd];{newEmbed:{description:$get[error] | Hey! Slow down, you have to wait until \` %sec%.%ms%s \` before running this command again.}{color:$get[clr2]}}]
 

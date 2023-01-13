@@ -15,7 +15,7 @@ module.exports = {
 $if[$toLowercase[$message]==module||$toLowercase[$message]==modules]
 $addTimestamp
 $color[$get[clr]]
-$footer[$userTag;$authorAvatar]
+$footer[$userTag;$userAvatar[$authorID]]
 $addButton[1;🗑;4;deleteEmbed;no;]
 $addButton[1;⚠️;2;button_cmd_admin_$authorID;no;]
 $addButton[1;⚙️;2;button_cmd_setup_$authorID;no;]
@@ -32,7 +32,7 @@ $else
 $if[$get[perms&]==none]
 $addTimestamp
 $color[$get[clr]]
-$footer[$userTag;$authorAvatar]
+$footer[$userTag;$userAvatar[$authorID]]
 $addField[__Category__;\` $get[category&] \`;yes]
 $addField[__Cooldown__;\` $get[cd&] \`;yes]
 $addField[__Perms__;\` $get[perms&] \`;yes]
@@ -51,7 +51,7 @@ $else
 
 $addTimestamp
 $color[$get[clr]]
-$footer[$userTag;$authorAvatar]
+$footer[$userTag;$userAvatar[$authorID]]
 $addField[__Category__;\` $get[category&] \`;yes]
 $addField[__Cooldown__;\` $get[cd&] \`;yes]
 $addField[__Perms__;\` $get[perms&] \`;yes]
@@ -70,13 +70,13 @@ $reply[$messageID;no]
 $if[$toLowercase[$message]==module||$toLowercase[$message]==modules]
 $let[lala;la]
 $else
-$onlyIf[$checkContains[$userPerms;$get[uperms]]==true;{newEmbed:{author:║ Excluded Commands!:$authorAvatar}{description:> $get[error] | The command requires the \` $get[perms&] \` permission.}{color:$get[clr2]}}]
+$onlyIf[$checkContains[$userPerms;$get[uperms]]==true;{newEmbed:{author:║ Excluded Commands!:$userAvatar[$authorID]}{description:> $get[error] | The command requires the \` $get[perms&] \` permission.}{color:$get[clr2]}}]
 
-$onlyIf[$get[category&]!=Owner;{newEmbed:{author:║ Excluded Commands!:$authorAvatar}{description:> $get[error] | The command is not included in the command list and is only for bot developer.}{color:$get[clr2]}}]
+$onlyIf[$get[category&]!=Owner;{newEmbed:{author:║ Excluded Commands!:$userAvatar[$authorID]}{description:> $get[error] | The command is not included in the command list and is only for bot developer.}{color:$get[clr2]}}]
 $let[uperms;$replaceText[$toLowercase[$get[perms&]]; ;]]
 $endif
 
-$onlyIf[$get[name&]!=;{newEmbed:{author:║ Not Found!:$authorAvatar}{description:> $get[error] | The command/module \` $message \` doesn't even exists!}{color:$get[clr2]}}]
+$onlyIf[$get[name&]!=;{newEmbed:{author:║ Not Found!:$userAvatar[$authorID]}{description:> $get[error] | The command/module \` $message \` doesn't even exists!}{color:$get[clr2]}}]
 
 $let[alias&;$commandInfo[$message;cmdAliases]]
 $let[category&;$commandInfo[$message;category]]
@@ -89,7 +89,7 @@ $let[example&;$replaceText[$commandInfo[$message;example];<Prefix>;$get[prefix]]
 $endif
 $endif
 
-$argsCheck[>0;{newEmbed:{author:║ Wrong Arguments Given!:$authorAvatar}{field:$get[error] Command's Usage#COLON#:\`\`\`js
+$argsCheck[>0;{newEmbed:{author:║ Wrong Arguments Given!:$userAvatar[$authorID]}{field:$get[error] Command's Usage#COLON#:\`\`\`js
 Aliases: #RIGHT#$get[alias]#LEFT#\n~> Usage:\n$get[usage]\n\n~> Example:\n$get[example]\`\`\`}{footer:$get[params]}{color:$get[clr2]}}]
 $cooldown[$get[cd];{newEmbed:{description:$get[error] | Hey! Slow down, you have to wait until \` %sec%.%ms%s \` before running this command again.}{color:$get[clr2]}}]
 

@@ -15,14 +15,14 @@ $addTimestamp
 $reply[$messageID;no]
 $color[$get[clr]]
 $footer[$userTag]
-$author[║ Changed the prefix for this server to: $message;$authorAvatar]
+$author[║ Changed the prefix for this server to: $message;$userAvatar[$authorID]]
 $setServerVar[prefix;$message;$guildID;server]
 
 $argsCheck[1;{newEmbed:{description:$get[error] | Oops, you included some *space*, your Prefix should be no *space*. }{color:$get[clr2]}}]
 $onlyIf[$checkCondition[$charCount[$message]<6]==true;{newEmbed:{description:$get[error] | Too long, your prefix must be \` 5 \` or below characters only and no spaces!}{color:$get[clr2]}}]
 $onlyPerms[manageguild;{newEmbed:{description:$get[error] | You don't have enough permissions <\` $get[perms] \`> to use this command.}{color:$get[clr2]}}]
 $reply[$messageID;no]
-$argsCheck[>0;{newEmbed:{author:║ Wrong Arguments Given!:$authorAvatar}{field:$get[aerror] Command's Usage#COLON#:\`\`\`js
+$argsCheck[>0;{newEmbed:{author:║ Wrong Arguments Given!:$userAvatar[$authorID]}{field:$get[aerror] Command's Usage#COLON#:\`\`\`js
 Aliases: #RIGHT#$get[alias]#LEFT#\n~> $get[usage]\n~> $get[example]\`\`\`}{footer:$get[params]}{color:$get[clr2]}}]
 $cooldown[$get[cd];{newEmbed:{description:$get[error] | Hey! Slow down, you have to wait until \` %sec%.%ms%s \` before running this command again.}{color:$get[clr2]}}]
 
