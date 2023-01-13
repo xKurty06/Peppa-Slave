@@ -11,17 +11,18 @@ module.exports = {
 		"<@!$clientID>"
 	],
 	Intents: [
-		"guilds",
-		"guildMembers",
-		"guildBans",
-		"guildIntegrations",
-		"guildInvites",
-		"guildVoiceStates",
-		"guildPresences",
-		"guildMessages",
-		"guildMessageReactions",
-		"guildMessageTyping",
-		"guildEmojisAndStickers"
+		"MessageContent",
+		"Guilds",
+		"GuildMembers",
+		"GuildBans",
+		"GuildIntegrations",
+		"GuildInvites",
+		"GuildVoiceStates",
+		"GuildPresences", 
+		"GuildMessages",
+		"GuildMessageReactions",
+		"GuildMessageTyping",
+		"GuildEmojisAndStickers"
 	],
 	Tables: ["server", "user", "bot", "message", "chnnls"],
 	Caches: [

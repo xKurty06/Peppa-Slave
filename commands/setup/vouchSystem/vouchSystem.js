@@ -1,15 +1,15 @@
 module.exports = {
 	name: "$alwaysExecute",
 	code: `
-<:peppapig:1057625427029540904> ***Thank you for vouching, your warranty has been activated!*** <:peppapig:1057625427029540904>
+<:peppapig:1057625427029540904> ***Thank you for vouching! your warranty has been activated.*** <:peppapig:1057625427029540904>
 $reply[$messageID;yes]
 
-$onlyIf[$get[attch]!=;{newEmbed:{author:$get[error] | Wrong format given!}{description:*Please provide a screenshot of your purchase!*}{color:$get[clr2]}}",
+$onlyIf[$get[attch]!=;{newEmbed:{title:$get[error] | Wrong format given!}{description:*Please provide a screenshot of your purchase!*}{color:$get[clr2]}}",
 "reply": {"messageReference": "$messageID"},
 "options": "{delete:15s}"
 }]
 $onlyIf[$checkContains[$message;vouch;Vouch]==true;{
-"embeds": "{newEmbed:{author:$get[error] | Wrong format given!}{description:**Proper Format:** *\` - vouch @yskaela#2022 for 1 pc of Nitro Boost, tysm! \`*}{color:$get[clr2]}}",
+"embeds": "{newEmbed:{title:$get[error] | Wrong format given!}{description:**Proper Format:** *\` - vouch @$userTag[886620575735373825] for 1 pc of Nitro Boost, tysm! \`*}{color:$get[clr2]}}",
 "reply": {"messageReference": "$messageID"},
 "options": "{delete:15s}"
 }]

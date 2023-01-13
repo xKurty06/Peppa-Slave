@@ -48,7 +48,7 @@ $let[prefix;$getServerVar[prefix;$guildID;server]]
 		usage: "<Prefix>eval <code>",
 		perms: "none",
 		error: "$channelSendMessage[911995913885581353;```js\nError: $error```]",
-		$if: "v4",
+		$if: "old",
 		code: `
 $eval[$message;no;yes;yes;no]
 $argsCheck[>0;{newEmbed:{author:║ Wrong Arguments Given!:$authorAvatar}{field:<a:errors_args:903510494751649852> Command's Usage#COLON#:\`\`\`js

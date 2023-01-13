@@ -55,7 +55,7 @@ $addTimestamp
 $color[$get[clr]]
 $footer[$userTag]
 $author[║ My prefix;$authorAvatar]
-$description[ ឵឵ ឵឵ ឵឵឵឵>> Hey **$username**!My prefix for this server is **\` $get[prefix] \`**, $if[$checkUserPerms[$authorID;manageserver]==true; you can customize it by running this command \` $get[prefix]prefix <prefix> \`]]
+$description[ ឵឵ ឵឵ ឵឵឵឵>> Hey **$username**!My prefix for this server is **\` $get[prefix] \`**, $if[$checkUserPerms[$authorID;manageguild]==true; you can customize it by running this command \` $get[prefix]prefix <prefix> \`]]
 $reply[$messageID;no]
 
 $cooldown[$get[cd];]

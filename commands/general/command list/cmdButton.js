@@ -2,7 +2,7 @@ module.exports = [
 	{
 		type: "interaction",
 		prototype: "button",
-		$if: "v4",
+		$if: "old",
 		code: `
 $interactionUpdate[;{newEmbed:{author:║ Command List | $toLocaleUppercase[$get[customID]]:$serverIcon}{description:\`\`\`js\n$get[result]\`\`\`}{color:$get[clr]}{footer:$get[params]:$authorAvatar}};{actionRow:{button:🏠:1:button_cmd_menu_$authorID:no}{button:🐷:1:button_cmd_general_$authorID:no}
 {button:⚙️:2:button_cmd_setup_$authorID:no}
@@ -48,7 +48,7 @@ $textSplit[$interactionData[customId];_]
 	{
 		type: "interaction",
 		prototype: "button",
-		$if: "v4",
+		$if: "old",
 		code: `
 $interactionUpdate[;{newEmbed:{description:> $get[arrow] Choose a module by clicking the corresponding emojis in a button below.
 

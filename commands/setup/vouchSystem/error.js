@@ -13,7 +13,7 @@ module.exports = {
 	perms: "Manage Server",
 	code: `
 
-$onlyPerms[manageserver;]
+$onlyPerms[manageguild;]
 $argsCheck[>0;{newEmbed:{author:║ Command Info!:$authorAvatar}{field:$get[arrow] Command's Usage#COLON#:\`\`\`js
 Aliases: #RIGHT#$get[alias]#LEFT#\n~> Usage:\n$get[usage]\n\n~> Example:\n$get[example]\`\`\`}{footer:$get[params]}{color:$get[clr2]}}]
 $cooldown[$get[cd];{newEmbed:{description:$get[error] | Hey! Slow down, you have to wait until \` %sec%.%ms%s \` before running this command again.}{color:$get[clr2]}}]

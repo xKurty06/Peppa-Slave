@@ -15,9 +15,9 @@ $title[・──── __*R O B U X*__ ────・]
 $description[ ឵឵឵឵
  ឵឵឵឵
 ・─  **PRICES**\`\`\`
-✦ ₱270.00 = 1k robux (covered tax)
+✦ ₱280.00 = 1k robux (covered tax)
 ✦ ₱200.00 = 1k robux (not covered tax)
-✦ ₱50.00 = 100 robux (tingi-tingi)\`\`\`
+✦ ₱40.00 = 100 robux (tingi-tingi)\`\`\`
 
 ・─  **NOTE**\`\`\`
 ⤿ Payment via game pass/shirt.

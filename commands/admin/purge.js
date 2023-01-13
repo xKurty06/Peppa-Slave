@@ -11,7 +11,7 @@ module.exports = {
 	cooldown: "5s",
 	usage: "<Prefix>purge <amount> (unPins | all | user | bot)",
 	perms: "Manage Messages",
-	$if: "v4",
+	$if: "old",
 	code: `
 $get[msg2]
 $if[$checkContains[$get[msg2];bot;all;unpins]]

@@ -9,10 +9,10 @@ module.exports = {
 	cooldown: "3s",
 	usage: "<Prefix>commands [command name | module]",
 	perms: "",
-	$if: "v4",
+	$if: "old",
 	code: `
 
-$if[$checkContains[$toLowercase[$message];module]==true]
+$if[$toLowercase[$message]==module||$toLowercase[$message]==modules]
 $addTimestamp
 $color[$get[clr]]
 $footer[$userTag;$authorAvatar]
@@ -66,6 +66,10 @@ $get[example&]\`\`\`]
 $author[║ Command Info | $get[name&];$serverIcon]
 $reply[$messageID;no]
 
+
+$if[$toLowercase[$message]==module||$toLowercase[$message]==modules]
+$let[lala;la]
+$else
 $onlyIf[$checkContains[$userPerms;$get[uperms]]==true;{newEmbed:{author:║ Excluded Commands!:$authorAvatar}{description:> $get[error] | The command requires the \` $get[perms&] \` permission.}{color:$get[clr2]}}]
 
 $onlyIf[$get[category&]!=Owner;{newEmbed:{author:║ Excluded Commands!:$authorAvatar}{description:> $get[error] | The command is not included in the command list and is only for bot developer.}{color:$get[clr2]}}]
@@ -73,6 +77,7 @@ $let[uperms;$replaceText[$toLowercase[$get[perms&]]; ;]]
 $endif
 
 $onlyIf[$get[name&]!=;{newEmbed:{author:║ Not Found!:$authorAvatar}{description:> $get[error] | The command/module \` $message \` doesn't even exists!}{color:$get[clr2]}}]
+
 $let[alias&;$commandInfo[$message;cmdAliases]]
 $let[category&;$commandInfo[$message;category]]
 $let[desc&;$commandInfo[$message;description]]
@@ -81,6 +86,7 @@ $let[perms&;$commandInfo[$message;perms]]
 $let[name&;$commandInfo[$message;cmdName]]
 $let[usage&;$replaceText[$commandInfo[$message;usage];<Prefix>;$get[prefix]]]
 $let[example&;$replaceText[$commandInfo[$message;example];<Prefix>;$get[prefix]]]
+$endif
 $endif
 
 $argsCheck[>0;{newEmbed:{author:║ Wrong Arguments Given!:$authorAvatar}{field:$get[error] Command's Usage#COLON#:\`\`\`js
