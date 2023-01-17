@@ -13,7 +13,8 @@ module.exports = {
 $addTimestamp
 $color[$get[clr]]
 $footer[$userTag]
-$addFields[0;TCategory#COLON#:$get[resultChannel]:yes;Status#COLON#:\` $get[status] \`:yes]
+$addField[Status#COLON#;\` $get[status] \`;yes]
+$addField[Ticket Category#COLON#;$get[resultChannel];yes]
 $author[║ Ticket Helper System;$userAvatar]
 $reply[$messageID;no]
 

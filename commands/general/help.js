@@ -14,7 +14,11 @@ module.exports = [
 $addTimestamp
 $color[$get[clr]]
 $footer[$userTag;$userAvatar]
-$addFields[0;Server Prefix#COLON#:\` $get[prefix] \`:yes;Commands Count (all)#COLON#:\` $get[cmdCount] \`:yes; ឵឵឵឵:\n> $get[arrow] Curious what am I for? Well I'm a bot focuses on helping \` $serverName[1057338848247554111] \` server only, just to help improve and to make life easier for members.\n\n> $get[arrow] Need any help using $client[user.username] bot? Run the command \` $get[prefix]commands \` to learn more about my commands. If you want know about my specific commands or modules then run the command \` $get[prefix]command <command name/module> \`:no;Additional Resources#COLON#:#RIGHT#\`Server Invite\`#LEFT#(https#COLON#//dsc.gg/peppashoppe) | #RIGHT#\`DM to avail\`#LEFT#(https#COLON#//discord.com/users/886620575735373825) | #RIGHT#\`Bump Server\`#LEFT#(https#COLON#//disboard.org/server/1057338848247554111) | #RIGHT#\`Bot dev\`#LEFT#(https#COLON#//disboard.org/server/698595070198415421)]
+$addField[Server Prefix#COLON#;\` $get[prefix] \`;yes]
+
+$addField[Additional Resources#COLON#;#RIGHT#\`Server Invite\`#LEFT#(https#COLON#//dsc.gg/peppashoppe) | #RIGHT#\`DM to avail\`#LEFT#(https#COLON#//discord.com/users/886620575735373825) | #RIGHT#\`Bump Server\`#LEFT#(https#COLON#//disboard.org/server/1057338848247554111) | #RIGHT#\`Bot dev\`#LEFT#(https#COLON#//disboard.org/server/698595070198415421);no]
+$addField[ ឵឵឵឵;\n> $get[arrow] Curious what am I for? Well I'm a bot focuses on helping \` $serverName[1057338848247554111] \` server only, just to help improve and to make life easier for members.\n\n> $get[arrow] Need any help using $client[user.username] bot? Run the command \` $get[prefix]commands \` to learn more about my commands. If you want know about my specific commands or modules then run the command \` $get[prefix]command <command name/module> \`;no]
+$addField[Commands Count (all)#COLON#;\` $get[cmdCount] \`;yes]
 $author[║ Help Panel;$serverIcon]
 $reply[$messageID;no]
 

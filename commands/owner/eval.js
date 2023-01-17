@@ -10,12 +10,13 @@ module.exports = [
 		example: "<Prefix>eval $authorID",
 		usage: "<Prefix>eval <code>",
 		perms: "none",
-		error: "$channelSendMessage[911995913885581353;```js\nError: $error```]",
+		error: "$channelSendMessage[$channelID;```js\nError: $error```]",
 		code: `
 $eval[$message;no;yes;yes;no]
 $argsCheck[>0;{newEmbed:{author:║ Wrong Arguments Given!:$userAvatar}{field:<a:errors_args:903510494751649852> Command's Usage#COLON#:\`\`\`js
 Aliases: #RIGHT#$get[alias]#LEFT#\n~> $get[usage]\n~> $get[example]\`\`\`}{footer:$get[params]}{color:$get[clr2]}}]
 
+$deletecommand
 $onlyForIDs[$joinSplitText[;];]
 $textSplit[$getVar[botOwners;bot];/]
 

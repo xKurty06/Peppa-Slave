@@ -3,11 +3,7 @@ module.exports = [
 		type: "channelCreate",
 		channel: " ",
 		code: `
-$channelSendMessage[$get[channelID];{
-    "content": "test",
-    "embeds": "{newEmbed:{title:<#COLON#peppapigshoppe_happypeppa#COLON#1060268959724740720> Hello Shopper!}{description:> $get[arrow] | Want to order or report now? Click the Green Button below to make an <:peppapigshoppe:1057625427029540904>Order Form and Red Button for the <:peppapigshoppe_report:1061638968195690577>Report Form!\n\n> 📌 | If the bot is offline, please send the format manually from <#1059307766684073984> channel.}{color:$get[clr]}}",
-    "components": "{actionRow:{button:Order here:success:orderForm:no:<:peppapigshoppe:1057625427029540904>}{button:Nitro:danger:nitroReportForm:no:<:peppapigshoppe_report:1061638968195690577>}{button:Premium Acc:danger:premReportForm:no:<:peppapigshoppe_report:1061638968195690577>}}"
-}]
+$channelSendMessage[$channelID;<@&1057491730733207583>{newEmbed:{title:<#COLON#peppapigshoppe_happypeppa#COLON#1060268959724740720> Hello Shopper!}{description:> <a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466> | Want to order or report now? Click the Green Button below to make an <:peppapigshoppe:1057625427029540904>Order Form and Red Button for the <:peppapigshoppe_report:1061638968195690577>Report Form!\n\n> 📌 | If the bot is offline, please send the format manually from <#1059307766684073984> channel.}{color:$get[clr]}}{actionRow:{button:Order here:success:orderForm:no:<#COLON#peppapigshoppe#COLON#1057625427029540904>}{button:Nitro:danger:nitroReportForm:no:<#COLON#peppapigshoppe_report#COLON#1061638968195690577>}{button:Premium Acc:danger:premReportForm:no:<#COLON#peppapigshoppe_report#COLON#1061638968195690577>}}]
 $wait[3s]
 
 $onlyIf[$isNumber[$splitText[2]]==true;]
@@ -89,7 +85,7 @@ $let[prefix;$getServerVar[prefix;$guildID;server]]
 		prototype: "modal",
 		type: "interaction",
 		code: `
-$interactionReply[;<@$authorID>{newEmbed:{title:$get[arrow] | Please proceed to the next step: 2/2}{color:$get[clr]}};{actionRow:{button:Step 2/2:success:premReportForm_step2:no:}};;users;no]
+$interactionReply[<@$authorID>;{newEmbed:{title:$get[arrow] | Please proceed to the next step: 2/2}{color:$get[clr]}};{actionRow:{button:Step 2/2:success:premReportForm_step2:no}};;users;no]
 $setChannelVar[datePurchase;$get[datePurchase];$channelID;chnnls]
 $setChannelVar[repEmail;$get[repEmail];$channelID;chnnls]
 $setChannelVar[typeItem;$get[typeItem];$channelID;chnnls]
@@ -115,18 +111,20 @@ $let[prefix;$getServerVar[prefix;$guildID;server]]
 		type: "interaction",
 		code: `
 $setChannelVar[lastPremRepFormMsgID;$messageID;$channelID;chnnls]
-$editMessage[$messageID;<@$authorID>{newEmbed:{title:<a:peppapigshoppe_loading:1061990355484037120> | Processing...}{color:$get[clr]}}]
+$interactionEdit[<@$authorID>;{newEmbed:{title:<a:peppapigshoppe_loading:1061990355484037120> | Processing...}{color:$get[clr]}};{actionRow:{button:Step 2/2:success:premReportForm_step2:yes}};;users;no]
+
 $interactionModal[Fill the report form: 2/2;premReportForm2;
     {actionRow:
-      {textInput:⤿ Days/Months used:1:premReportForm_dateUsed:yes:e.g#COLON# 3days/1month used:1:50}
+		{textInput:⤿ Days/Months used:1:premReportForm_dateUsed:yes:e.g#COLON# 3days/1month used:1:50}
     }
     {actionRow:
-      {textInput:⤿ Remaining Days/Months:1:premReportForm_dateLeft:yes:e.g#COLON# 28days left/11months left:1:50}
+		{textInput:⤿ Remaining Days/Months:1:premReportForm_dateLeft:yes:e.g#COLON# 28days left/11months left:1:50}
     }
     {actionRow:
-      {textInput:⤿ Issue:1:premReportForm_issue:yes:e.g#COLON# Cannot open account or invalid...etc.:1:500}
+		{textInput:⤿ Issue:1:premReportForm_issue:yes:e.g#COLON# Cannot open account or invalid...etc.:1:500}
     }
-  ]
+	]
+$log[>> "$messageID"]
 
 $let[arrow;<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466>]
 $let[error;❌]
@@ -176,11 +174,11 @@ $description[\`\`\`fix
 ~> No rush orders. We're doing all we can to get you your item/s as soon as possible.\`\`\`]
 $thumbnail[https://cdn.discordapp.com/attachments/1057866510997139477/1058049552906727516/IMG_4416.png]
 $wait[2s]
-$channelSendMessage[$channelID;<@$authorID>{newEmbed:{title:$get[arrow] | Always remember to send the screenshot of your payment receipt.}{color:$get[clr]}}]
+$channelSendMessage[$channelID;<@$authorID>{newEmbed:{title:<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466> | Always remember to send the screenshot of your payment receipt.}{color:$get[clr]}}]
 
-$onlyIf[$checkContains[$toLowercase[$get[payment]];gcash]==true;<@$authorID>{newEmbed:{title:$get[arrow] | Always remember to send the screenshot of your payment receipt.}{color:$get[clr]}}]
+$onlyIf[$checkContains[$toLowercase[$get[payment]];gcash]==true;<@$authorID>{newEmbed:{title:<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466> | Always remember to send the screenshot of your payment receipt.}{color:$get[clr]}}]
 
-$interactionReply[;{newEmbed:{author:$userTag:$userAvatar}{title:<:peppapigshoppe:1057625427029540904> | Order Form Submitted!}{fields:$get[arrow] Name of Item/s#COLON#,\` $get[item] \`,no:$get[arrow] Quantity#COLON#,\` $get[quantity] \`,yes:$get[arrow] Mode of payment#COLON#,\` $get[payment] \`,yes}{footer:Thank you for submitting an order form, please wait for @yskaela#2022 to process it shortly.:$userAvatar[$clientID]}{color:$get[clr]}};;;users;no]
+$interactionReply[;{newEmbed:{author:$userTag:$userAvatar}{title:<:peppapigshoppe:1057625427029540904> | Order Form Submitted!}{fields:<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466> Name of Item/s#COLON#,\` $get[item] \`,no:$get[arrow] Quantity#COLON#,\` $get[quantity] \`,yes:$get[arrow] Mode of payment#COLON#,\` $get[payment] \`,yes}{footer:Thank you for submitting an order form, please wait for @yskaela#2022 to process it shortly.:$userAvatar[$clientID]}{color:$get[clr]}};;;users;no]
 $let[payment;$textInputValue[orderForm_payment]]
 $let[quantity;$textInputValue[orderForm_quantity]]
 $let[item;$textInputValue[orderForm_item]]
@@ -197,7 +195,7 @@ $let[prefix;$getServerVar[prefix;$guildID;server]]
 		prototype: "modal",
 		type: "interaction",
 		code: `
-$channelSendMessage[$channelID;<@$authorID>{newEmbed:{description:> $get[arrow] **Always remember to send the screenshot of revoke email (Check your gmail account) and the screenshot/link message of your vouch in <#1057338851359735828>.**}{color:$get[clr]}}]
+$channelSendMessage[$channelID;<@$authorID>{newEmbed:{description:> <a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466> **Always remember to send the screenshot of revoke email (Check your gmail account) and the screenshot/link message of your vouch in <#1057338851359735828>.**}{color:$get[clr]}}]
 $wait[1s]
 $interactionReply[;{newEmbed:{author:$userTag:$userAvatar}{title:<:peppapigshoppe_report:1061638968195690577> | Nitro Report Form Submitted!}{fields:$get[arrow] Discord User & Tag#COLON#,\` $userTag \`,no:$get[arrow] Nitro Gift link given#COLON#,\` $get[nitroLink] \`,no:$get[arrow] Claimer Usertag#COLON#,\` $get[claimer] \`,yes:$get[arrow] Date of purchase#COLON#,\` $get[datePurchase] \`,yes:$get[arrow] Remaining Days/Months#COLON#,\` $get[dateLeft] \`,yes}{footer:Thank you for submitting report form, please wait for @yskaela#2022 to process it shortly.:$userAvatar[$clientID]}{color:$get[clr]}};;;users;no]
 
@@ -218,7 +216,7 @@ $let[prefix;$getServerVar[prefix;$guildID;server]]
 		prototype: "modal",
 		type: "interaction",
 		code: `
-$channelSendMessage[$channelID;<@$authorID>{newEmbed:{description:> $get[arrow] **Always remember to send the screenshot of the issue and the screenshot/link message of your vouch in <#1057338851359735828>.**}{color:$get[clr]}}]
+$channelSendMessage[$channelID;<@$authorID>{newEmbed:{description:> <a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466> **Always remember to send the screenshot of the issue and the screenshot/link message of your vouch in <#1057338851359735828>.**}{color:$get[clr]}}]
 $wait[1s]
 $interactionUpdate[;{newEmbed:{author:$userTag:$userAvatar}{title:<:peppapigshoppe_report:1061638968195690577> | Premium Acc Form Submitted!}{fields:$get[arrow] Discord User & Tag#COLON#,\` $userTag \`,no:$get[arrow] Premium Item/s Purchased & Subscription/s#COLON#,\` $get[itemSub] \`,no:$get[arrow] Item's Email & Password#COLON#,\` $get[emailPass] \`,no:$get[arrow] Type of Item/s#COLON#,\` $get[typeItem] \`,no:$get[arrow] Replacement Email#COLON#,\` $get[repEmail] \`,no:$get[arrow] Date of Purchase#COLON#,\` $get[datePurchase] \`,no:$get[arrow] Date Reported#COLON#,\` $get[dateNow] \`,no:$get[arrow] Days/Months Used#COLON#,\` $get[dateUsed] \`,no:$get[arrow] Remaining Days/Months#COLON#,\` $get[dateLeft] \`,no:$get[arrow] Issue#COLON#,\` $get[issue] \`,no}{footer:Thank you for submitting report form, please wait for @yskaela#2022 to process it shortly.:$userAvatar[$clientID]}{color:$get[clr]}}]
 

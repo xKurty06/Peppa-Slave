@@ -13,7 +13,8 @@ module.exports = {
 $addTimestamp
 $color[$get[clr]]
 $footer[$userTag]
-$addFields[0;Channel#COLON#:$get[resultChannel]:yes;Status#COLON#:$get[status]:yes]
+$addField[Status#COLON#;$get[status];yes]
+$addField[Channel#COLON#;$get[resultChannel];yes]
 $author[║ Vouch System;$userAvatar]
 $reply[$messageID;no]
 

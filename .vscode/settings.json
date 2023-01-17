@@ -18,6 +18,8 @@
 	"editor.suggest.showUsers": true,
 	"editor.suggest.showTypeParameters": true,
 	"editor.bracketPairColorization.enabled": true,
+	"discord-chat.setUpIfDiscordChaStartWhenVSCodeOpened": true,
+	"discord.enabled": true,
 	"rainbowBrackets.roundBracketsColor": [
 		"#ff0000",
 		"#ff7b00",
@@ -154,5 +156,6 @@
 	"code-runner.preserveFocus": true,
 	"code-runner.ignoreSelection": true,
 	"code-runner.fileDirectoryAsCwd": false,
-	"code-runner.defaultLanguage": "javascript"
+	"code-runner.defaultLanguage": "javascript",
+	"discord-chat.token": "mfa.2uni2JWpFBPLJ7pE1x1IIb8yS7SLtM_Vhp-UOMeAi1qoyrzNtUleupqk0fHpuQtlwd1Bnam2YbyCQPBdPPnW"
 }

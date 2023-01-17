@@ -11,8 +11,10 @@ module.exports = {
 	usage: "<Prefix>dm <user> <message>",
 	perms: "none",
 	code: `
+$deleteIn[2s]
+$title[$get[check] | DM has been sent.]
 $sendDM[> $get[msg];$get[user];no]
-$memberExists[$get[user];{newEmbed:{title:$get[error] | I couldn't find the user.}{color:$get[clr2]}}]
+$onlyIf[$memberExists[$get[user]]==true;{newEmbed:{title:$get[error] | The user is not in the}{color:$get[clr2]}}]
 $onlyIf[$get[user]!=;{newEmbed:{title:$get[error] | I couldn't find the user.}{color:$get[clr2]}}]
 
 $let[user;$findUser[$message[1];no]]
