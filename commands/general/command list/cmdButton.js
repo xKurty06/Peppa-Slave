@@ -9,11 +9,7 @@ $interactionUpdate[;{newEmbed:{author:║ Command List | $toLocaleUppercase[$get
 {button:⚠️:2:button_cmd_admin_$authorID:no}
 {button:🗑:4:deleteEmbed:no}}]
 
-$onlyIf[$get[authorID]==$interactionData[author.id];{
-    "content": "> $get[error] <@$interactionData[author.id]>, only \` $userTag[$get[authorID]] \` can interact with those buttons!",
-    "ephemeral": true,
-    "options": {"interaction": true}
-}]
+$onlyIf[$get[authorID]==$interactionData[author.id];> $get[error] <@$interactionData[author.id]>, only \` $userTag[$get[authorID]] \` can interact with those buttons!{options:{ephemeral: true}}{extraOptions:{interaction: true}}]
 
 $let[result;$getObjectProperty[$get[customID]]]
 $createObject[$get[text]]

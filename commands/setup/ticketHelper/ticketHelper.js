@@ -124,7 +124,6 @@ $interactionModal[Fill the report form: 2/2;premReportForm2;
 		{textInput:⤿ Issue:1:premReportForm_issue:yes:e.g#COLON# Cannot open account or invalid...etc.:1:500}
     }
 	]
-$log[>> "$messageID"]
 
 $let[arrow;<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466>]
 $let[error;❌]

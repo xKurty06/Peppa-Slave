@@ -1,9 +1,9 @@
 module.exports = [
 	{
-		name: "eval5",
-		cmdName: "eval5",
-		aliases: ["ev", "ev5", "aoi5"],
-		cmdAliases: "aoi5, ev5",
+		name: "eval",
+		cmdName: "eval",
+		aliases: ["ev", "ev5", "aoi5", "eval5"],
+		cmdAliases: "eval5, aoi5, ev5, ev",
 		category: "Owner",
 		description: "evals command/message with aoi.js",
 		cooldown: "none",
@@ -95,7 +95,7 @@ $argsCheck[>0;{newEmbed:{author:║ Wrong Arguments Given!:$userAvatar}{field:<a
 Aliases: #RIGHT#$get[alias]#LEFT#\n~> $get[usage]\n~> $get[example]\`\`\`}{footer:$get[params]}{color:$get[clr2]}}]
 $onlyForIDs[$joinSplitText[;];]
 $textSplit[$getVar[botOwners;bot];/]
-$let[error;$get[error]]
+$let[error;❌]
 $let[check;✅]
 $let[alias;$commandInfo[$commandName;cmdAliases]]
 $let[category;$commandInfo[$commandName;category]]

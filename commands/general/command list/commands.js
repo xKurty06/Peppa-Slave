@@ -1,8 +1,8 @@
 module.exports = {
 	name: "commands",
 	cmdName: "commands",
-	aliases: ["command", "cmdInfo", "cmd"],
-	cmdAliases: "command, cmdInfo, cmd",
+	aliases: ["command", "cmdInfo", "help", "cmd"],
+	cmdAliases: "command, cmdInfo, help, cmd",
 	description: "Returns all the bot's commands",
 	example: "<Prefix>commands setprefix\n<Prefix>commands module",
 	category: "General",
@@ -11,7 +11,6 @@ module.exports = {
 	perms: "",
 	$if: "old",
 	code: `
-
 $if[$toLowercase[$message]==module||$toLowercase[$message]==modules]
 $addTimestamp
 $color[$get[clr]]
@@ -24,12 +23,12 @@ $addButton[1;🏠;1;button_cmd_menu_$authorID;no;]
 $description[> $get[arrow] Choose a module by clicking the corresponding emojis in a button below.
 
 🐷 = General | ⚙️ = Setup | ⚠️ = Admin | 🗑 = Delete embed | 🏠 = Back to menu]
-$author[║ Command Info | Module;$serverIcon]
+$author[║ Command Info | Module;$userAvatar[$clientID]]
 $reply[$messageID;no]
 
 $else
 
-$if[$get[perms&]==none]
+$addButton[1;Delete;danger;deleteEmbed;false;🗑]
 $addTimestamp
 $color[$get[clr]]
 $footer[$userTag;$userAvatar]
@@ -44,40 +43,14 @@ Aliases: #RIGHT#$get[alias&]#LEFT#
 $get[usage&]\`\`\`
 __**Example:**__\`\`\`js
 $get[example&]\`\`\`]
-$author[║ Command Info | $get[name&];$serverIcon]
+$author[║ Command Info | $get[name&];$userAvatar[$clientID]]
 $reply[$messageID;no]
 
-$else
-
-$addTimestamp
-$color[$get[clr]]
-$footer[$userTag;$userAvatar]
-$addField[__Category__;\` $get[category&] \`;yes]
-$addField[__Cooldown__;\` $get[cd&] \`;yes]
-$addField[__Perms__;\` $get[perms&] \`;yes]
-$description[__**Description**__:\`\`\`bash
-$get[desc&]\`\`\`
-__**Usage:**__\`\`\`js
-Aliases: #RIGHT#$get[alias&]#LEFT#
-
-$get[usage&]\`\`\`
-__**Example:**__\`\`\`js
-$get[example&]\`\`\`]
-$author[║ Command Info | $get[name&];$serverIcon]
-$reply[$messageID;no]
-
-
-$if[$toLowercase[$message]==module||$toLowercase[$message]==modules]
-$let[lala;la]
-$else
-$onlyIf[$checkContains[$userPerms;$get[uperms]]==true;{newEmbed:{author:║ Excluded Commands!:$userAvatar}{description:> $get[error] | The command requires the \` $get[perms&] \` permission.}{color:$get[clr2]}}]
-
-$onlyIf[$get[category&]!=Owner;{newEmbed:{author:║ Excluded Commands!:$userAvatar}{description:> $get[error] | The command is not included in the command list and is only for bot developer.}{color:$get[clr2]}}]
-$let[uperms;$replaceText[$toLowercase[$get[perms&]]; ;]]
-$endif
+$onlyIf[$get[category&]!=Owner;{newEmbed:{author:║ Excluded Commands!:$userAvatar}{description:> $get[error] | The command is excluded from the command list and is only for bot developer.}{color:$get[clr2]}}]
 
 $onlyIf[$get[name&]!=;{newEmbed:{author:║ Not Found!:$userAvatar}{description:> $get[error] | The command/module \` $message \` doesn't even exists!}{color:$get[clr2]}}]
 
+$let[uperms;$replaceText[$toLowercase[$get[perms&]]; ;]]
 $let[alias&;$commandInfo[$message;cmdAliases]]
 $let[category&;$commandInfo[$message;category]]
 $let[desc&;$commandInfo[$message;description]]
@@ -86,7 +59,6 @@ $let[perms&;$commandInfo[$message;perms]]
 $let[name&;$commandInfo[$message;cmdName]]
 $let[usage&;$replaceText[$commandInfo[$message;usage];<Prefix>;$get[prefix]]]
 $let[example&;$replaceText[$commandInfo[$message;example];<Prefix>;$get[prefix]]]
-$endif
 $endif
 
 $argsCheck[>0;{newEmbed:{author:║ Wrong Arguments Given!:$userAvatar}{field:$get[error] Command's Usage#COLON#:\`\`\`js

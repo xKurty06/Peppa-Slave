@@ -1,30 +1,26 @@
 module.exports = {
-	name: "dm",
-	cmdName: "dm",
-	aliases: [""],
-	cmdAliases: "none",
-	description: "Sends user a direct message with bot.",
-	example:
-		"<Prefix>dm @xKurty Hey how are you?\n<Prefix>dm 698595070198415421 Hey your bot is nice!",
+	name: "uptime",
+	cmdName: "uptime",
+	aliases: ["upt"],
+	cmdAliases: "upt",
+	description: "Rreturns how long the bot is online/uptime",
+	example: "<Prefix>uptime",
 	category: "General",
-	cooldown: "5s",
-	usage: "<Prefix>dm <user> <message>",
+	cooldown: "3s",
+	usage: "<Prefix>uptime",
 	perms: "none",
 	code: `
-$deleteIn[2s]
+
 $color[$get[clr]]
-$title[$get[check] | DM has been sent.]
-$sendDM[> $get[msg];$get[user];no]
-$onlyIf[$memberExists[$get[user]]==true;{newEmbed:{title:$get[error] | The user is not in the}{color:$get[clr2]}}]
-$onlyIf[$get[user]!=;{newEmbed:{title:$get[error] | I couldn't find the user.}{color:$get[clr2]}}]
+$description[\`\`\`js
+$uptime\`\`\`]
+$author[║ Bot Uptime;$userAvatar]
+$reply[$messageID;no]
 
-$let[user;$findUser[$message[1];no]]
-$let[msg;$messageSlice[1]]
 
-$argsCheck[>1;{newEmbed:{author:║ Wrong Arguments Given!:$userAvatar[$authorID]}{field:$get[error] Command's Usage#COLON#:\`\`\`js
+$argsCheck[0;{newEmbed:{author:║ Wrong Arguments Given!:$userAvatar}{field:$get[error] Command's Usage#COLON#:\`\`\`js
 Aliases: #RIGHT#$get[alias]#LEFT#\n~> Usage:\n$get[usage]\n\n~> Example:\n$get[example]\`\`\`}{footer:$get[params]}{color:$get[clr2]}}]
 $cooldown[$get[cd];{newEmbed:{description:$get[error] | Hey! Slow down, you have to wait until \` %sec%.%ms%s \` before running this command again.}{color:$get[clr2]}}]
-$deletecommand
 
 $let[arrow;<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466>]
 $let[error;❌]

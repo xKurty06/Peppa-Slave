@@ -1,10 +1,10 @@
 module.exports = (bot) => {
 	let admin = 2;
-	let general = 3;
+	let general = 5;
 	let owner = 6;
 	let setup = 20;
 	let number2 = admin + general + owner + setup;
-	let number = admin + general - owner + setup;
+	let number = admin + general + setup;
 	bot.variables(
 		{
 			prefix: "p!",
@@ -43,8 +43,7 @@ module.exports = (bot) => {
 		{
 			authorMessage: "",
 			msg_messageID: "",
-			deleteEmbed: "false",
-			
+			deleteEmbed: "false"
 		},
 		"message"
 	);
