@@ -10,26 +10,26 @@ module.exports = {
 	usage: "<Prefix>exec <command>",
 	perms: "none",
 	code: `
-$deletecommand
 $addTimestamp[1]
 $color[1;$get[clr]]
 $footer[1;$userTag]
-$author[1;║ Terminal/Shell;$authorAvatar]
+$author[1;║ Terminal/Shell;$userAvatar]
 $addField[1;<:output:937755816637915196> Output:;\`\`\`js
 $get[a]\`\`\`;no]
 $let[a;$exec[$message]]
+$deletecommand
 
-$addCmdReactions[✅]
-$argsCheck[>0;{newEmbed:{author:║ Wrong Arguments Given!:$authorAvatar}{field:$get[error] Command's Usage#COLON#:\`\`\`js
-Aliases: #RIGHT#$get[alias]#LEFT#\n~> $get[usage]\n~> $get[example]\`\`\`}{footer:$get[params]}{footer:$get[params]}{color:$get[clr2]}}]
+$argsCheck[>0;{newEmbed:{author:║ Wrong Arguments Given!:$userAvatar}{field:$get[error] Command's Usage#COLON#:\`\`\`js
+Aliases: #RIGHT#$get[alias]#LEFT#\n~> Usage:\n$get[usage]\n\n~> Example:\n$get[example]\`\`\`}{footer:$get[params]}{color:$get[clr2]}}]
 $onlyForIDs[$joinSplitText[;];]
 $textSplit[$getVar[botOwners;bot];/]
-$let[arrow;<#COLON#arrow2#COLON#1055144562257047702>]
+
+$let[arrow;<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466>]
 $let[error;❌]
 $let[check;✅]
 $let[clr2;$getServerVar[clr2;$guildID;server]]
 $let[clr;$getServerVar[clr;$guildID;server]]
-$let[params;<X> = Required, \(X?\) = Optional, #RIGHT#A | B | C#LEFT# = Options]
+$let[params;< > = Required, \( \) = Optional, #RIGHT#a | b | c#LEFT# = Choices]
 $let[alias;$commandInfo[$commandName;cmdAliases]]
 $let[category;$commandInfo[$commandName;category]]
 $let[desc;$commandInfo[$commandName;description]]

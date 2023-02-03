@@ -10,17 +10,17 @@ module.exports = {
   usage: "<Prefix>",
   perms: "",
   code: `
-$addTimestamp[]
+$addTimestamp
 $color[$get[clr]]
 $footer[$userTag]
-$author[║ X;$authorAvatar]
+$author[║ X;$userAvatar]
 $reply[$messageID;no]
 
 $onlyBotPerms[;{newEmbed:{description:$get[error] | Missing Bot's Permissions <\`\`>}{color:$get[clr2]}}]
 $onlyIf[$hasPermsInChannel[$voiceID;$clientID;]==true;{newEmbed:{description:$get[error] | Missing Bot's Permission(s) of <\`\`>.}{color:$get[clr2]}}]
-$onlyPerms[;{newEmbed:{description:$get[error] | You don't have enough permissions <\`\`> to use this command!}{color:$get[clr2]}}]
-$argsCheck[;{newEmbed:{author:║ Wrong Arguments Given!:$authorAvatar}{field:$get[error] Command's Usage#COLON#:\`\`\`js
-Aliases: #RIGHT#$get[alias]#LEFT#\n~> $get[usage]\n~> $get[example]\`\`\`}{footer:$get[params]}{footer:$get[params]}{color:$get[clr2]}}]
+$onlyPerms[;{newEmbed:{description:$get[error] | You don't have enough permissions <\` $get[perms] \`> to use this command!}{color:$get[clr2]}}]
+$argsCheck[;{newEmbed:{author:║ Wrong Arguments Given!:$userAvatar}{field:$get[error] Command's Usage#COLON#:\`\`\`js
+Aliases: #RIGHT#$get[alias]#LEFT#\n~> Usage:\n$get[usage]\n\n~> Example:\n$get[example]\`\`\`}{footer:$get[params]}{color:$get[clr2]}}]
 $cooldown[$get[cd];{newEmbed:{description:$get[error] | Hey! Slow down, you have to wait until \` %sec%.%ms%s \` before running this command again.}{color:$get[clr2]}}]
 
 $onlyForServers[877873096265170994;]
@@ -31,7 +31,7 @@ $let[error;❌]
 $let[check;✅]
 $let[clr2;$getServerVar[clr2;$guildID;server]]
 $let[clr;$getServerVar[clr;$guildID;server]]
-$let[params;<X> = Required, \(X?\) = Optional, #RIGHT#A | B | C#LEFT# = Options]
+$let[params;< > = Required, \( \) = Optional, #RIGHT#a | b | c#LEFT# = Choices]
 $let[alias;$commandInfo[$commandName;cmdAliases]]
 $let[category;$commandInfo[$commandName;category]]
 $let[desc;$commandInfo[$commandName;description]]
@@ -74,7 +74,7 @@ $let[error;❌]
 $let[check;✅]
 $let[clr2;$getServerVar[clr2;$guildID;server]]
 $let[clr;$getServerVar[clr;$guildID;server]]
-$let[params;<X> = Required, \(X?\) = Optional, #RIGHT#A | B | C#LEFT# = Options]
+$let[params;< > = Required, \( \) = Optional, #RIGHT#a | b | c#LEFT# = Choices]
 $let[alias;$commandInfo[$commandName;cmdAliases]]
 $let[category;$commandInfo[$commandName;category]]
 $let[desc;$commandInfo[$commandName;description]]

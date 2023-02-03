@@ -39,8 +39,6 @@ module.exports = (loader, bot, Kurt) => {
 	bot.onStickerUpdate();
 	bot.onBanAdd();
 	bot.onBanRemove();
-	bot.onInviteCreate();
-	bot.onInviteDelete();
 	bot.onReactionAdd();
 	bot.onReactionRemove();
 	bot.onReactionRemoveAll();

@@ -16,7 +16,7 @@ module.exports = (botKey, cfg) => ({
 			alwaysExecute: true,
 			time: "30000"
 		},
-		// cache: cfg.Caches,
+		cache: cfg.Caches,
 		mobilePlatform: false,
 		disableLogs: false,
 		plugins: [],

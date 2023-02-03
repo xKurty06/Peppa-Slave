@@ -1,31 +1,31 @@
 module.exports = (bot) => {
-	bot.functionManager.createCustomFunction[
+	bot.functionManager.createFunction[
 		({
-			name: '$varExists',
-			type: 'djs',
+			name: "$varExists",
+			type: "djs",
 			code: async (d) => {
 				const data = d.util.aoiFunc(d);
 				if (data.err) return d.error(data.err);
-				const [name, table = 'main'] = data.inside.splits;
+				const [name, table = "main"] = data.inside.splits;
 				if (!name)
 					return d.aoiError.fnError(
 						d,
-						'custom',
+						"custom",
 						{},
-						'No variable name given.'
+						"No variable name given."
 					);
 				data.result =
 					(await d.client.variableManager.cache.get(
 						`${name}_${table}`
 					)) !== undefined;
 				return {
-					code: d.util.setCode(data),
+					code: d.util.setCode(data)
 				};
-			},
+			}
 		},
 		{
-			name: '$memberAvatar',
-			type: 'djs',
+			name: "$memberAvatar",
+			type: "djs",
 			code: async (d) => {
 				const data = d.util.aoiFunc(d);
 				const [guildID = d.guild.id, user = d.author.id] =
@@ -35,28 +35,32 @@ module.exports = (bot) => {
 					.members.cache.get(user)
 					.avatarURL({ size: 2048 });
 				return {
-					code: d.util.setCode(data),
+					code: d.util.setCode(data)
 				};
-			},
-		}, {
+			}
+		},
+		{
 			name: "$transcript",
 			type: "djs",
 			code: async (d) => {
-				const data = d.util.aoiFunc(d)
-				const discordTranscripts = require('discord-html-transcripts');
+				const data = d.util.aoiFunc(d);
+				const discordTranscripts = require("discord-html-transcripts");
 				const channel = d.message.channel;
-				const attachment = await discordTranscripts.createTranscript(channel, {
-					limit: -1,
-					returnBuffer: false,
-					fileName: d.channel.name + ".html",
-				});
+				const attachment = await discordTranscripts.createTranscript(
+					channel,
+					{
+						limit: -1,
+						returnBuffer: false,
+						fileName: d.channel.name + ".html"
+					}
+				);
 				channel.send({
 					files: [attachment]
 				});
 				return {
 					code: d.util.setCode(data)
-				}
+				};
 			}
-		}
-		)];
+		})
+	];
 };

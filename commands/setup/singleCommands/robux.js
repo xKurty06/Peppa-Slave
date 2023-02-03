@@ -15,9 +15,9 @@ $title[・──── __*R O B U X*__ ────・]
 $description[ ឵឵឵឵
  ឵឵឵឵
 ・─  **PRICES**\`\`\`
-✦ ₱270.00 = 1k robux (covered tax)
+✦ ₱280.00 = 1k robux (covered tax)
 ✦ ₱200.00 = 1k robux (not covered tax)
-✦ ₱50.00 = 100 robux (tingi-tingi)\`\`\`
+✦ ₱40.00 = 100 robux (tingi-tingi)\`\`\`
 
 ・─  **NOTE**\`\`\`
 ⤿ Payment via game pass/shirt.
@@ -43,12 +43,12 @@ $cooldown[$get[cd];{newEmbed:{description:$get[error] | Hey! Slow down, you have
 
 $onlyForIDs[$joinSplitText[;];]
 $textSplit[$getVar[owners;bot];/]
-$let[arrow;<#COLON#arrow2#COLON#1055144562257047702>]
+$let[arrow;<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466>]
 $let[error;❌]
 $let[check;✅]
 $let[clr2;$getServerVar[clr2;$guildID;server]]
 $let[clr;$getServerVar[clr;$guildID;server]]
-$let[params;<X> = Required, \(X?\) = Optional, #RIGHT#A | B | C#LEFT# = Options]
+$let[params;< > = Required, \( \) = Optional, #RIGHT#a | b | c#LEFT# = Choices]
 $let[alias;$commandInfo[$commandName;cmdAliases]]
 $let[category;$commandInfo[$commandName;category]]
 $let[desc;$commandInfo[$commandName;description]]

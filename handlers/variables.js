@@ -1,4 +1,10 @@
 module.exports = (bot) => {
+	let admin = 2;
+	let general = 5;
+	let owner = 6;
+	let setup = 20;
+	let number2 = admin + general + owner + setup;
+	let number = admin + general + setup;
 	bot.variables(
 		{
 			prefix: "p!",
@@ -6,7 +12,6 @@ module.exports = (bot) => {
 			clr2: "FF1010",
 			vouchChannel: "",
 			vouchStatus: "disabled",
-			serverLogs: "",
 			ticketHelper: "",
 			ticketStatus: "disabled"
 		},
@@ -14,18 +19,24 @@ module.exports = (bot) => {
 	);
 	bot.variables(
 		{
-			owners:
-				"698595070198415421/845285505678704650/886620575735373825",
-			botOwners: "698595070198415421/845285505678704650"
+			owners: "698595070198415421/845285505678704650/886620575735373825/800946590939742239",
+			botOwners: "698595070198415421", //845285505678704650
+			commandsCount: `${number}`,
+			commandsCount2: `${number2}`
 		},
 		"bot"
 	);
 	bot.variables({}, "user");
 	bot.variables(
 		{
-			ticketHelper_format: "false",
+			lastPremRepFormMsgID: "",
+			itemSub: "",
+			emailPass: "",
+			typeItem: "",
+			repEmail: "",
+			datePurchase: ""
 		},
-		"channels"
+		"chnnls"
 	);
 	bot.variables(
 		// MESSAGE DATABASE

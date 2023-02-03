@@ -1,6 +1,9 @@
-console.log(`[ SYSTEM ] ~> Client starting....`);
+require("dotenv").config({ path: "./src/.env" });
+console.log(`[ SYSTEM ] ~> Client starting...`);
 const cfg = require("./src/config.js");
-const Krt = require("aoi.js");
+const Kurt = require("aoi.js");
+const { Util } = require("aoi.js");
+const { setup } = require("aoi.parser");
 const botKey = process.env.TOKEN;
 const kurty = require("./src/bot.js")(botKey, cfg);
 const bot = new Kurt.AoiClient(kurty.Bot);
@@ -15,15 +18,18 @@ const server = http.createServer((req, res) => {
 	let b = bot.ws.ping;
 	let number = a + b;
 	let ping = Math.round(number);
-	res.end(`Peppa's Slave bot is now online and ready to work for "Peppa's Shoppe" server!\n BotPing: ${ping}ms`);
+	res.end(
+		`Peppa's Slave bot is now online and ready to work for "Peppa's Shoppe" server!\n BotPing: ${ping}ms`
+	);
 });
 
-//Callbacks and Events Handler
+//Setups, Callbacks and Events Handler
 require("./handlers/events/events.js")(loader, bot, Kurt);
 require("./handlers/status.js")(bot);
 require("./handlers/variables.js")(bot);
 require("./handlers/keepAlive.js")(app, bodyParser, express, server);
 require("./handlers/events/onReady.js")(bot, Kurt);
+setup(Util);
 
 //Custom Function Manager
 require("./handlers/customFunction.js")(bot);
