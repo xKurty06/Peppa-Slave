@@ -3,7 +3,7 @@ console.log(`[ SYSTEM ] ~> Client starting...`);
 const cfg = require("./src/config.js");
 const Kurt = require("aoi.js");
 const { Util } = require("aoi.js");
-const { parse, createAst } = require("aoi.parser");
+const { setup } = require("aoi.parser");
 const botKey = process.env.TOKEN;
 const kurty = require("./src/bot.js")(botKey, cfg);
 const bot = new Kurt.AoiClient(kurty.Bot);
@@ -23,13 +23,13 @@ const server = http.createServer((req, res) => {
 	);
 });
 
-//Callbacks and Events Handler
+//Setups, Callbacks and Events Handler
 require("./handlers/events/events.js")(loader, bot, Kurt);
 require("./handlers/status.js")(bot);
 require("./handlers/variables.js")(bot);
 require("./handlers/keepAlive.js")(app, bodyParser, express, server);
 require("./handlers/events/onReady.js")(bot, Kurt);
-require("./handlers/parser.js")(Util, parse, createAst);
+setup(Util);
 
 //Custom Function Manager
 require("./handlers/customFunction.js")(bot);
