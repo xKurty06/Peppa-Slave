@@ -219,8 +219,7 @@ $channelSendMessage[$channelID;<@$authorID>{newEmbed:{description:> <a#COLON#pep
 $wait[1s]
 $interactionUpdate[;{newEmbed:{author:$userTag:$userAvatar}{title:<:peppapigshoppe_report:1061638968195690577> | Premium Acc Form Submitted!}{fields:$get[arrow] Discord User & Tag#COLON#,\` $userTag \`,no:$get[arrow] Premium Item/s Purchased & Subscription/s#COLON#,\` $get[itemSub] \`,no:$get[arrow] Item's Email & Password#COLON#,\` $get[emailPass] \`,no:$get[arrow] Type of Item/s#COLON#,\` $get[typeItem] \`,no:$get[arrow] Replacement Email#COLON#,\` $get[repEmail] \`,no:$get[arrow] Date of Purchase#COLON#,\` $get[datePurchase] \`,no:$get[arrow] Date Reported#COLON#,\` $get[dateNow] \`,no:$get[arrow] Days/Months Used#COLON#,\` $get[dateUsed] \`,no:$get[arrow] Remaining Days/Months#COLON#,\` $get[dateLeft] \`,no:$get[arrow] Issue#COLON#,\` $get[issue] \`,no}{footer:Thank you for submitting report form, please wait for @yskaela#2022 to process it shortly.:$userAvatar[$clientID]}{color:$get[clr]}}]
 
-$let[dateNow;$formatDate[$dateStamp;dddd, DD MMMM YYYY], $hour:$minute:$second]
-$timezone[Asia/Manila]
+$let[dateNow;$parseDate[$dateStamp;date]]
 $let[issue;$textInputValue[premReportForm_issue]]
 $let[dateLeft;$textInputValue[premReportForm_dateLeft]]
 $let[dateUsed;$textInputValue[premReportForm_dateUsed]]
