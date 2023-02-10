@@ -14,13 +14,13 @@ module.exports = [
 $addTimestamp
 $color[$get[clr]]
 $footer[$userTag;$userAvatar]
-$addField[Server Prefix#COLON#;\` $get[prefix] \`;yes]
+$addField[Server Prefix#COLON#;\` $get[prefix] \`;true]
 
-$addField[Additional Resources#COLON#;#RIGHT#\`Server Invite\`#LEFT#(https#COLON#//dsc.gg/peppashoppe) | #RIGHT#\`DM to avail\`#LEFT#(https#COLON#//discord.com/users/886620575735373825) | #RIGHT#\`Bump Server\`#LEFT#(https#COLON#//disboard.org/server/1057338848247554111) | #RIGHT#\`Bot dev\`#LEFT#(https#COLON#//disboard.org/server/698595070198415421);no]
-$addField[ ឵឵឵឵;\n> $get[arrow] Curious what am I for? Well I'm a bot focuses on helping \` $serverName[1057338848247554111] \` server only, just to help improve and to make life easier for members.\n\n> $get[arrow] Need any help using $client[user.username] bot? Run the command \` $get[prefix]commands \` to learn more about my commands. If you want know about my specific commands or modules then run the command \` $get[prefix]command <command name/module> \`;no]
-$addField[Commands Count (all)#COLON#;\` $get[cmdCount] \`;yes]
-$author[║ Help Panel;$serverIcon]
-$reply[$messageID;no]
+$addField[Additional Resources#COLON#;#RIGHT#\`Server Invite\`#LEFT#(https#COLON#//dsc.gg/peppashoppe) | #RIGHT#\`DM to avail\`#LEFT#(https#COLON#//discord.com/users/886620575735373825) | #RIGHT#\`Bump Server\`#LEFT#(https#COLON#//disboard.org/server/1057338848247554111) | #RIGHT#\`Bot dev\`#LEFT#(https#COLON#//disboard.org/server/698595070198415421);false]
+$addField[ ឵឵឵឵;\n> $get[arrow] Curious what am I for? Well I'm a bot focuses on helping \` $guildName[1057338848247554111] \` server only, just to help improve and to make life easier for members.\n\n> $get[arrow] Need any help using $client[user.username] bot? Run the command \` $get[prefix]commands \` to learn more about my commands. If you want know about my specific commands or modules then run the command \` $get[prefix]command <command name/module> \`;false]
+$addField[Commands Count (all)#COLON#;\` $get[cmdCount] \`;true]
+$author[║ Help Panel;$guildIcon]
+$reply[$messageID;false]
 
 $argsCheck[0;]
 $cooldown[$get[cd];{newEmbed:{description:$get[error] | Hey! Slow down, you have to wait until \` %sec%.%ms%s \` before running this command again.}{color:$get[clr2]}}]
@@ -60,7 +60,7 @@ $color[$get[clr]]
 $footer[$userTag]
 $author[║ My prefix;$userAvatar]
 $description[ ឵឵ ឵឵ ឵឵឵឵>> Hey **$username**!My prefix for this server is **\` $get[prefix] \`**, $if[$checkUserPerms[$authorID;manageguild]==true; you can customize it by running this command \` $get[prefix]prefix <prefix> \`]]
-$reply[$messageID;no]
+$reply[$messageID;false]
 
 $cooldown[$get[cd];]
 $onlyIf[$findUser[$message]==$clientID;]
@@ -79,6 +79,6 @@ $let[perms;$commandInfo[$commandName;perms]]
 $let[name;$commandInfo[$commandName;cmdName]]
 $let[usage;$replaceText[$commandInfo[$commandName;usage];<Prefix>;$get[prefix]]]
 $let[example;$replaceText[$commandInfo[$commandName;example];<Prefix>;$get[prefix]]]
-$let[prefix;$getServerVar[prefix;$guildID;server]]`
+$let[prefix;$getGuildVar[prefix;$guildID;server]]`
 	}
 ];

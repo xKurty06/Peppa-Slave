@@ -15,7 +15,7 @@ $color[1;$get[clr]]
 $footer[1;$userTag]
 $author[1;║ Terminal/Shell;$userAvatar]
 $addField[1;<:output:937755816637915196> Output:;\`\`\`js
-$get[a]\`\`\`;no]
+$get[a]\`\`\`;false]
 $let[a;$exec[$message]]
 $deletecommand
 
@@ -38,6 +38,6 @@ $let[perms;$commandInfo[$commandName;perms]]
 $let[name;$commandInfo[$commandName;cmdName]]
 $let[usage;$replaceText[$commandInfo[$commandName;usage];<Prefix>;$get[prefix]]]
 $let[example;$replaceText[$commandInfo[$commandName;example];<Prefix>;$get[prefix]]]
-$let[prefix;$getServerVar[prefix;$guildID;server]]
+$let[prefix;$getGuildVar[prefix;$guildID;server]]
 `
 };
