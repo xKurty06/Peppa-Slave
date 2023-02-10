@@ -7,9 +7,9 @@ $if[yes==yes]
 $addTimestamp
 $color[123456]
 $footer[$userTag;$userAvatar]
-$addField[__Category__;\` test \`;yes]
-$addField[__Cooldown__;\` test \`;yes]
-$addField[__Perms__;\` none \`;yes]
+$addField[__Category__;\` test \`;true]
+$addField[__Cooldown__;\` test \`;true]
+$addField[__Perms__;\` none \`;true]
 $description[__**Description**__:\`\`\`bash
 $get[desc&]\`\`\`
 __**Usage:**__\`\`\`js
@@ -19,7 +19,7 @@ $get[usage&]\`\`\`
 __**Example:**__\`\`\`js
 $get[example&]\`\`\`]
 $author[║ Command Info | Testing;$userAvatar[$clientID]]
-$reply[$messageID;no]
+$reply[$messageID;false]
 $endif
 
 $argsCheck[>0;{newEmbed:{field:$get[error] Command's Usage#COLON#:\`\`\`js
@@ -28,8 +28,8 @@ Aliases: #RIGHT#$get[alias&]#LEFT#\n~> Usage:\n$get[usage&]\n\n~> Example:\n$get
 $let[arrow;<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466>]
 $let[error;❌]
 $let[check;✅]
-$let[clr2;$getServerVar[clr2;$guildID;server]]
-$let[clr;$getServerVar[clr;$guildID;server]]
+$let[clr2;$getGuildVar[clr2;$guildID;server]]
+$let[clr;$getGuildVar[clr;$guildID;server]]
 $let[desc&;test desc]
 $let[example&;test jas;dele;analve]
 $let[alias&;test, test2, test3]
@@ -57,7 +57,7 @@ $let[params;< > = Required, \( \) = Optional, #RIGHT#a | b | c#LEFT# = Choices]
 
 //  $var[percent;$calculate[($var[value]*100)/$var[max_value]]]
 //  $var[bar;$replaceText[$repeatMessage[$var[bar_length];$var[blank]];$var[blank];$var[filled];$round[$divide[$multi[$var[percent];$var[bar_length]];100]]]]
-//  $var[amount;$sum[$multi[$getVar[banknote;$mentioned[1;yes]];30000];$multi[$getVar[pickaxe;$mentioned[1;yes]];25000];$multi[$getVar[orb;$mentioned[1;yes]];40000];$multi[$getVar[revolver;$mentioned[1;yes]];60000];$multi[$getVar[sword;$mentioned[1;yes]];90000]]]
+//  $var[amount;$sum[$multi[$getVar[banknote;$mentioned[1;true]];30000];$multi[$getVar[pickaxe;$mentioned[1;true]];25000];$multi[$getVar[orb;$mentioned[1;true]];40000];$multi[$getVar[revolver;$mentioned[1;true]];60000];$multi[$getVar[sword;$mentioned[1;true]];90000]]]
 
 // $title[$username[$findUser[$message[1]]]'s profile!]
 // $description[Networth: ♜ \`$numberSeparator[$var[amount]]\` $if[$getVar[betabadge;$findUser[$message[1]]]>=1]<:beta_tester:1057201310446927893>$endif $if[$getVar[supportdeveloper;$findUser[$message[1]]]>=1]<:developeractivo:1057285399279579146>$endif $if[$getVar[developer;$findUser[$message[1]]]>=1]<:Developer:1057285417201828040>$endif

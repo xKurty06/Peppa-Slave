@@ -10,13 +10,13 @@ module.exports = {
 	perms: "Manage Server",
 	description: "Lets you to change my prefix for this server.",
 	code: `
-$setServerVar[prefix;$message;$guildID;server]
+$setGuildVar[prefix;$message;$guildID;server]
 $addTimestamp
 $reply[$messageID;no]
 $color[$get[clr]]
 $footer[$userTag]
 $author[║ Changed the prefix for this server to: $message;$userAvatar]
-$setServerVar[prefix;$message;$guildID;server]
+$setGuildVar[prefix;$message;$guildID;server]
 
 $argsCheck[1;{newEmbed:{description:$get[error] | Oops, you included some *space*, your Prefix should be no *space*. }{color:$get[clr2]}}]
 $onlyIf[$checkCondition[$charCount[$message]<6]==true;{newEmbed:{description:$get[error] | Too long, your prefix must be \` 5 \` or below characters only and no spaces!}{color:$get[clr2]}}]

@@ -21,7 +21,7 @@ $if[$checkContains[$get[msg2];bot;all;unpins]]
     $footer[$userTag]
     $description[> 🧹 Successfully cleared \` $get[result] \` messages from \` bots \` in this channel.]
     $author[║ Purge;$userAvatar]
-    $let[result;$clear[$get[msg1];$authorID;yes;$channelID]]
+    $let[result;$clear[$get[msg1];$authorID;true;$channelID]]
     $wait[1s]
 
     $elseif[$get[msg2]===all]
@@ -30,7 +30,7 @@ $if[$checkContains[$get[msg2];bot;all;unpins]]
     $footer[$userTag]
     $description[> 🧹 Successfully cleared \` $get[result] \` messages from \` everyone \` in this channel.]
     $author[║ Purge;$userAvatar]
-    $let[result;$clear[$get[msg1];$authorID;yes;$channelID]]
+    $let[result;$clear[$get[msg1];$authorID;true;$channelID]]
     $wait[1s]
     $endelseif
     
@@ -40,7 +40,7 @@ $if[$checkContains[$get[msg2];bot;all;unpins]]
     $footer[$userTag]
     $description[> 🧹 Successfully cleared \` $get[result] \` messages from \` unpinned \` messages in this channel.]
     $author[║ Purge;$userAvatar]
-    $let[result;$clear[$get[msg1];$authorID;yes;$channelID]]
+    $let[result;$clear[$get[msg1];$authorID;true;$channelID]]
     $wait[1s]
 
     $endelseif
@@ -52,7 +52,7 @@ $else
     $footer[$userTag]
     $description[> 🧹 Successfully cleared \` $get[result] \` messages from <@$get[user]> in this channel.]
     $author[║ Purge;$userAvatar]
-    $let[result;$clear[$get[msg1];$authorID;yes;$channelID]]
+    $let[result;$clear[$get[msg1];$authorID;true;$channelID]]
     $wait[1s]
 
     $else
@@ -61,7 +61,7 @@ $else
     $footer[$userTag]
     $description[> 🧹 Successfully cleared \` $get[result] \` messages from \` everyone1 \` in this channel.]
     $author[║ Purge;$userAvatar]
-    $let[result;$clear[$get[msg1];$authorID;yes;$channelID]]
+    $let[result;$clear[$get[msg1];$authorID;true;$channelID]]
     $wait[1s]
 
     $endif
@@ -74,18 +74,18 @@ $argsCheck[>0;{newEmbed:{author:║ Wrong Arguments Given!:$userAvatar}{field:$g
 Aliases: #RIGHT#$get[alias]#LEFT#\n~> Usage:\n$get[usage]\n\n~> Example:\n$get[example]\`\`\`}{footer:$get[params]}{color:$get[clr2]}}]
 $cooldown[$get[cd];{newEmbed:{description:$get[error] | Hey! Slow down, you have to wait until \` %sec%.%ms%s \` before running this command again.}{color:$get[clr2]}}]
 
-$onlyForServers[877873096265170994;]
+$onlyForGuilds[877873096265170994;]
 $onlyForIDs[$joinSplitText[;];]
 $textSplit[$getVar[botOwners;bot];/]
-$let[user;$findUser[$get[msg];no]]
+$let[user;$findUser[$get[msg];false]]
 $let[msg2;$toLowercase[$message[2]]]
 $let[msg1;$message[1]]
 $let[msg;$messageSlice[1]]
 $let[arrow;<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466>]
 $let[error;❌]
 $let[check;✅]
-$let[clr2;$getServerVar[clr2;$guildID;server]]
-$let[clr;$getServerVar[clr;$guildID;server]]
+$let[clr2;$getGuildVar[clr2;$guildID;server]]
+$let[clr;$getGuildVar[clr;$guildID;server]]
 $let[params;< > = Required, \( \) = Optional, #RIGHT#a | b | c#LEFT# = Choices]
 $let[alias;$commandInfo[$commandName;cmdAliases]]
 $let[category;$commandInfo[$commandName;category]]
@@ -95,6 +95,6 @@ $let[perms;$commandInfo[$commandName;perms]]
 $let[name;$commandInfo[$commandName;cmdName]]
 $let[usage;$replaceText[$commandInfo[$commandName;usage];<Prefix>;$get[prefix]]]
 $let[example;$replaceText[$commandInfo[$commandName;example];<Prefix>;$get[prefix]]]
-$let[prefix;$getServerVar[prefix;$guildID;server]]
+$let[prefix;$getGuildVar[prefix;$guildID;server]]
 `
 };

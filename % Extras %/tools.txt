@@ -32,7 +32,7 @@ https://youtube.com/c/CodeLyon
 
 ------------------------------------------------------------------------------
 
-https://api.xzusfin.repl.co/card?avatar=$replaceText[$userAvatar;.webp;.png;1]?size=2048&middle=Goodbye&name=$replaceText[$replaceText[$username[$authorID]#$discriminator[$authorID];#;%23;-1]; ;%20;-1]&bottom=$replaceText[$serverName[$guildID] now have $membersCount members left!; ;%20;-1]&background=https://cdn.discordapp.com/attachments/789656208276848682/798106281189572645/default11.png&text=%23ffffff&avatarborder=%23FFFFFF&avatarbg=%23FF28b3
+https://api.xzusfin.repl.co/card?avatar=$replaceText[$userAvatar;.webp;.png;1]?size=2048&middle=Goodbye&name=$replaceText[$replaceText[$username[$authorID]#$discriminator[$authorID];#;%23;-1]; ;%20;-1]&bottom=$replaceText[$guildName[$guildID] now have $membersCount members left!; ;%20;-1]&background=https://cdn.discordapp.com/attachments/789656208276848682/798106281189572645/default11.png&text=%23ffffff&avatarborder=%23FFFFFF&avatarbg=%23FF28b3
 
 -------------------------------------------------------------------
 

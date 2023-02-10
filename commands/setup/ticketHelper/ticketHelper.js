@@ -4,11 +4,11 @@ module.exports = [
 		channel: " ",
 		$if: "old",
 		code: `
-$if[$channelCategoryID[$newChannel[id]]==$getServerVar[ticketHelper;$guildID;server]]
+$if[$channelCategoryID[$newChannel[id]]==$getGuildVar[ticketHelper;$guildID;server]]
 $channelSendMessage[$channelID;<@&1057491730733207583>{newEmbed:{title:<#COLON#peppapigshoppe_happypeppa#COLON#1060268959724740720> Hello Shopper!}{description:> <a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466> | Want to order or report now? Click the Green Button below to make an <:peppapigshoppe:1057625427029540904>Order Form and Red Button for the <:peppapigshoppe_report:1061638968195690577>Report Form!\n\n> 📌 | If the bot is offline, please send the format manually from <#1059307766684073984> channel.}{color:$get[clr]}}{actionRow:{button:Order here:success:orderForm:no:<#COLON#peppapigshoppe#COLON#1057625427029540904>}}]
 $endif
 
-$if[$channelCategoryID[$newChannel[id]]==$getServerVar[ticketHelper2;$guildID;server]]
+$if[$channelCategoryID[$newChannel[id]]==$getGuildVar[ticketHelper2;$guildID;server]]
 $channelSendMessage[$channelID;<@&1057491730733207583>{newEmbed:{title:<#COLON#peppapigshoppe_happypeppa#COLON#1060268959724740720> Hello Shopper!}{description:> <a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466> | Want to order or report now? Click the Green Button below to make an <:peppapigshoppe:1057625427029540904>Order Form and Red Button for the <:peppapigshoppe_report:1061638968195690577>Report Form!\n\n> 📌 | If the bot is offline, please send the format manually from <#1059307766684073984> channel.}{color:$get[clr]}}{actionRow:{button:Nitro:danger:nitroReportForm:no:<#COLON#peppapigshoppe_report#COLON#1061638968195690577>}{button:Premium Acc:danger:premReportForm:no:<#COLON#peppapigshoppe_report#COLON#1061638968195690577>}}]
 $endif
 
@@ -18,16 +18,16 @@ $onlyIf[$get[status]==enabled;]
 
 $textSplit[$newChannel[name];-]
 $let[channelType;$channelType[$get[channelID]]]
-$let[ticketCatID2;$getServerVar[ticketHelper2;$guildID;server]]
-$let[ticketCatID;$getServerVar[ticketHelper;$guildID;server]]
-$let[status;$getServerVar[ticketStatus;$guildID;server]]
+$let[ticketCatID2;$getGuildVar[ticketHelper2;$guildID;server]]
+$let[ticketCatID;$getGuildVar[ticketHelper;$guildID;server]]
+$let[status;$getGuildVar[ticketStatus;$guildID;server]]
 $let[channelID;$newChannel[id]]
 $let[arrow;<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466>]
 $let[error;❌]
 $let[check;✅]
-$let[clr2;$getServerVar[clr2;$guildID;server]]
-$let[clr;$getServerVar[clr;$guildID;server]]
-$let[prefix;$getServerVar[prefix;$guildID;server]]
+$let[clr2;$getGuildVar[clr2;$guildID;server]]
+$let[clr;$getGuildVar[clr;$guildID;server]]
+$let[prefix;$getGuildVar[prefix;$guildID;server]]
 `
 	},
 	{
@@ -49,9 +49,9 @@ $interactionModal[Fill the order form: 1/1;orderForm1;
 $let[arrow;<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466>]
 $let[error;❌]
 $let[check;✅]
-$let[clr2;$getServerVar[clr2;$guildID;server]]
-$let[clr;$getServerVar[clr;$guildID;server]]
-$let[prefix;$getServerVar[prefix;$guildID;server]]
+$let[clr2;$getGuildVar[clr2;$guildID;server]]
+$let[clr;$getGuildVar[clr;$guildID;server]]
+$let[prefix;$getGuildVar[prefix;$guildID;server]]
 `
 	},
 	{
@@ -80,9 +80,9 @@ $interactionModal[Fill the report form: 1/2;premReportForm1;
 $let[arrow;<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466>]
 $let[error;❌]
 $let[check;✅]
-$let[clr2;$getServerVar[clr2;$guildID;server]]
-$let[clr;$getServerVar[clr;$guildID;server]]
-$let[prefix;$getServerVar[prefix;$guildID;server]]
+$let[clr2;$getGuildVar[clr2;$guildID;server]]
+$let[clr;$getGuildVar[clr;$guildID;server]]
+$let[prefix;$getGuildVar[prefix;$guildID;server]]
 `
 	},
 	{
@@ -90,7 +90,7 @@ $let[prefix;$getServerVar[prefix;$guildID;server]]
 		prototype: "modal",
 		type: "interaction",
 		code: `
-$interactionReply[<@$authorID>;{newEmbed:{title:$get[arrow] | Please proceed to the next step: 2/2}{color:$get[clr]}};{actionRow:{button:Step 2/2:success:premReportForm_step2:no}};;users;no]
+$interactionReply[<@$authorID>;{newEmbed:{title:$get[arrow] | Please proceed to the next step: 2/2}{color:$get[clr]}};{actionRow:{button:Step 2/2:success:premReportForm_step2:no}};;users;false]
 $setChannelVar[datePurchase;$get[datePurchase];$channelID;chnnls]
 $setChannelVar[repEmail;$get[repEmail];$channelID;chnnls]
 $setChannelVar[typeItem;$get[typeItem];$channelID;chnnls]
@@ -105,9 +105,9 @@ $let[itemSub;$textInputValue[premReportForm_item-sub]]
 $let[arrow;<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466>]
 $let[error;❌]
 $let[check;✅]
-$let[clr2;$getServerVar[clr2;$guildID;server]]
-$let[clr;$getServerVar[clr;$guildID;server]]
-$let[prefix;$getServerVar[prefix;$guildID;server]]
+$let[clr2;$getGuildVar[clr2;$guildID;server]]
+$let[clr;$getGuildVar[clr;$guildID;server]]
+$let[prefix;$getGuildVar[prefix;$guildID;server]]
 `
 	},
 	{
@@ -116,7 +116,7 @@ $let[prefix;$getServerVar[prefix;$guildID;server]]
 		type: "interaction",
 		code: `
 $setChannelVar[lastPremRepFormMsgID;$messageID;$channelID;chnnls]
-$interactionEdit[<@$authorID>;{newEmbed:{title:<a:peppapigshoppe_loading:1061990355484037120> | Processing...}{color:$get[clr]}};{actionRow:{button:Step 2/2:success:premReportForm_step2:yes}};;users;no]
+$interactionEdit[<@$authorID>;{newEmbed:{title:<a:peppapigshoppe_loading:1061990355484037120> | Processing...}{color:$get[clr]}};{actionRow:{button:Step 2/2:success:premReportForm_step2:yes}};;users;false]
 
 $interactionModal[Fill the report form: 2/2;premReportForm2;
     {actionRow:
@@ -133,9 +133,9 @@ $interactionModal[Fill the report form: 2/2;premReportForm2;
 $let[arrow;<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466>]
 $let[error;❌]
 $let[check;✅]
-$let[clr2;$getServerVar[clr2;$guildID;server]]
-$let[clr;$getServerVar[clr;$guildID;server]]
-$let[prefix;$getServerVar[prefix;$guildID;server]]
+$let[clr2;$getGuildVar[clr2;$guildID;server]]
+$let[clr;$getGuildVar[clr;$guildID;server]]
+$let[prefix;$getGuildVar[prefix;$guildID;server]]
 		`
 	},
 	{
@@ -160,9 +160,9 @@ $interactionModal[Fill the report form: 1/1;nitroReportForm1;
 $let[arrow;<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466>]
 $let[error;❌]
 $let[check;✅]
-$let[clr2;$getServerVar[clr2;$guildID;server]]
-$let[clr;$getServerVar[clr;$guildID;server]]
-$let[prefix;$getServerVar[prefix;$guildID;server]]
+$let[clr2;$getGuildVar[clr2;$guildID;server]]
+$let[clr;$getGuildVar[clr;$guildID;server]]
+$let[prefix;$getGuildVar[prefix;$guildID;server]]
 `
 	},
 	{
@@ -174,16 +174,16 @@ $channelSendMessage[$channelID;<@$authorID>{newEmbed:{title:<a#COLON#peppapigsho
 
 $onlyIf[$checkContains[$toLowercase[$get[payment]];gcash]==true;<@$authorID>{newEmbed:{title:<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466> | Always remember to send the screenshot of your payment receipt.}{color:$get[clr]}}]
 
-$interactionReply[;{newEmbed:{author:$userTag:$userAvatar}{title:<:peppapigshoppe:1057625427029540904> | Order Form Submitted!}{fields:<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466> Name of Item/s#COLON#,\` $get[item] \`,no:$get[arrow] Quantity#COLON#,\` $get[quantity] \`,yes:$get[arrow] Mode of payment#COLON#,\` $get[payment] \`,yes}{footer:Thank you for submitting an order form, please wait for @yskaela#2022 to process it shortly.:$userAvatar[$clientID]}{color:$get[clr]}};;;users;no]
+$interactionReply[;{newEmbed:{author:$userTag:$userAvatar}{title:<:peppapigshoppe:1057625427029540904> | Order Form Submitted!}{fields:<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466> Name of Item/s#COLON#,\` $get[item] \`,no:$get[arrow] Quantity#COLON#,\` $get[quantity] \`,yes:$get[arrow] Mode of payment#COLON#,\` $get[payment] \`,yes}{footer:Thank you for submitting an order form, please wait for @yskaela#2022 to process it shortly.:$userAvatar[$clientID]}{color:$get[clr]}};;;users;false]
 $let[payment;$textInputValue[orderForm_payment]]
 $let[quantity;$textInputValue[orderForm_quantity]]
 $let[item;$textInputValue[orderForm_item]]
 $let[arrow;<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466>]
 $let[error;❌]
 $let[check;✅]
-$let[clr2;$getServerVar[clr2;$guildID;server]]
-$let[clr;$getServerVar[clr;$guildID;server]]
-$let[prefix;$getServerVar[prefix;$guildID;server]]
+$let[clr2;$getGuildVar[clr2;$guildID;server]]
+$let[clr;$getGuildVar[clr;$guildID;server]]
+$let[prefix;$getGuildVar[prefix;$guildID;server]]
 	`
 	},
 	{
@@ -193,7 +193,7 @@ $let[prefix;$getServerVar[prefix;$guildID;server]]
 		code: `
 $channelSendMessage[$channelID;<@$authorID>{newEmbed:{description:> <a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466> **Always remember to send the screenshot of revoke email (Check your gmail account) and the screenshot/link message of your vouch in <#1057338851359735828>.**}{color:$get[clr]}}]
 $wait[1s]
-$interactionReply[;{newEmbed:{author:$userTag:$userAvatar}{title:<:peppapigshoppe_report:1061638968195690577> | Nitro Report Form Submitted!}{fields:$get[arrow] Discord User & Tag#COLON#,\` $userTag \`,no:$get[arrow] Nitro Gift link given#COLON#,\` $get[nitroLink] \`,no:$get[arrow] Claimer Usertag#COLON#,\` $get[claimer] \`,yes:$get[arrow] Date of purchase#COLON#,\` $get[datePurchase] \`,yes:$get[arrow] Remaining Days/Months#COLON#,\` $get[dateLeft] \`,yes}{footer:Thank you for submitting report form, please wait for @yskaela#2022 to process it shortly.:$userAvatar[$clientID]}{color:$get[clr]}};;;users;no]
+$interactionReply[;{newEmbed:{author:$userTag:$userAvatar}{title:<:peppapigshoppe_report:1061638968195690577> | Nitro Report Form Submitted!}{fields:$get[arrow] Discord User & Tag#COLON#,\` $userTag \`,no:$get[arrow] Nitro Gift link given#COLON#,\` $get[nitroLink] \`,no:$get[arrow] Claimer Usertag#COLON#,\` $get[claimer] \`,yes:$get[arrow] Date of purchase#COLON#,\` $get[datePurchase] \`,yes:$get[arrow] Remaining Days/Months#COLON#,\` $get[dateLeft] \`,yes}{footer:Thank you for submitting report form, please wait for @yskaela#2022 to process it shortly.:$userAvatar[$clientID]}{color:$get[clr]}};;;users;false]
 
 $let[dateLeft;$textInputValue[nitroReportForm_dateLeft]]
 $let[datePurchase;$textInputValue[nitroReportForm_datePurchase]]
@@ -202,9 +202,9 @@ $let[nitroLink;$textInputValue[nitroReportForm_nitroLink]]
 $let[arrow;<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466>]
 $let[error;❌]
 $let[check;✅]
-$let[clr2;$getServerVar[clr2;$guildID;server]]
-$let[clr;$getServerVar[clr;$guildID;server]]
-$let[prefix;$getServerVar[prefix;$guildID;server]]
+$let[clr2;$getGuildVar[clr2;$guildID;server]]
+$let[clr;$getGuildVar[clr;$guildID;server]]
+$let[prefix;$getGuildVar[prefix;$guildID;server]]
  `
 	},
 	{
@@ -230,9 +230,9 @@ $let[itemSub;$getChannelVar[itemSub;$channelID;chnnls]]
 $let[arrow;<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466>]
 $let[error;❌]
 $let[check;✅]
-$let[clr2;$getServerVar[clr2;$guildID;server]]
-$let[clr;$getServerVar[clr;$guildID;server]]
-$let[prefix;$getServerVar[prefix;$guildID;server]]
+$let[clr2;$getGuildVar[clr2;$guildID;server]]
+$let[clr;$getGuildVar[clr;$guildID;server]]
+$let[prefix;$getGuildVar[prefix;$guildID;server]]
  `
 	}
 ];

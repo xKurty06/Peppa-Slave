@@ -101,7 +101,7 @@ module.exports = {
 		"onVariableCreate",
 		"onVariableDelete",
 		"onVariableUpdate",
-		"onFunctionError",
+		"onFunctionError"
 		// "onWebhookUpdate"
 	]
 };

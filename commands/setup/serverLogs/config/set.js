@@ -1,25 +1,25 @@
 module.exports = {
-  name: "serverLogs set",
-  cmdName: "serverLogs set",
-  aliases: [""],
-  cmdAliases: "none",
-  description: "Lets you set Server Logs channel.",
-  example: "<Prefix>serverLogs set #server-logs",
-  category: "Setup",
-  cooldown: "5s",
-  usage: "<Prefix>serverLogs set <#channel>",
-  perms: "Manage Server",
-  code: `
+	name: "serverLogs set",
+	cmdName: "serverLogs set",
+	aliases: [""],
+	cmdAliases: "none",
+	description: "Lets you set Server Logs channel.",
+	example: "<Prefix>serverLogs set #server-logs",
+	category: "Setup",
+	cooldown: "5s",
+	usage: "<Prefix>serverLogs set <#channel>",
+	perms: "Manage Server",
+	code: `
 $addTimestamp[]
 $color[$get[clr]]
 $footer[$userTag]
-$description[> Server Logs Channel has been succesfully set to <#$getServerVar[serverLogs;$guildID;server]>!]
+$description[> Guild Logs Channel has been succesfully set to <#$getServerVar[serverLogs;$guildID;server]>!]
 $author[║ Server Logs;$authorAvatar]
 $reply[$messageID;no]
 
 $wait[1s]
 
-$setServerVar[serverLogs;$get[channelID];$guildID;server]
+$setGuildVar[serverLogs;$get[channelID];$guildID;server]
 
 $onlyIf[$serverChannelExists[$get[channelID]]==true;{newEmbed:{description:$get[error] | I couldn't find \` $message \` channel.}{color:$get[clr2]}}]
 $onlyPerms[manageserver;{newEmbed:{description:$get[error] | You don't have enough permissions <\` $get[perms] \`> to use this command!}{color:$get[clr2]}}]
@@ -28,13 +28,13 @@ Aliases: #RIGHT#$get[alias]#LEFT#\n~> $get[usage]\n~> $get[example]\`\`\`}{foote
 $cooldown[$get[cd];{newEmbed:{description:$get[error] | Hey! Slow down, you have to wait until \` %sec%.%ms%s \` before running this command again.}{color:$get[clr2]}}]
 
 $let[channelID;$findChannel[$message;no]]
-$onlyForServers[877873096265170994;]
+$onlyForGuilds[877873096265170994;]
 $onlyForIDs[$joinSplitText[;];]
 $textSplit[$getVar[botOwners;bot];/]
 $let[arrow;<#COLON#arrow2#COLON#1055144562257047702>]
 $let[error;❌]
 $let[check;✅]
-$let[clr2;$getServerVar[clr2;$guildID;server]]
+$let[clr2;$getGuildVar[clr2;$guildID;server]]
 $let[clr;$getServerVar[clr;$guildID;server]]
 $let[params;<X> = Required, \(X?\) = Optional, #RIGHT#A | B | C#LEFT# = Options]
 $let[alias;$commandInfo[$commandName;cmdAliases]]
@@ -46,4 +46,5 @@ $let[name;$commandInfo[$commandName;cmdName]]
 $let[usage;$replaceText[$commandInfo[$commandName;usage];<Prefix>;$get[prefix]]]
 $let[example;$replaceText[$commandInfo[$commandName;example];<Prefix>;$get[prefix]]]
 $let[prefix;$getServerVar[prefix;$guildID;server]]
-`}
+`
+};

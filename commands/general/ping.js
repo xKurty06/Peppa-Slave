@@ -11,12 +11,12 @@ module.exports = {
 	perms: "none",
 	code: `
 $color[$get[clr]]
-$addField[Average Ping;\`\`\`js\n$get[average] ms\`\`\`;yes]
-$addField[Database Ping;\`\`\`js\n$get[db] ms\`\`\`;yes]
-$addField[Message Ping;\`\`\`js\n$get[msg] ms\`\`\`;yes]
-$addField[Ping;\`\`\`js\n$get[ping] ms\`\`\`;yes]
+$addField[Average Ping;\`\`\`js\n$get[average] ms\`\`\`;true]
+$addField[Database Ping;\`\`\`js\n$get[db] ms\`\`\`;true]
+$addField[Message Ping;\`\`\`js\n$get[msg] ms\`\`\`;true]
+$addField[Ping;\`\`\`js\n$get[ping] ms\`\`\`;true]
 $author[║ Bot Ping;$userAvatar]
-$reply[$messageID;no]
+$reply[$messageID;false]
 
 $let[average;$round[$math[($get[ping]+$get[msg]+$get[db])/3]]]
 $let[db;$databasePing]
@@ -29,8 +29,8 @@ $cooldown[$get[cd];{newEmbed:{description:$get[error] | Hey! Slow down, you have
 $let[arrow;<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466>]
 $let[error;❌]
 $let[check;✅]
-$let[clr2;$getServerVar[clr2;$guildID;server]]
-$let[clr;$getServerVar[clr;$guildID;server]]
+$let[clr2;$getGuildVar[clr2;$guildID;server]]
+$let[clr;$getGuildVar[clr;$guildID;server]]
 $let[params;< > = Required, \( \) = Optional, #RIGHT#a | b | c#LEFT# = Choices]
 $let[alias;$commandInfo[$commandName;cmdAliases]]
 $let[category;$commandInfo[$commandName;category]]
@@ -40,6 +40,6 @@ $let[perms;$commandInfo[$commandName;perms]]
 $let[name;$commandInfo[$commandName;cmdName]]
 $let[usage;$replaceText[$commandInfo[$commandName;usage];<Prefix>;$get[prefix]]]
 $let[example;$replaceText[$commandInfo[$commandName;example];<Prefix>;$get[prefix]]]
-$let[prefix;$getServerVar[prefix;$guildID;server]]
+$let[prefix;$getGuildVar[prefix;$guildID;server]]
 `
 };

@@ -4,7 +4,7 @@ module.exports = [
 		code: `
     Select an option.
     
-    $addSelectMenu[1;helpCustomID;This placeholder won't show up cause we have selected default field as yes;1;1;no;A Option:Description of A option:test1:no:👋;B Option: :test2:no:👋]
+    $addSelectMenu[1;helpCustomID;This placeholder won't show up cause we have selected default field as yes;1;1;false;A Option:Description of A option:test1:no:👋;B Option: :test2:no:👋]
     `
 	},
 	{

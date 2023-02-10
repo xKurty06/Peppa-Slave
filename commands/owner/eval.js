@@ -12,7 +12,7 @@ module.exports = [
 		perms: "none",
 		error: "$channelSendMessage[$channelID;```js\nError: $error```]",
 		code: `
-$eval[$message;no;yes;yes;no]
+$eval[$message;false;true;true;false]
 $argsCheck[>0;{newEmbed:{author:║ Wrong Arguments Given!:$userAvatar}{field:<a:errors_args:903510494751649852> Command's Usage#COLON#:\`\`\`js
 Aliases: #RIGHT#$get[alias]#LEFT#\n~> $get[usage]\n~> $get[example]\`\`\`}{footer:$get[params]}{color:$get[clr2]}}]
 
@@ -23,8 +23,8 @@ $textSplit[$getVar[botOwners;bot];/]
 $let[arrow;<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466>]
 $let[error;❌]
 $let[check;✅]
-$let[clr2;$getServerVar[clr2;$guildID;server]]
-$let[clr;$getServerVar[clr;$guildID;server]]
+$let[clr2;$getGuildVar[clr2;$guildID;server]]
+$let[clr;$getGuildVar[clr;$guildID;server]]
 $let[params;< > = Required, \( \) = Optional, #RIGHT#a | b | c#LEFT# = Choices]
 $let[alias;$commandInfo[$commandName;cmdAliases]]
 $let[category;$commandInfo[$commandName;category]]
@@ -34,7 +34,7 @@ $let[perms;$commandInfo[$commandName;perms]]
 $let[name;$commandInfo[$commandName;cmdName]]
 $let[usage;$replaceText[$commandInfo[$commandName;usage];<Prefix>;$get[prefix]]]
 $let[example;$replaceText[$commandInfo[$commandName;example];<Prefix>;$get[prefix]]]
-$let[prefix;$getServerVar[prefix;$guildID;server]]
+$let[prefix;$getGuildVar[prefix;$guildID;server]]
 `
 	},
 	{
@@ -51,15 +51,15 @@ $let[prefix;$getServerVar[prefix;$guildID;server]]
 		error: "$channelSendMessage[911995913885581353;```js\nError: $error```]",
 		$if: "old",
 		code: `
-$eval[$message;no;yes;yes;no]
+$eval[$message;false;true;true;false]
 $argsCheck[>0;{newEmbed:{author:║ Wrong Arguments Given!:$userAvatar}{field:<a:errors_args:903510494751649852> Command's Usage#COLON#:\`\`\`js
-Aliases: #RIGHT#$get[alias]#LEFT#\n~> $get[usage]\n~> $get[example]\`\`\`}{footer:$get[params]}{color:$getServerVar[clr;$guildID;server]}}]
+Aliases: #RIGHT#$get[alias]#LEFT#\n~> $get[usage]\n~> $get[example]\`\`\`}{footer:$get[params]}{color:$getGuildVar[clr;$guildID;server]}}]
 $onlyForIDs[$joinSplitText[;];]
 $textSplit[$getVar[botOwners;bot];/]
 $let[error;$get[error]]
 $let[check;✅]
-$let[clr2;$getServerVar[clr2;$guildID;server]]
-$let[clr;$getServerVar[clr;$guildID;server]]
+$let[clr2;$getGuildVar[clr2;$guildID;server]]
+$let[clr;$getGuildVar[clr;$guildID;server]]
 $let[params;< > = Required, \( \) = Optional, #RIGHT#a | b | c#LEFT# = Choices]
 $let[alias;$commandInfo[$commandName;cmdAliases]]
 $let[category;$commandInfo[$commandName;category]]
@@ -69,7 +69,7 @@ $let[perms;$commandInfo[$commandName;perms]]
 $let[name;$commandInfo[$commandName;cmdName]]
 $let[usage;$replaceText[$commandInfo[$commandName;usage];<Prefix>;$get[prefix]]]
 $let[example;$replaceText[$commandInfo[$commandName;example];<Prefix>;$get[prefix]]]
-$let[prefix;$getServerVar[prefix;$guildID;server]]
+$let[prefix;$getGuildVar[prefix;$guildID;server]]
 $deletecommand
 `
 	},
@@ -89,7 +89,7 @@ $djsEval[try {
 $message
 } catch (err) {
 channel.send("**Source Error:**\`\`\`js\\n" + err + "\`\`\`")
-};no]
+};false]
 
 $argsCheck[>0;{newEmbed:{author:║ Wrong Arguments Given!:$userAvatar}{field:<a:errors_args:903510494751649852> $toLocaleUppercase[$get[name]]'s Usage#COLON#:\`\`\`js
 Aliases: #RIGHT#$get[alias]#LEFT#\n~> $get[usage]\n~> $get[example]\`\`\`}{footer:$get[params]}{color:$get[clr2]}}]
@@ -105,7 +105,7 @@ $let[perms;$commandInfo[$commandName;perms]]
 $let[name;$commandInfo[$commandName;cmdName]]
 $let[usage;$replaceText[$commandInfo[$commandName;usage];<Prefix>;$get[prefix]]]
 $let[example;$replaceText[$commandInfo[$commandName;example];<Prefix>;$get[prefix]]]
-$let[prefix;$getServerVar[prefix;$guildID;server]]
+$let[prefix;$getGuildVar[prefix;$guildID;server]]
 $deletecommand
 `
 	}

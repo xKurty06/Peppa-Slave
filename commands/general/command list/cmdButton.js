@@ -4,7 +4,7 @@ module.exports = [
 		prototype: "button",
 		$if: "old",
 		code: `
-$interactionUpdate[;{newEmbed:{author:║ Command List | $toLocaleUppercase[$get[customID]]:$serverIcon}{description:\`\`\`js\n$get[result]\`\`\`}{color:$get[clr]}{footer:$get[params]:$userAvatar}};{actionRow:{button:🏠:1:button_cmd_menu_$authorID:no}{button:🐷:1:button_cmd_general_$authorID:no}
+$interactionUpdate[;{newEmbed:{author:║ Command List | $toLocaleUppercase[$get[customID]]:$guildIcon}{description:\`\`\`js\n$get[result]\`\`\`}{color:$get[clr]}{footer:$get[params]:$userAvatar}};{actionRow:{button:🏠:1:button_cmd_menu_$authorID:no}{button:🐷:1:button_cmd_general_$authorID:no}
 {button:⚙️:2:button_cmd_setup_$authorID:no}
 {button:⚠️:2:button_cmd_admin_$authorID:no}
 {button:🗑:4:deleteEmbed:no}}]
@@ -17,8 +17,8 @@ $let[text;$readFile[./src/cmdList.json]]
 $let[arrow;<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466>]
 $let[error;❌]
 $let[check;✅]
-$let[clr2;$getServerVar[clr2;$guildID;server]]
-$let[clr;$getServerVar[clr;$guildID;server]]
+$let[clr2;$getGuildVar[clr2;$guildID;server]]
+$let[clr;$getGuildVar[clr;$guildID;server]]
 $let[params;< > = Required, \( \) = Optional, #RIGHT#a | b | c#LEFT# = Choices]
 $let[alias;$commandInfo[$commandName;cmdAliases]]
 $let[category;$commandInfo[$commandName;category]]
@@ -28,7 +28,7 @@ $let[perms;$commandInfo[$commandName;perms]]
 $let[name;$commandInfo[$commandName;cmdName]]
 $let[usage;$replaceText[$commandInfo[$commandName;usage];<Prefix>;$get[prefix]]]
 $let[example;$replaceText[$commandInfo[$commandName;example];<Prefix>;$get[prefix]]]
-$let[prefix;$getServerVar[prefix;$guildID;server]]
+$let[prefix;$getGuildVar[prefix;$guildID;server]]
 
 $onlyIf[$checkContains[$get[customID];admin;general;setup]==true;]
 $onlyIf[$get[id2]==cmd;]
@@ -48,7 +48,7 @@ $textSplit[$interactionData[customId];_]
 		code: `
 $interactionUpdate[;{newEmbed:{description:> $get[arrow] Choose a module by clicking the corresponding emojis in a button below.
 
-🐷 = General | ⚙️ = Setup | ⚠️ = Admin | 🗑 = Delete embed | 🏠 = Back to menu}{author:║ Command Info | Module:$serverIcon}{footer:$userTag:$userAvatar}{color:$get[clr]}{timestamp:ms}};{actionRow:{button:🏠:1:button_cmd_menu_$authorID:no}{button:🐷:1:button_cmd_general_$authorID:no}
+🐷 = General | ⚙️ = Setup | ⚠️ = Admin | 🗑 = Delete embed | 🏠 = Back to menu}{author:║ Command Info | Module:$guildIcon}{footer:$userTag:$userAvatar}{color:$get[clr]}{timestamp:ms}};{actionRow:{button:🏠:1:button_cmd_menu_$authorID:no}{button:🐷:1:button_cmd_general_$authorID:no}
 {button:⚙️:2:button_cmd_setup_$authorID:no}
 {button:⚠️:2:button_cmd_admin_$authorID:no}
 {button:🗑:4:deleteEmbed:no}}]
@@ -65,8 +65,8 @@ $let[text;$readFile[./src/cmdList.json]]
 $let[arrow;<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466>]
 $let[error;❌]
 $let[check;✅]
-$let[clr2;$getServerVar[clr2;$guildID;server]]
-$let[clr;$getServerVar[clr;$guildID;server]]
+$let[clr2;$getGuildVar[clr2;$guildID;server]]
+$let[clr;$getGuildVar[clr;$guildID;server]]
 $let[params;< > = Required, \( \) = Optional, #RIGHT#a | b | c#LEFT# = Choices]
 $let[alias;$commandInfo[$commandName;cmdAliases]]
 $let[category;$commandInfo[$commandName;category]]
@@ -76,7 +76,7 @@ $let[perms;$commandInfo[$commandName;perms]]
 $let[name;$commandInfo[$commandName;cmdName]]
 $let[usage;$replaceText[$commandInfo[$commandName;usage];<Prefix>;$get[prefix]]]
 $let[example;$replaceText[$commandInfo[$commandName;example];<Prefix>;$get[prefix]]]
-$let[prefix;$getServerVar[prefix;$guildID;server]]
+$let[prefix;$getGuildVar[prefix;$guildID;server]]
 
 $onlyIf[$checkContains[$get[customID];menu]==true;]
 $onlyIf[$get[id2]==cmd;]

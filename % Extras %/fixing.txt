@@ -8,7 +8,7 @@ $color[RANDOM]
 > **Изъято: $numberSeparator[$noMentionMessage;,]**🪙]
 $onlyIf[$getUserVar[money;$mentioned[1;yes]]<=$noMentionMessage; error here ]
 $onlyIf[$isNumber[$message[2]]==true;**Введите число!**]
-$argsCheck[>1;\`Пробуй так **$getServerVar[prefix]remove-money (Упоминание) (кол-во монет)\`**]
+$argsCheck[>1;\`Пробуй так **$getGuildVar[prefix]remove-money (Упоминание) (кол-во монет)\`**]
 $setUserVar[money;$sub[$getUserVar[money;$mentioned[1;yes]];$noMentionMessage];$mentioned[1;yes]]
  $onlyPerms[manageroles;{newEmbed:{title:Ошибка}} {description:**Тебе нужны разрешение** **MANAGEROLES**} 
 $image[https://media.discordapp.net/attachments/884921916643758140/975784279831380058/1._rgb-1.gif?width=360&height=6]
@@ -51,11 +51,11 @@ These are the variables you can use in embeds per categories.
 }
 {user.id} {user.name} {user.tag} {user.userTag} {user.age} {user.ping} {server.id} {server.name} {server.boost} {server.members} {server.age} {owner.name} {owner.id} {today.date_time}
 
-$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[aaaaa;{user.id};$authorID];{user.name};$userName];{user.tag};#$discriminator];{user.userTag};$userTag];{user.age};$creationDate[$authorID;date]];{user.ping};<@$authorID>];{server.id};$guildID];{server.name};$serverName];{server.boost};$serverBoostCount];{server.members};$membersCount[$guildID;all;yes]];{server.age};$creationDate[$guildID;date]];{owner.name};$username[$ownerID[$guildID]]];{owner.id};$ownerID[$guildID]];{today.date_time};$formatDate[$dateStamp;LLLL]]
+$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[aaaaa;{user.id};$authorID];{user.name};$userName];{user.tag};#$discriminator];{user.userTag};$userTag];{user.age};$creationDate[$authorID;date]];{user.ping};<@$authorID>];{server.id};$guildID];{server.name};$guildName];{server.boost};$guildBoostCount];{server.members};$membersCount[$guildID;all;yes]];{server.age};$creationDate[$guildID;date]];{owner.name};$username[$ownerID[$guildID]]];{owner.id};$ownerID[$guildID]];{today.date_time};$formatDate[$dateStamp;LLLL]]
 
 {user.pfp} {user.banner} {server.icon} {server.banner}
 
-$replaceText[$replaceText[$replaceText[$replaceText[aaaaa;{user.pfp};$userAvatar];{user.banner};$userBanner];{server.icon};$serverIcon];{server.banner};$serverBanner]
+$replaceText[$replaceText[$replaceText[$replaceText[aaaaa;{user.pfp};$userAvatar];{user.banner};$userBanner];{server.icon};$guildIcon];{server.banner};$guildBanner]
 
 
 

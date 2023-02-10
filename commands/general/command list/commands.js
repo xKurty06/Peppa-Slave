@@ -15,16 +15,16 @@ $if[$toLowercase[$message]==module||$toLowercase[$message]==modules]
 $addTimestamp
 $color[$get[clr]]
 $footer[$userTag;$userAvatar]
-$addButton[1;🗑;4;deleteEmbed;no;]
-$addButton[1;⚠️;2;button_cmd_admin_$authorID;no;]
-$addButton[1;⚙️;2;button_cmd_setup_$authorID;no;]
-$addButton[1;🐷;1;button_cmd_general_$authorID;no;]
-$addButton[1;🏠;1;button_cmd_menu_$authorID;no;]
+$addButton[1;🗑;4;deleteEmbed;false;]
+$addButton[1;⚠️;2;button_cmd_admin_$authorID;false;]
+$addButton[1;⚙️;2;button_cmd_setup_$authorID;false;]
+$addButton[1;🐷;1;button_cmd_general_$authorID;false;]
+$addButton[1;🏠;1;button_cmd_menu_$authorID;false;]
 $description[> $get[arrow] Choose a module by clicking the corresponding emojis in a button below.
 
 🐷 = General | ⚙️ = Setup | ⚠️ = Admin | 🗑 = Delete embed | 🏠 = Back to menu]
 $author[║ Command Info | Module;$userAvatar[$clientID]]
-$reply[$messageID;no]
+$reply[$messageID;false]
 
 $else
 
@@ -32,9 +32,9 @@ $addButton[1;Delete;danger;deleteEmbed;false;🗑]
 $addTimestamp
 $color[$get[clr]]
 $footer[$userTag;$userAvatar]
-$addField[__Category__;\` $get[category&] \`;yes]
-$addField[__Cooldown__;\` $get[cd&] \`;yes]
-$addField[__Perms__;\` $get[perms&] \`;yes]
+$addField[__Category__;\` $get[category&] \`;true]
+$addField[__Cooldown__;\` $get[cd&] \`;true]
+$addField[__Perms__;\` $get[perms&] \`;true]
 $description[__**Description**__:\`\`\`bash
 $get[desc&]\`\`\`
 __**Usage:**__\`\`\`js
@@ -44,7 +44,7 @@ $get[usage&]\`\`\`
 __**Example:**__\`\`\`js
 $get[example&]\`\`\`]
 $author[║ Command Info | $get[name&];$userAvatar[$clientID]]
-$reply[$messageID;no]
+$reply[$messageID;false]
 
 $onlyIf[$get[category&]!=Owner;{newEmbed:{author:║ Excluded Commands!:$userAvatar}{description:> $get[error] | The command is excluded from the command list and is only for bot developer.}{color:$get[clr2]}}]
 
@@ -68,8 +68,8 @@ $cooldown[$get[cd];{newEmbed:{description:$get[error] | Hey! Slow down, you have
 $let[arrow;<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466>]
 $let[error;❌]
 $let[check;✅]
-$let[clr2;$getServerVar[clr2;$guildID;server]]
-$let[clr;$getServerVar[clr;$guildID;server]]
+$let[clr2;$getGuildVar[clr2;$guildID;server]]
+$let[clr;$getGuildVar[clr;$guildID;server]]
 $let[params;< > = Required, \( \) = Optional, #RIGHT#a | b | c#LEFT# = Choices]
 $let[alias;$commandInfo[$commandName;cmdAliases]]
 $let[category;$commandInfo[$commandName;category]]
@@ -79,6 +79,6 @@ $let[perms;$commandInfo[$commandName;perms]]
 $let[name;$commandInfo[$commandName;cmdName]]
 $let[usage;$replaceText[$commandInfo[$commandName;usage];<Prefix>;$get[prefix]]]
 $let[example;$replaceText[$commandInfo[$commandName;example];<Prefix>;$get[prefix]]]
-$let[prefix;$getServerVar[prefix;$guildID;server]]
+$let[prefix;$getGuildVar[prefix;$guildID;server]]
 `
 };
