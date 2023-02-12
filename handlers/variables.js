@@ -13,6 +13,7 @@ module.exports = (bot) => {
 			vouchChannel: "",
 			vouchStatus: "disabled",
 			ticketHelper: "",
+			ticketHelper2: "",
 			ticketStatus: "disabled"
 		},
 		"server"

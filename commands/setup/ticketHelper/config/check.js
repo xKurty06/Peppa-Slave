@@ -14,7 +14,8 @@ $addTimestamp
 $color[$get[clr]]
 $footer[$userTag]
 $addField[Status#COLON#;\` $get[status] \`;yes]
-$addField[Ticket Category#COLON#;$get[resultChannel];yes]
+$addField[Report Category#COLON#;$get[resultChannel2];yes]
+$addField[Order Category#COLON#;$get[resultChannel];yes]
 $author[║ Ticket Helper System;$userAvatar]
 $reply[$messageID;no]
 
@@ -23,7 +24,9 @@ $argsCheck[0;{newEmbed:{author:║ Wrong Arguments Given!:$userAvatar}{field:$ge
 Aliases: #RIGHT#$get[alias]#LEFT#\n~> Usage:\n$get[usage]\n\n~> Example:\n$get[example]\`\`\`}{footer:$get[params]}{color:$get[clr2]}}]
 $cooldown[$get[cd];{newEmbed:{description:$get[error] | Hey! Slow down, you have to wait until \` %sec%.%ms%s \` before running this command again.}{color:$get[clr2]}}]
 
+$let[resultChannel2;$replaceText[$replaceText[$checkCondition[$get[vChannel2]==];true;\` not set \`];false;<#$get[vChannel2]>]]
 $let[resultChannel;$replaceText[$replaceText[$checkCondition[$get[vChannel]==];true;\` not set \`];false;<#$get[vChannel]>]]
+$let[vChannel2;$getServerVar[ticketHelper2;$guildID;server]]
 $let[vChannel;$getServerVar[ticketHelper;$guildID;server]]
 $let[status;$getServerVar[ticketStatus;$guildID;server]]
 $let[arrow;<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466>]

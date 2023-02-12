@@ -18,6 +18,7 @@ $author[║ Ticket Helper System;$userAvatar]
 $reply[$messageID;no]
 
 $resetServerVar[ticketStatus;server]
+$resetServerVar[ticketHelper2;server]
 $resetServerVar[ticketHelper;server]
 $onlyPerms[manageguild;{newEmbed:{description:$get[error] | You don't have enough permissions <\` $get[perms] \`> to use this command!}{color:$get[clr2]}}]
 $argsCheck[0;{newEmbed:{author:║ Wrong Arguments Given!:$userAvatar}{field:$get[error] Command's Usage#COLON#:\`\`\`js

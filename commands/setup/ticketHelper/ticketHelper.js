@@ -2,18 +2,23 @@ module.exports = [
 	{
 		type: "channelCreate",
 		channel: " ",
+		$if: "old",
 		code: `
-$channelSendMessage[$channelID;<@&1057491730733207583>{newEmbed:{title:<#COLON#peppapigshoppe_happypeppa#COLON#1060268959724740720> Hello Shopper!}{description:> <a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466> | Want to order or report now? Click the Green Button below to make an <:peppapigshoppe:1057625427029540904>Order Form and Red Button for the <:peppapigshoppe_report:1061638968195690577>Report Form!\n\n> 📌 | If the bot is offline, please send the format manually from <#1059307766684073984> channel.}{color:$get[clr]}}{actionRow:{button:Order here:success:orderForm:no:<#COLON#peppapigshoppe#COLON#1057625427029540904>}{button:Nitro:danger:nitroReportForm:no:<#COLON#peppapigshoppe_report#COLON#1061638968195690577>}{button:Premium Acc:danger:premReportForm:no:<#COLON#peppapigshoppe_report#COLON#1061638968195690577>}}]
-$wait[3s]
+$if[$channelCategoryID[$newChannel[id]]==$getServerVar[ticketHelper;$guildID;server]]
+$channelSendMessage[$channelID;<@&1057491730733207583>{newEmbed:{title:<#COLON#peppapigshoppe_happypeppa#COLON#1060268959724740720> Hello Shopper!}{description:> <a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466> | Want to order or report now? Click the Green Button below to make an <:peppapigshoppe:1057625427029540904>Order Form and Red Button for the <:peppapigshoppe_report:1061638968195690577>Report Form!\n\n> 📌 | If the bot is offline, please send the format manually from <#1059307766684073984> channel.}{color:$get[clr]}}{actionRow:{button:Order here:success:orderForm:no:<#COLON#peppapigshoppe#COLON#1057625427029540904>}}]
+$endif
 
-$onlyIf[$isNumber[$splitText[2]]==true;]
+$if[$channelCategoryID[$newChannel[id]]==$getServerVar[ticketHelper2;$guildID;server]]
+$channelSendMessage[$channelID;<@&1057491730733207583>{newEmbed:{title:<#COLON#peppapigshoppe_happypeppa#COLON#1060268959724740720> Hello Shopper!}{description:> <a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466> | Want to order or report now? Click the Green Button below to make an <:peppapigshoppe:1057625427029540904>Order Form and Red Button for the <:peppapigshoppe_report:1061638968195690577>Report Form!\n\n> 📌 | If the bot is offline, please send the format manually from <#1059307766684073984> channel.}{color:$get[clr]}}{actionRow:{button:Nitro:danger:nitroReportForm:no:<#COLON#peppapigshoppe_report#COLON#1061638968195690577>}{button:Premium Acc:danger:premReportForm:no:<#COLON#peppapigshoppe_report#COLON#1061638968195690577>}}]
+$endif
+
+$wait[3s]
 $onlyIf[$splitText[1]==ticket;]
-$textSplit[$newChannel[name];-]
-$onlyIf[$channelCategoryID[$get[channelID]]==$get[ticketCatID];]
-$onlyIf[$checkContains[$get[channelType];text]==true;]
 $onlyIf[$get[status]==enabled;]
 
+$textSplit[$newChannel[name];-]
 $let[channelType;$channelType[$get[channelID]]]
+$let[ticketCatID2;$getServerVar[ticketHelper2;$guildID;server]]
 $let[ticketCatID;$getServerVar[ticketHelper;$guildID;server]]
 $let[status;$getServerVar[ticketStatus;$guildID;server]]
 $let[channelID;$newChannel[id]]
@@ -165,14 +170,6 @@ $let[prefix;$getServerVar[prefix;$guildID;server]]
 		prototype: "modal",
 		type: "interaction",
 		code: `
-$color[$get[clr]]
-$description[\`\`\`fix
-~> 09076080723
-~> GL P.
-~> Always include payment receipt.
-~> No rush orders. We're doing all we can to get you your item/s as soon as possible.\`\`\`]
-$thumbnail[https://cdn.discordapp.com/attachments/1057866510997139477/1058049552906727516/IMG_4416.png]
-$wait[2s]
 $channelSendMessage[$channelID;<@$authorID>{newEmbed:{title:<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466> | Always remember to send the screenshot of your payment receipt.}{color:$get[clr]}}]
 
 $onlyIf[$checkContains[$toLowercase[$get[payment]];gcash]==true;<@$authorID>{newEmbed:{title:<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466> | Always remember to send the screenshot of your payment receipt.}{color:$get[clr]}}]
