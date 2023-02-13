@@ -20,15 +20,13 @@ module.exports = (botKey, cfg) => ({
 		mobilePlatform: false,
 		aoiLogs: true,
 		aoiWarning: true,
-		plugins: ["aoi.parser"],
-		disableLogs: false,
 		plugins: [],
 		sharding: true,
 		shardAmount: "1000",
 		suppressPackageErrors: true,
 		suppressAllErrors: false,
 		errorMessage: cfg.ErrorMessages,
-		events: { functionError: true, timeout: true },
+		events: cfg.Events,
 		disableFunctions: ["$clientToken"],
 		autoUpdate: false
 	}

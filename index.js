@@ -1,7 +1,7 @@
 require("dotenv").config({ path: "./src/.env" });
 console.log(`[ SYSTEM ] ~> Client starting...`);
 const cfg = require("./src/config.js");
-const Kurt = require("aoi.js");
+const Krt = require("aoi.js");
 const { Util } = require("aoi.js");
 const { setup } = require("aoi.parser");
 const botKey = process.env.TOKEN;
@@ -24,14 +24,14 @@ const server = http.createServer((req, res) => {
 });
 
 //Setups, Callbacks and Events Handler
-require("./handlers/events/events.js")(loader, bot, Kurt);
-require("./handlers/status.js")(bot);
-require("./handlers/variables.js")(bot);
-require("./handlers/keepAlive.js")(app, bodyParser, express, server);
-require("./handlers/events/onReady.js")(bot, Kurt);
+require("./handler/events/events.js")(loader, bot, Kurt);
+require("./handler/status.js")(bot);
+require("./handler/variables.js")(bot);
+require("./handler/keepAlive.js")(app, bodyParser, express, server);
+require("./handler/events/onReady.js")(bot, Kurt);
 setup(Util);
 
 //Custom Function Manager
-require("./handlers/customFunction.js")(bot);
+require("./handler/customFunction.js")(bot);
 
 //Commands
