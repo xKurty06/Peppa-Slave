@@ -64,6 +64,7 @@ $reply[$messageID;false]
 
 $cooldown[$get[cd];]
 $onlyIf[$findUser[$message]==$clientID;]
+$onlyIf[$authorID!=$clientID;]
 
 $let[arrow;<a#COLON#peppapigshoppe_arrow#COLON#1059035766115815466>]
 $let[error;❌]
