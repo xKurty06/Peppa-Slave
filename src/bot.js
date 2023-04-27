@@ -23,8 +23,8 @@ module.exports = (botKey, cfg) => ({
 		},
 		suppressAllErrors: false,
 		errorMessage: cfg.ErrorMessages,
-		aoiWarning: false,
-		aoiLogs: false,
+		aoiWarning: true,
+		aoiLogs: true,
 		respondOnEdit: {
 			commands: true,
 			alwaysExecute: true,
