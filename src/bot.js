@@ -7,7 +7,7 @@ module.exports = (botKey, cfg) => ({
 		disableFunctions: cfg.DisabledFuncs,
 		plugins: [],
 		respondToBots: false,
-		guildOnly: true,
+		guildOnly: false,
 		autoUpdate: false,
 		mobilePlatform: false,
 		cache: [],

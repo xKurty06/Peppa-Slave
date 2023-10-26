@@ -1,6 +1,6 @@
 {
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"editor.maxTokenizationLineLength": "10000",
+	"editor.maxTokenizationLineLength": 10000,
 	"editor.snippets.codeActions.enabled": true,
 	"editor.formatOnSave": true,
 	"editor.autoClosingQuotes": "always",
