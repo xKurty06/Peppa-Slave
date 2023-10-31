@@ -1,161 +1,161 @@
 {
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"editor.maxTokenizationLineLength": 10000,
-	"editor.snippets.codeActions.enabled": true,
-	"editor.formatOnSave": true,
-	"editor.autoClosingQuotes": "always",
-	"editor.colorDecorators": true,
-	"editor.copyWithSyntaxHighlighting": true,
-	"editor.suggest.showSnippets": true,
-	"editor.suggest.showWords": true,
-	"editor.suggest.showVariables": true,
-	"editor.suggest.showValues": true,
-	"editor.suggest.showKeywords": true,
-	"editor.suggest.showColors": true,
-	"editor.suggest.showConstructors": true,
-	"editor.suggest.showFields": true,
-	"editor.suggest.showFunctions": true,
-	"editor.suggest.showUsers": true,
-	"editor.suggest.showTypeParameters": true,
-	"editor.bracketPairColorization.enabled": true,
-	"discord-chat.setUpIfDiscordChaStartWhenVSCodeOpened": true,
-	"discord.enabled": true,
-	"rainbowBrackets.roundBracketsColor": [
-		"#ff0000",
-		"#ff7b00",
-		"#eeff00",
-		"#00ff00",
-		"#0011ff",
-		"#ae00ff"
-	],
-	"rainbowBrackets.squareBracketsColor": [
-		"#ff0000",
-		"#ff7b00",
-		"#eeff00",
-		"#00ff00",
-		"#0011ff",
-		"#ae00ff"
-	],
-	"rainbowBrackets.squigglyBracketsColor": [
-		"#ff0000",
-		"#ff7b00",
-		"#eeff00",
-		"#00ff00",
-		"#0011ff",
-		"#ae00ff"
-	], //>>>>
-	"editor.matchBrackets": "always",
-	"prettier.bracketSameLine": true,
-	"prettier.bracketSpacing": true,
-	"editor.guides.bracketPairsHorizontal": "active",
-	"editor.language.colorizedBracketPairs": null,
-	"editor.guides.bracketPairs": "active",
-	"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
-	"editor.guides.highlightActiveBracketPair": true,
-	"editor.language.brackets": null, //<<<<
-	"editor.autoIndent": "brackets",
-	"editor.autoClosingBrackets": "always",
-	"editor.snippetSuggestions": "inline",
-	"editor.mouseWheelZoom": true,
-	"workbench.colorTheme": "Abyss",
-	"workbench.preferredDarkColorTheme": "Neon Vommit",
-	"workbench.editor.decorations.colors": true,
-	"workbench.preferredHighContrastColorTheme": "Neon Vommit",
-	"indentRainbow.includedLanguages": [],
-	"editor.tokenColorCustomizations": {
-		"textMateRules": [
-			{
-				"scope": [
-					"string.quoted.double.js",
-					"string.quoted.single.js",
-					"string.quoted.double.json.comments"
-				],
-				"settings": {
-					"foreground": "#f4a0ff",
-					"fontStyle": "italic"
-				}
-			},
-			{
-				"scope": "string.template.js",
-				"settings": {
-					"foreground": "#e9b68c",
-					"fontStyle": ""
-				}
-			},
-			{
-				"scope": [
-					"meta.var-single-variable.expr.js",
-					"variable.other.constant.js"
-				],
-				"settings": {
-					"foreground": "#9effff",
-					"fontStyle": "italic"
-				}
-			},
-			{
-				"scope": ["comment.line.double-slash.js", "comment.block"],
-				"settings": {
-					"foreground": "#979797",
-					"fontStyle": "italic "
-				}
-			},
-			{
-				"scope": [
-					"constant.character.escape",
-					"variable.other.readwrite.js",
-					"variable.parameter.js"
-				],
-				"settings": {
-					"foreground": "#ff3535",
-					"fontStyle": "bold"
-				}
-			}
-		]
-	},
-	"workbench.colorCustomizations": {
-		"editorBracketMatch.border": "#0099ff",
-		"editorBracketHighlight.foreground1": "#ff0000",
-		"editorBracketHighlight.foreground2": "#ff7b00",
-		"editorBracketHighlight.foreground3": "#eeff00",
-		"editorBracketHighlight.foreground4": "#00ff00",
-		"editorBracketHighlight.foreground5": "#0011ff",
-		"editorBracketHighlight.foreground6": "#ae00ff",
-		"[Neon Vommit]": {
-			"textCodeBlock.background": "#64ccff"
-		},
-		"tab.activeBackground": "#0e0c88",
-		"[Deep Blue]": {
-			"editor.background": "#01004e31",
-			"editorBracketMatch.background": "#002cbd"
-		},
-		"terminal.background": "#02002b",
-		"terminal.foreground": "#c8ecff"
-	},
-	"terminal.integrated.drawBoldTextInBrightColors": true,
-	"[javascript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode",
-		"editor.formatOnSave": true
-	},
-	"[json]": {
-		"editor.formatOnSave": true
-	},
-	"[sql]": {
-		"editor.formatOnSave": true
-	},
-	"files.autoGuessEncoding": true,
-	"editor.formatOnPaste": true,
-	"code-runner.executorMap": {
-		"javascript": "node ."
-	},
-	"code-runner.customCommand": "node .",
-	"code-runner.saveFileBeforeRun": true,
-	"code-runner.runInTerminal": true,
-	"code-runner.clearPreviousOutput": false,
-	"code-runner.showExecutionMessage": true,
-	"code-runner.showRunIconInEditorTitleMenu": true,
-	"code-runner.preserveFocus": true,
-	"code-runner.ignoreSelection": true,
-	"code-runner.fileDirectoryAsCwd": false,
-	"code-runner.defaultLanguage": "javascript",
-	"discord-chat.token": "mfa.2uni2JWpFBPLJ7pE1x1IIb8yS7SLtM_Vhp-UOMeAi1qoyrzNtUleupqk0fHpuQtlwd1Bnam2YbyCQPBdPPnW"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.maxTokenizationLineLength": 10000,
+  "editor.snippets.codeActions.enabled": true,
+  "editor.formatOnSave": true,
+  "editor.autoClosingQuotes": "always",
+  "editor.colorDecorators": true,
+  "editor.copyWithSyntaxHighlighting": true,
+  "editor.suggest.showSnippets": true,
+  "editor.suggest.showWords": true,
+  "editor.suggest.showVariables": true,
+  "editor.suggest.showValues": true,
+  "editor.suggest.showKeywords": true,
+  "editor.suggest.showColors": true,
+  "editor.suggest.showConstructors": true,
+  "editor.suggest.showFields": true,
+  "editor.suggest.showFunctions": true,
+  "editor.suggest.showUsers": true,
+  "editor.suggest.showTypeParameters": true,
+  "editor.bracketPairColorization.enabled": true,
+  "discord-chat.setUpIfDiscordChaStartWhenVSCodeOpened": true,
+  "discord.enabled": true,
+  "rainbowBrackets.roundBracketsColor": [
+    "#ff0000",
+    "#ff7b00",
+    "#eeff00",
+    "#00ff00",
+    "#0011ff",
+    "#ae00ff"
+  ],
+  "rainbowBrackets.squareBracketsColor": [
+    "#ff0000",
+    "#ff7b00",
+    "#eeff00",
+    "#00ff00",
+    "#0011ff",
+    "#ae00ff"
+  ],
+  "rainbowBrackets.squigglyBracketsColor": [
+    "#ff0000",
+    "#ff7b00",
+    "#eeff00",
+    "#00ff00",
+    "#0011ff",
+    "#ae00ff"
+  ], //>>>>
+  "editor.matchBrackets": "always",
+  "prettier.bracketSameLine": true,
+  "prettier.bracketSpacing": true,
+  "editor.guides.bracketPairsHorizontal": "active",
+  "editor.language.colorizedBracketPairs": null,
+  "editor.guides.bracketPairs": "active",
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.guides.highlightActiveBracketPair": true,
+  "editor.language.brackets": null, //<<<<
+  "editor.autoIndent": "brackets",
+  "editor.autoClosingBrackets": "always",
+  "editor.snippetSuggestions": "inline",
+  "editor.mouseWheelZoom": true,
+  "workbench.colorTheme": "Neon Vommit",
+  "workbench.preferredDarkColorTheme": "Neon Vommit",
+  "workbench.editor.decorations.colors": true,
+  "workbench.preferredHighContrastColorTheme": "Neon Vommit",
+  "indentRainbow.includedLanguages": [],
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "string.quoted.double.js",
+          "string.quoted.single.js",
+          "string.quoted.double.json.comments"
+        ],
+        "settings": {
+          "foreground": "#f4a0ff",
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "string.template.js",
+        "settings": {
+          "foreground": "#e9b68c",
+          "fontStyle": ""
+        }
+      },
+      {
+        "scope": [
+          "meta.var-single-variable.expr.js",
+          "variable.other.constant.js"
+        ],
+        "settings": {
+          "foreground": "#9effff",
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": ["comment.line.double-slash.js", "comment.block"],
+        "settings": {
+          "foreground": "#979797",
+          "fontStyle": "italic "
+        }
+      },
+      {
+        "scope": [
+          "constant.character.escape",
+          "variable.other.readwrite.js",
+          "variable.parameter.js"
+        ],
+        "settings": {
+          "foreground": "#ff3535",
+          "fontStyle": "bold"
+        }
+      }
+    ]
+  },
+  "workbench.colorCustomizations": {
+    "editorBracketMatch.border": "#0099ff",
+    "editorBracketHighlight.foreground1": "#ff0000",
+    "editorBracketHighlight.foreground2": "#ff7b00",
+    "editorBracketHighlight.foreground3": "#eeff00",
+    "editorBracketHighlight.foreground4": "#00ff00",
+    "editorBracketHighlight.foreground5": "#0011ff",
+    "editorBracketHighlight.foreground6": "#ae00ff",
+    "[Neon Vommit]": {
+      "textCodeBlock.background": "#64ccff"
+    },
+    "tab.activeBackground": "#0e0c88",
+    "[Deep Blue]": {
+      "editor.background": "#01004e31",
+      "editorBracketMatch.background": "#002cbd"
+    },
+    "terminal.background": "#02002b",
+    "terminal.foreground": "#c8ecff"
+  },
+  "terminal.integrated.drawBoldTextInBrightColors": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.formatOnSave": true
+  },
+  "[sql]": {
+    "editor.formatOnSave": true
+  },
+  "files.autoGuessEncoding": true,
+  "editor.formatOnPaste": true,
+  "code-runner.executorMap": {
+    "javascript": "node ."
+  },
+  "code-runner.customCommand": "node .",
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.runInTerminal": true,
+  "code-runner.clearPreviousOutput": false,
+  "code-runner.showExecutionMessage": true,
+  "code-runner.showRunIconInEditorTitleMenu": true,
+  "code-runner.preserveFocus": true,
+  "code-runner.ignoreSelection": true,
+  "code-runner.fileDirectoryAsCwd": false,
+  "code-runner.defaultLanguage": "javascript",
+  "discord-chat.token": "mfa.2uni2JWpFBPLJ7pE1x1IIb8yS7SLtM_Vhp-UOMeAi1qoyrzNtUleupqk0fHpuQtlwd1Bnam2YbyCQPBdPPnW"
 }
