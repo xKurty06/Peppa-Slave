@@ -13,14 +13,14 @@ const bodyParser = require("body-parser");
 const app = express();
 const http = require("http");
 const server = http.createServer((req, res) => {
-	res.writeHead(200);
-	let a = bot.db.ping;
-	let b = bot.ws.ping;
-	let number = a + b;
-	let ping = Math.round(number);
-	res.end(
-		`Peppa's Slave bot is now online and ready to work for "Peppa's Shoppe" server!\n BotPing: ${ping}ms`
-	);
+  res.writeHead(200);
+  let a = bot.db.ping;
+  let b = bot.ws.ping;
+  let number = a + b;
+  let ping = Math.round(number);
+  res.end(
+    `Peppa's Slave bot is now online and ready to work for "Peppa's Shoppe" server!\n BotPing: ${ping}ms`
+  );
 });
 
 //Setups, Callbacks and Events Handler
