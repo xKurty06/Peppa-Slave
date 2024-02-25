@@ -71,7 +71,7 @@
           "string.quoted.double.json.comments"
         ],
         "settings": {
-          "foreground": "#f4a0ff",
+          "foreground": "#7b9eff",
           "fontStyle": "italic"
         }
       },
@@ -106,7 +106,7 @@
           "variable.parameter.js"
         ],
         "settings": {
-          "foreground": "#ff3535",
+          "foreground": "#02d1ec",
           "fontStyle": "bold"
         }
       }
@@ -143,19 +143,19 @@
     "editor.formatOnSave": true
   },
   "files.autoGuessEncoding": true,
-  "editor.formatOnPaste": true,
-  "code-runner.executorMap": {
-    "javascript": "node ."
-  },
-  "code-runner.customCommand": "node .",
-  "code-runner.saveFileBeforeRun": true,
-  "code-runner.runInTerminal": true,
-  "code-runner.clearPreviousOutput": false,
-  "code-runner.showExecutionMessage": true,
-  "code-runner.showRunIconInEditorTitleMenu": true,
-  "code-runner.preserveFocus": true,
-  "code-runner.ignoreSelection": true,
-  "code-runner.fileDirectoryAsCwd": false,
-  "code-runner.defaultLanguage": "javascript",
-  "discord-chat.token": "mfa.2uni2JWpFBPLJ7pE1x1IIb8yS7SLtM_Vhp-UOMeAi1qoyrzNtUleupqk0fHpuQtlwd1Bnam2YbyCQPBdPPnW"
+  "editor.formatOnPaste": true
+  //   "code-runner.executorMap": {
+  //     "javascript": "node ."
+  //   },
+  //   "code-runner.customCommand": "node .",
+  //   "code-runner.saveFileBeforeRun": true,
+  //   "code-runner.runInTerminal": true,
+  //   "code-runner.clearPreviousOutput": false,
+  //   "code-runner.showExecutionMessage": true,
+  //   "code-runner.showRunIconInEditorTitleMenu": true,
+  //   "code-runner.preserveFocus": true,
+  //   "code-runner.ignoreSelection": true,
+  //   "code-runner.fileDirectoryAsCwd": false,
+  //   "code-runner.defaultLanguage": "javascript",
+  //   "discord-chat.token": "mfa.2uni2JWpFBPLJ7pE1x1IIb8yS7SLtM_Vhp-UOMeAi1qoyrzNtUleupqk0fHpuQtlwd1Bnam2YbyCQPBdPPnW"
 }
